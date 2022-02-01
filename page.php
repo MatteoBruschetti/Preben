@@ -1,18 +1,25 @@
-<!------------------------------------------------------
-    THIS IS THE TEMPLATE FOR DISPLAY ANY SINGLE STATIC POST (che sarebbero le pagine)
-------------------------------------------------------->
-<?php get_header(); ?>
+<?php
+/**
+ * The template for displaying all single posts
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package WordPress
+ * @subpackage Twenty_Twenty_One
+ * @since Twenty Twenty-One 1.0
+ */
 
-    <div>page.php here</div>
-    
-    <?php if ( have_posts() ) {
-        while ( have_posts() ) {
-            the_post(); ?>
-                <div class="container-fluid">
-                    <?php the_content(); ?>
-                </div>
-            <?php
-        }
-    }?>
+get_header();
 
-<?php get_footer(); ?>
+/* Start the Loop */
+while ( have_posts() ) :
+	the_post();
+	get_template_part( 'template-parts/content/content-page' );
+
+	// If comments are open or there is at least one comment, load up the comment template.
+	if ( comments_open() || get_comments_number() ) {
+		comments_template();
+	}
+endwhile; // End of the loop.
+
+get_footer();
