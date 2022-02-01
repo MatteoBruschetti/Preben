@@ -1,0 +1,16 @@
+.citazione{
+    .row{
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+    
+    svg{
+        max-height: 20vh;
+    }
+
+    p{
+        font-size: 1.75rem;
+        font-weight: 700;
+    }
+}

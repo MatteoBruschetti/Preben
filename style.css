@@ -1,0 +1,706 @@
+/*
+Theme Name: 
+Theme URI: http://matteobruschetti.altervista.org
+Author: Matteo Bruschetti
+Author URI: http://matteobruschetti.altervista.org
+Description:    - ACF invece di Gutemberg per permettere al cliente la gestione totale dei contenuti ma non dello stile
+                - bootstrap grid 
+                - homepage displays a static page
+                - blog page for display articles
+                - dinamic navbar with custom menu
+                - custom post type
+                - contact mod in customize
+
+                TO ADD:
+                - responsive images
+                - dinamic footer with socail icon
+                - standard cookies e privacy policies
+                - dinamic logo in navbar
+                - navbar versione desktop senza hamburger 
+*/
+/*------------------------------------------------------------------------------
+HOSTING LOCAL FONTS with https://google-webfonts-helper.herokuapp.com/fonts/
+------------------------------------------------------------------------------*/
+/*--------------------------------------------------
+Type scale
+--------------------------------------------------*/
+h1 {
+  font-size: 9rem;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  line-height: 110%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #1D1D1F;
+}
+
+h2 {
+  font-size: 9rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 110%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #1D1D1F;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 110%;
+  text-align: left;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 180%;
+  word-wrap: break-word;
+}
+
+/*--------------------------------------------------
+CORRECTIONS
+--------------------------------------------------*/
+.t-left {
+  text-align: left;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.t-center-mobile {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .t-center-mobile {
+    text-align: left;
+  }
+}
+
+.t-right {
+  text-align: right;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+/*--------------------------------------------------
+RECCOMENDATIONS for text font sizes
+
+    DESKTOP
+        H1: 42px
+        H2: 38px
+        H3: 25px
+        body text: 18px
+        secondary text: 16px
+        navbar link: 16px
+
+    MOBILE
+        H1: 38px
+        H2: 36px
+        H3: 23px
+        body text: 16px
+        secondary text: 14px
+--------------------------------------------------*/
+/*--------------------------------------------------
+    MARGIN
+    https://type-scale.com/?size=16&scale=1.333&text=A%20Visual%20Type%20Scale&font=Inter&fontweight=400&bodyfont=Poppins&bodyfontweight=400&lineheight=1.65&backgroundcolor=white&fontcolor=%23333&preview=false
+--------------------------------------------------*/
+.mt-xxl {
+  margin-top: calc(1rem  * 1.618 * 1.618 * 1.618 * 1.618 * 1.618);
+}
+
+.mb-xxl {
+  margin-bottom: calc(1rem  * 1.618 * 1.618 * 1.618 * 1.618 * 1.618);
+}
+
+.mt-xxl {
+  margin-top: calc(1rem  * 1.618 * 1.618 * 1.618 * 1.618);
+}
+
+.mb-xxl {
+  margin-bottom: calc(1rem  * 1.618 * 1.618 * 1.618 * 1.618);
+}
+
+.mt-xl {
+  margin-top: calc(1rem  * 1.618 * 1.618 * 1.618);
+}
+
+.mb-xl {
+  margin-bottom: calc(1rem  * 1.618 * 1.618 * 1.618);
+}
+
+.mt-l {
+  margin-top: calc(1rem  * 1.618 * 1.618);
+}
+
+.mb-l {
+  margin-bottom: calc(1rem  * 1.618 * 1.618);
+}
+
+.mt-m {
+  margin-top: calc(1rem * 1.618);
+}
+
+.mb-m {
+  margin-bottom: calc(1rem * 1.618);
+}
+
+.mt-s {
+  margin-top: 1rem;
+}
+
+.mb-s {
+  margin-bottom: 1rem;
+}
+
+.mt-xs {
+  margin-top: calc(1rem / 1.618);
+}
+
+.mb-xs {
+  margin-bottom: calc(1rem / 1.618);
+}
+
+/*--------------------------------------------------
+PADDING
+--------------------------------------------------*/
+.no-p {
+  padding: 0 !important;
+}
+
+.no-pl {
+  padding-left: 0 !important;
+}
+
+.no-pr {
+  padding-right: 0 !important;
+}
+
+.pt-xxl {
+  padding-top: calc(1rem  * 1.618 * 1.618 * 1.618 * 1.618 * 1.618);
+}
+
+.pb-xxl {
+  padding-bottom: calc(1rem  * 1.618 * 1.618 * 1.618 * 1.618 * 1.618);
+}
+
+.pt-xxl {
+  padding-top: calc(1rem  * 1.618 * 1.618 * 1.618 * 1.618);
+}
+
+.pb-xxl {
+  padding-bottom: calc(1rem  * 1.618 * 1.618 * 1.618 * 1.618);
+}
+
+.pt-xl {
+  padding-top: calc(1rem  * 1.618 * 1.618 * 1.618);
+}
+
+.pb-xl {
+  padding-bottom: calc(1rem  * 1.618 * 1.618 * 1.618);
+}
+
+.pt-l {
+  padding-top: calc(1rem  * 1.618 * 1.618);
+}
+
+.pb-l {
+  padding-bottom: calc(1rem  * 1.618 * 1.618);
+}
+
+.pt-m {
+  padding-top: calc(1rem * 1.618);
+}
+
+.pb-m {
+  padding-bottom: calc(1rem * 1.618);
+}
+
+.pt-s {
+  padding-top: 1rem;
+}
+
+.pb-s {
+  padding-bottom: 1rem;
+}
+
+.pt-xs {
+  padding-top: calc(1rem / 1.618);
+}
+
+.pb-xs {
+  padding-bottom: calc(1rem / 1.618);
+}
+
+/*--------------------------------------------------
+RESET CSS
+--------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+/*--------------------------------------------------
+BASE
+--------------------------------------------------*/
+*, *:before, *:after {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+  font-size: 16px;
+  /*= 1rem*/
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /*Include padding and border in the element's total width and height*/
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #FEFEFE;
+}
+
+::-moz-selection {
+  color: white;
+  background: black;
+}
+
+::selection {
+  color: white;
+  background: black;
+}
+
+img {
+  width: 100%;
+}
+
+/*--------------------------------------------------
+BOOTSTRAP MEDIA-QUERIES 2021
+----------------------------------------------------*/
+body {
+  overflow-x: hidden;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 64px;
+  max-height: 80px;
+  background-color: black;
+  padding: 0.5rem 2rem;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav .logo {
+  color: #FEFEFE;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+nav .logo img {
+  height: auto;
+  max-width: 160px;
+}
+
+nav .logo:hover {
+  opacity: 0.85;
+}
+
+nav .burger {
+  display: block;
+  /*shows until 992px*/
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+nav .burger #burger-icon {
+  height: 32px;
+  cursor: pointer;
+  /*animate out*/
+  /*animate in*/
+}
+
+nav .burger #burger-icon rect {
+  fill: none;
+}
+
+nav .burger #burger-icon line {
+  fill: none;
+  stroke: #FEFEFE;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 4px;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+nav .burger #burger-icon .l-1, nav .burger #burger-icon .l-3 {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+nav .burger #burger-icon .l-2 {
+  -webkit-transition: opacity 0.3s ease-in-out 0.3s;
+  transition: opacity 0.3s ease-in-out 0.3s;
+}
+
+nav .burger #burger-icon .top-translate {
+  -webkit-transform: translateY(32.5%);
+          transform: translateY(32.5%);
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  transition: -webkit-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+}
+
+nav .burger #burger-icon .top-rotate {
+  -webkit-transform: rotate(-45deg) translateY(32.5%);
+          transform: rotate(-45deg) translateY(32.5%);
+  -webkit-transition: -webkit-transform 0.3s ease-out 0.3s;
+  transition: -webkit-transform 0.3s ease-out 0.3s;
+  transition: transform 0.3s ease-out 0.3s;
+  transition: transform 0.3s ease-out 0.3s, -webkit-transform 0.3s ease-out 0.3s;
+}
+
+nav .burger #burger-icon .mid {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+nav .burger #burger-icon .bottom-translate {
+  -webkit-transform: translateY(-32.5%);
+          transform: translateY(-32.5%);
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  transition: -webkit-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+}
+
+nav .burger #burger-icon .bottom-rotate {
+  -webkit-transform: rotate(45deg) translateY(-32.5%);
+          transform: rotate(45deg) translateY(-32.5%);
+  -webkit-transition: -webkit-transform 0.3s ease-out 0.3s;
+  transition: -webkit-transform 0.3s ease-out 0.3s;
+  transition: transform 0.3s ease-out 0.3s;
+  transition: transform 0.3s ease-out 0.3s, -webkit-transform 0.3s ease-out 0.3s;
+}
+
+nav .burger:hover {
+  opacity: 0.85;
+}
+
+nav .menu {
+  position: absolute;
+  right: 0;
+  top: 64px;
+  z-index: 98;
+  -webkit-transform: translateX(101vw);
+          transform: translateX(101vw);
+  height: calc(100vh - 64px);
+  width: 100vw;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+nav .menu li {
+  opacity: 0;
+  -webkit-transform: translateX(1.5rem);
+          transform: translateX(1.5rem);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+nav .menu li a {
+  color: #FEFEFE;
+  font-size: 1.5rem;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+
+nav .menu li a:hover {
+  color: grey;
+}
+
+nav .open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+nav .open li:nth-child(1) {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+nav .open li:nth-child(2) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+nav .open li:nth-child(3) {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+nav .open li:nth-child(4) {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+nav .open li:nth-child(5) {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+nav .open li:nth-child(6) {
+  -webkit-transition-delay: 1.2s;
+          transition-delay: 1.2s;
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+nav .current-menu-item a {
+  color: grey !important;
+}
+
+.fix-fixed {
+  margin-top: 72px;
+}
+
+footer {
+  background-color: grey;
+}
+
+footer .svg-social-icon-bg {
+  fill: black;
+}
+
+footer .svg-social-icon {
+  fill: #FEFEFE;
+}
+
+footer .widget_nav_menu .menu-item a {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  border-bottom: 4px solid black;
+  -webkit-transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+footer .widget_nav_menu .menu-item a:hover {
+  border-bottom-color: grey;
+  padding: 0 5px;
+}
+
+footer .widget_nav_menu .menu-item.current_page_item a {
+  color: red;
+  border-bottom: none;
+}
+
+/*----------------------------------------
+    BUTTONS
+-----------------------------------------*/
+.btn {
+  display: inline-block;
+  color: #FEFEFE;
+  background: black;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-radius: 100px;
+  padding: 16px 32px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn:hover {
+  -webkit-box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
+  background-color: grey;
+}
+
+/*----------------------------------------
+    LINKS
+-----------------------------------------*/
+.link {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  border-bottom: 4px solid black;
+  -webkit-transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.link:hover {
+  border-bottom-color: grey;
+  padding: 0 5px;
+}
+
+.link-ghost {
+  color: black;
+  -webkit-transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.link-ghost:hover {
+  color: grey;
+}
+
+/*--------------------------------------------------
+RECCOMENDATIONS for target size by Apple
+    DESKTOP and MOBILE minimun raget size = 44px X 44px 
+--------------------------------------------------*/
+/*Blocco ACF
+*Testo Immagine
+-----------------------------------------------*/
+.testo-immagine .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testo-immagine h2 {
+  text-align: left;
+}
+
+.testo-immagine img {
+  width: 100%;
+}
+
+.destra .row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+@media (min-width: 768px) {
+  .destra .row .immagine {
+    padding: 0 0 0 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .sinistra .immagine {
+    padding: 0 30px 0 0;
+  }
+}
+
+.immagine-full-width .col-12 {
+  height: 75vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.citazione .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.citazione svg {
+  max-height: 20vh;
+}
+
+.citazione p {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+/*# sourceMappingURL=style.css.map */

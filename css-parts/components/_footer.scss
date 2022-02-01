@@ -1,0 +1,46 @@
+footer{
+    background-color: $color-secondary;
+
+
+    //social bar
+    .svg-social-icon-bg{
+        fill: $color-primary;
+    }
+    .svg-social-icon{
+        fill: $color-white;
+    }
+
+    //logo and legal
+
+
+    //sitemap
+    .widget_nav_menu{
+        .menu-item{
+            a{
+                color: $color-txt-primary; text-decoration: none;
+                display: inline-block;
+                text-transform: uppercase;
+                border-bottom: 4px solid $color-primary;
+                transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+                &:hover{
+                    border-bottom-color: $color-secondary;
+                    padding: 0 5px;
+                }
+            }
+
+            &.current_page_item{
+                a{
+                    color: $color-accent;
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+
+
+    //search bar
+
+
+
+}
