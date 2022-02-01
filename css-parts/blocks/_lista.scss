@@ -1,0 +1,15 @@
+.lista{
+    .container-fluid{
+        background-color: $color-primary;
+        padding: rem(120) rem(310);
+    }
+    .img img{
+        width: 100%;
+        padding-top: rem(16);
+    }
+    .lista-item{
+        p{
+            color: $color-white;
+        }   
+    }
+}

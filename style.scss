@@ -1,0 +1,43 @@
+/*
+Theme Name: 
+Theme URI: http://matteobruschetti.altervista.org
+Author: Matteo Bruschetti
+Author URI: http://matteobruschetti.altervista.org
+Description:    - ACF invece di Gutemberg per permettere al cliente la gestione totale dei contenuti ma non dello stile
+                - bootstrap grid 
+                - homepage displays a static page
+                - blog page for display articles
+                - dinamic navbar with custom menu
+                - custom post type
+                - contact mod in customize
+
+                TO ADD:
+                - responsive images
+                - dinamic footer with socail icon
+                - standard cookies e privacy policies
+                - dinamic logo in navbar
+                - navbar versione desktop senza hamburger 
+*/
+
+//variables
+@import "css-parts/variables/local-font";
+@import "css-parts/variables/device-screen";  
+@import "css-parts/variables/color";
+@import "css-parts/variables/typography";
+@import "css-parts/variables/spacers"; 
+@import "css-parts/variables/helpers"; 
+
+//base
+@import "css-parts/base";
+@import 'css-parts/media-query';
+
+//components
+@import "css-parts/components/nav";
+@import "css-parts/components/footer";
+@import "css-parts/components/btn";
+
+//blocks
+@import "css-parts/blocks/testo-immagine";
+@import "css-parts/blocks/immagine-full-width";
+@import "css-parts/blocks/cit";
+  

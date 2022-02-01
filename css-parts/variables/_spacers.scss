@@ -1,0 +1,104 @@
+/*--------------------------------------------------
+    MARGIN
+    https://type-scale.com/?size=16&scale=1.333&text=A%20Visual%20Type%20Scale&font=Inter&fontweight=400&bodyfont=Poppins&bodyfontweight=400&lineheight=1.65&backgroundcolor=white&fontcolor=%23333&preview=false
+--------------------------------------------------*/
+$margin-base: 1rem;
+
+.mt-xxl{ 
+    margin-top: calc(#{$margin-base}  * 1.618 * 1.618 * 1.618 * 1.618 * 1.618);
+}
+    .mb-xxl{
+        margin-bottom: calc(#{$margin-base}  * 1.618 * 1.618 * 1.618 * 1.618 * 1.618);
+    }
+.mt-xxl{ 
+    margin-top: calc(#{$margin-base}  * 1.618 * 1.618 * 1.618 * 1.618);
+}
+    .mb-xxl{
+        margin-bottom: calc(#{$margin-base}  * 1.618 * 1.618 * 1.618 * 1.618);
+    }
+.mt-xl{ 
+    margin-top: calc(#{$margin-base}  * 1.618 * 1.618 * 1.618);
+}
+    .mb-xl{
+        margin-bottom: calc(#{$margin-base}  * 1.618 * 1.618 * 1.618);
+    }
+.mt-l{
+    margin-top:  calc(#{$margin-base}  * 1.618 * 1.618);
+}
+    .mb-l{
+        margin-bottom:  calc(#{$margin-base}  * 1.618 * 1.618 );
+    }
+.mt-m{
+    margin-top: calc(#{$margin-base} * 1.618 );
+}
+    .mb-m{
+        margin-bottom: calc(#{$margin-base} * 1.618);
+    }
+.mt-s{
+    margin-top: $margin-base;
+}
+    .mb-s{
+        margin-bottom: $margin-base;
+    }
+.mt-xs{
+    margin-top: calc(#{$margin-base} / 1.618);
+}
+    .mb-xs{
+        margin-bottom: calc(#{$margin-base} / 1.618);
+    }
+
+
+
+/*--------------------------------------------------
+PADDING
+--------------------------------------------------*/
+.no-p{padding: 0 !important;}
+.no-pl{padding-left: 0 !important;}
+.no-pr{padding-right: 0 !important;}
+
+
+$padding-base: 1rem;
+
+.pt-xxl{ 
+    padding-top: calc(#{$padding-base}  * 1.618 * 1.618 * 1.618 * 1.618 * 1.618);
+}
+    .pb-xxl{
+        padding-bottom: calc(#{$padding-base}  * 1.618 * 1.618 * 1.618 * 1.618 * 1.618);
+    }
+.pt-xxl{ 
+    padding-top: calc(#{$padding-base}  * 1.618 * 1.618 * 1.618 * 1.618);
+}
+    .pb-xxl{
+        padding-bottom: calc(#{$padding-base}  * 1.618 * 1.618 * 1.618 * 1.618);
+    }
+.pt-xl{ 
+    padding-top: calc(#{$padding-base}  * 1.618 * 1.618 * 1.618);
+}
+    .pb-xl{
+        padding-bottom: calc(#{$padding-base}  * 1.618 * 1.618 * 1.618);
+    }
+.pt-l{
+    padding-top:  calc(#{$padding-base}  * 1.618 * 1.618);
+}
+    .pb-l{
+        padding-bottom:  calc(#{$padding-base}  * 1.618 * 1.618 );
+    }
+.pt-m{
+    padding-top: calc(#{$padding-base} * 1.618 );
+}
+    .pb-m{
+        padding-bottom: calc(#{$padding-base} * 1.618);
+    }
+.pt-s{
+    padding-top: $padding-base;
+}
+    .pb-s{
+        padding-bottom: $padding-base;
+    }
+.pt-xs{
+    padding-top: calc(#{$padding-base} / 1.618);
+}
+    .pb-xs{
+        padding-bottom: calc(#{$padding-base} / 1.618);
+    }
+
