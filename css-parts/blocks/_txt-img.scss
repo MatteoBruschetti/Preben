@@ -1,0 +1,47 @@
+/*Blocco ACF
+*Testo Immagine
+-----------------------------------------------*/
+.txt-img {
+
+    .wysiwyg{
+        p{margin-bottom:1.6rem}
+    }
+
+    .col-img{
+        margin-bottom: 4rem;
+
+        @media #{$large}{
+            margin-bottom: 0;
+        }
+    }
+
+    img{
+        border-radius: 1rem;
+        max-height: 50vh;
+
+        @media #{$large}{
+            max-height: 80vh;
+        }
+    }
+    
+}
+
+.right .row{
+    flex-direction: row-reverse;   
+
+    .col-img{
+        @media #{$large}{
+            padding-left: 4.8rem;
+        }
+    }
+   
+}
+
+.left{
+    .col-img{
+        @media #{$large}{
+            padding-right: 4.8rem;
+        }
+    }
+
+}

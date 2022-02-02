@@ -1,6 +1,6 @@
 <?php
     //setup_theme
-    function XY_setup_theme() {
+    function NC_setup_theme() {
         //tag title dinamico inserito in automatico nell'header
         add_theme_support("title-tag");
          //add feed RSS supports
@@ -10,19 +10,19 @@
         //aggiunta di una posizione del menu
         register_nav_menu("header", "Navbar Header");
     }
-    add_action("after_setup_theme", "XY_setup_theme");
+    add_action("after_setup_theme", "NC_setup_theme");
     
     //add CSS
-    function XY_styles() {
+    function NC_styles() {
         wp_enqueue_style("XY-style", get_template_directory_uri().'/style.min.css');
         wp_enqueue_style("XY-grid", get_template_directory_uri().'/css-parts/bootstrap-grid.min.css');
     }
-    add_action("wp_enqueue_scripts", "XY_styles");
+    add_action("wp_enqueue_scripts", "NC_styles");
     //add JS
-    function XY_scripts() {
+    function NC_scripts() {
         wp_enqueue_script("XY-scriptjs", get_template_directory_uri().'/js/script.js', array("jquery"), null, true);
     }
-    add_action("wp_enqueue_scripts", "XY_scripts");
+    add_action("wp_enqueue_scripts", "NC_scripts");
 
 
 
@@ -59,7 +59,7 @@
     });
 
     //Remove emoji
-    function XY_disable_emojis() {
+    function NC_disable_emojis() {
         remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
         remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
         remove_action( 'wp_print_styles', 'print_emoji_styles' );
@@ -70,7 +70,7 @@
         add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
         add_filter( 'wp_resource_hints', 'disable_emojis_remove_dns_prefetch', 10, 2 );
     }
-    add_action( 'init', 'XY_disable_emojis' );
+    add_action( 'init', 'NC_disable_emojis' );
         function disable_emojis_tinymce( $plugins ) {
             if ( is_array( $plugins ) ) {
             return array_diff( $plugins, array( 'wpemoji' ) );
@@ -87,10 +87,10 @@
         }
     
     //Remove embeded
-    function XY_disable_embed(){
+    function NC_disable_embed(){
         wp_dequeue_script( 'wp-embed' );
     }
-    add_action( 'wp_footer', 'XY_disable_embed' );
+    add_action( 'wp_footer', 'NC_disable_embed' );
 
 
 
@@ -104,11 +104,11 @@
     add_action( 'after_setup_theme', 'nx_gutenberg_setup' );
 
     // ADD support to SVG upload
-    function XY_svg_types($mimes) {
+    function NC_svg_types($mimes) {
         $mimes['svg'] = 'image/svg+xml';
         return $mimes;
     }
-    add_filter('upload_mimes', 'XY_svg_types');
+    add_filter('upload_mimes', 'NC_svg_types');
 
 
 

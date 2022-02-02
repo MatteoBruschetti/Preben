@@ -5,7 +5,7 @@
 
     /*Replace = CPT*/
 
-    function XY_custom_CPT() {
+    function NC_custom_CPT() {
         register_post_type('CPT',
             array(
                 'labels'                =>          array(
@@ -43,15 +43,15 @@
             ), flush_rewrite_rules() /*fine delle opzioni*/
         );
     }
-    add_action('init', 'XY_custom_CPT');
+    add_action('init', 'NC_custom_CPT');
 
 
     
     /*SHORTCODE
     -----------------------------*/
-    add_shortcode( 'CPT', 'XY_display_CPT_custom_post_type' );
+    add_shortcode( 'CPT', 'NC_display_CPT_custom_post_type' );
 
-    function XY_display_CPT_custom_post_type($atts){
+    function NC_display_CPT_custom_post_type($atts){
         ob_start();
         extract( shortcode_atts( array (
             'limit' => -1,
@@ -80,14 +80,14 @@
         };
 
         // STAMPA
-        $XY_query = new WP_Query( $args );
-        if( $XY_query->have_posts() ){ ?>
+        $NC_query = new WP_Query( $args );
+        if( $NC_query->have_posts() ){ ?>
             <section id="CPT" class="CPT">
                 <div class="row">
                     <?php
                     // RICERCA POST NATIVI
-                    while( $XY_query->have_posts() ){
-                        $XY_query->the_post();
+                    while( $NC_query->have_posts() ){
+                        $NC_query->the_post();
                         global $post;
 
                         //get alt text of thumbnail

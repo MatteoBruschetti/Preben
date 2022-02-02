@@ -1,23 +1,13 @@
 .hero{
-    h1{
-        margin-top: rem(320);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
 
-        @media #{$mobile} {
-            text-align: center;
-        }
+    .wysiwyg{
+        p{margin-bottom:1.6rem}
     }
-    
-    @media #{$mobile} {
-            text-align: center;
-        }
 
-    .hero-img{
-        height:100vh;
-        background-repeat:no-repeat; background-size:cover; background-position: center;
-
-        @media #{$mobile} {
-            width: 100vw;
-            height: 80vh;
-        }
+    img{
+        border-radius: 1rem;
     }
 }

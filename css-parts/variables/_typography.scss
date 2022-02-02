@@ -1,37 +1,53 @@
+$font-family-primary: 'Lato', sans-serif;
+$font-family-secondary: 'Poppins', sans-serif;
+
+body{font-family: $font-family-primary;}
+h1, h2, h3{font-family: $font-family-secondary;}
+
+
 /*--------------------------------------------------
 Type scale
 --------------------------------------------------*/
-h1{
-    //font-family:
-    font-size: 9rem; font-weight: 600;
-    letter-spacing: -1.5px; line-height: 110%;
-    text-transform: uppercase;
-    text-align: center;
-    color: $color-black;
-    
-}
-
-h2{
-    //font-family:
-    font-size: 9rem; font-weight: 600;
-    letter-spacing: -1px; line-height: 110%;
-    text-transform: uppercase;
-    text-align: center;
-    color: $color-black;
+h1, h2{
+    font-size: clamp(3.6rem, 5vw, 5.6rem);
+    font-weight: 700;
+    letter-spacing: -1.5px; line-height: 140%;
+    color: $color-primary;
 }
 
 h3{
-    //font-family:
     font-size: 3rem; font-weight: 600;
     line-height: 110%;
     text-align: left;
 }
 
+.overtitle{
+    color: $color-secondary;
+    font-family: $font-family-primary;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 180%;
+
+    @media #{$large}{
+        font-size: 1.6rem;
+    }
+}
 
 p{
-    font-size: 1rem; font-weight: 400;
+    color: $color-txt-secondary;
+    font-size: 1.6rem;
     line-height: 180%;
     word-wrap:break-word;
+
+    &.h1{
+        font-family: $font-family-secondary;
+        font-size: clamp(3.6rem, 5vw, 5.6rem);
+        font-weight: 700;
+        letter-spacing: -1.5px; line-height: 140%;
+        color: $color-primary;
+    }
 }
 
 

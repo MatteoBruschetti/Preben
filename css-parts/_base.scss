@@ -29,13 +29,13 @@ BASE
 --------------------------------------------------*/
 *, *:before, *:after{ -webkit-tap-highlight-color: rgba(0, 0, 0, 0); } //remove highlights on tapping on mobile devices 
 html{
-  font-size: 16px; /*= 1rem*/
+  font-size: 62.5%; /*= 62,5% di 16px = 10px*/
   box-sizing: border-box; /*Include padding and border in the element's total width and height*/
   scroll-behavior: smooth; 
 }
 
 body{
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.6rem; /*= 10px * 1.6 = 16px*/
   background: $color-white;
 }
 ::selection{
@@ -44,5 +44,5 @@ body{
 }
 
 img{
-  width: 100%;
+  max-width: 100%;
 }

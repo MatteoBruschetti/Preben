@@ -14,9 +14,9 @@
         <nav>
             <!--logo dinamico-->
             <div class="logo">
-                <?php if(get_theme_mod("XY_logo_image_color")) { ?>
+                <?php if(get_theme_mod("NC_logo_image_color")) { ?>
                     <a class="navbar-brand" href="<?php echo esc_url_raw(home_url()); ?>">
-                        <img src="<?php echo get_theme_mod("XY_logo_image_color"); ?>" alt="<?php echo get_theme_mod("XY_logo_alt_text"); ?>">
+                        <img src="<?php echo get_theme_mod("NC_logo_image_color"); ?>" alt="<?php echo get_theme_mod("NC_logo_alt_text"); ?>">
                     </a>
                 <?php } else { ?>
                     <a class="navbar-brand" href="<?php echo esc_url_raw(home_url()); ?>"><?php bloginfo("name"); ?></a>

@@ -21,27 +21,67 @@ Description:    - ACF invece di Gutemberg per permettere al cliente la gestione 
 /*------------------------------------------------------------------------------
 HOSTING LOCAL FONTS with https://google-webfonts-helper.herokuapp.com/fonts/
 ------------------------------------------------------------------------------*/
+/* lato-regular - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../../fonts/lato-v22-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../../../fonts/lato-v22-latin-regular.eot?#iefix") format("embedded-opentype"), url("../../../fonts/lato-v22-latin-regular.woff2") format("woff2"), url("../../../fonts/lato-v22-latin-regular.woff") format("woff"), url("../../../fonts/lato-v22-latin-regular.ttf") format("truetype"), url("../../../fonts/lato-v22-latin-regular.svg#Lato") format("svg");
+  /* Legacy iOS */
+}
+
+/* lato-italic - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: url("../../../fonts/lato-v22-latin-italic.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../../../fonts/lato-v22-latin-italic.eot?#iefix") format("embedded-opentype"), url("../../../fonts/lato-v22-latin-italic.woff2") format("woff2"), url("../../../fonts/lato-v22-latin-italic.woff") format("woff"), url("../../../fonts/lato-v22-latin-italic.ttf") format("truetype"), url("../../../fonts/lato-v22-latin-italic.svg#Lato") format("svg");
+  /* Legacy iOS */
+}
+
+/* lato-700 - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../../fonts/lato-v22-latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../../../fonts/lato-v22-latin-700.eot?#iefix") format("embedded-opentype"), url("../../../fonts/lato-v22-latin-700.woff2") format("woff2"), url("../../../fonts/lato-v22-latin-700.woff") format("woff"), url("../../../fonts/lato-v22-latin-700.ttf") format("truetype"), url("../../../fonts/lato-v22-latin-700.svg#Lato") format("svg");
+  /* Legacy iOS */
+}
+
+/* poppins-700 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../../fonts/poppins-v19-latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../../../fonts/poppins-v19-latin-700.eot?#iefix") format("embedded-opentype"), url("../../../fonts/poppins-v19-latin-700.woff2") format("woff2"), url("../../../fonts/poppins-v19-latin-700.woff") format("woff"), url("../../../fonts/poppins-v19-latin-700.ttf") format("truetype"), url("../../../fonts/poppins-v19-latin-700.svg#Poppins") format("svg");
+  /* Legacy iOS */
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Poppins", sans-serif;
+}
+
 /*--------------------------------------------------
 Type scale
 --------------------------------------------------*/
-h1 {
-  font-size: 9rem;
-  font-weight: 600;
+h1, h2 {
+  font-size: clamp(3.6rem, 5vw, 5.6rem);
+  font-weight: 700;
   letter-spacing: -1.5px;
-  line-height: 110%;
-  text-transform: uppercase;
-  text-align: center;
-  color: #1D1D1F;
-}
-
-h2 {
-  font-size: 9rem;
-  font-weight: 600;
-  letter-spacing: -1px;
-  line-height: 110%;
-  text-transform: uppercase;
-  text-align: center;
-  color: #1D1D1F;
+  line-height: 140%;
+  color: #002868;
 }
 
 h3 {
@@ -51,11 +91,36 @@ h3 {
   text-align: left;
 }
 
-p {
-  font-size: 1rem;
+.overtitle {
+  color: #DC0500;
+  font-family: "Lato", sans-serif;
+  font-size: 1.4rem;
   font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 180%;
+}
+
+@media (min-width: 992px) {
+  .overtitle {
+    font-size: 1.6rem;
+  }
+}
+
+p {
+  color: #58585b;
+  font-size: 1.6rem;
   line-height: 180%;
   word-wrap: break-word;
+}
+
+p.h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(3.6rem, 5vw, 5.6rem);
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  line-height: 140%;
+  color: #002868;
 }
 
 /*--------------------------------------------------
@@ -111,62 +176,29 @@ RECCOMENDATIONS for text font sizes
 --------------------------------------------------*/
 /*--------------------------------------------------
     MARGIN
-    https://type-scale.com/?size=16&scale=1.333&text=A%20Visual%20Type%20Scale&font=Inter&fontweight=400&bodyfont=Poppins&bodyfontweight=400&lineheight=1.65&backgroundcolor=white&fontcolor=%23333&preview=false
 --------------------------------------------------*/
-.mt-xxl {
-  margin-top: calc(1rem  * 1.618 * 1.618 * 1.618 * 1.618 * 1.618);
+.mb-240 {
+  margin-bottom: 24rem;
 }
 
-.mb-xxl {
-  margin-bottom: calc(1rem  * 1.618 * 1.618 * 1.618 * 1.618 * 1.618);
+.mb-40 {
+  margin-bottom: 4rem;
 }
 
-.mt-xxl {
-  margin-top: calc(1rem  * 1.618 * 1.618 * 1.618 * 1.618);
+.mb-32 {
+  margin-bottom: 3.2rem;
 }
 
-.mb-xxl {
-  margin-bottom: calc(1rem  * 1.618 * 1.618 * 1.618 * 1.618);
+.mb-24 {
+  margin-bottom: 2.4rem;
 }
 
-.mt-xl {
-  margin-top: calc(1rem  * 1.618 * 1.618 * 1.618);
+.mb-16 {
+  margin-bottom: 1.6rem;
 }
 
-.mb-xl {
-  margin-bottom: calc(1rem  * 1.618 * 1.618 * 1.618);
-}
-
-.mt-l {
-  margin-top: calc(1rem  * 1.618 * 1.618);
-}
-
-.mb-l {
-  margin-bottom: calc(1rem  * 1.618 * 1.618);
-}
-
-.mt-m {
-  margin-top: calc(1rem * 1.618);
-}
-
-.mb-m {
-  margin-bottom: calc(1rem * 1.618);
-}
-
-.mt-s {
-  margin-top: 1rem;
-}
-
-.mb-s {
-  margin-bottom: 1rem;
-}
-
-.mt-xs {
-  margin-top: calc(1rem / 1.618);
-}
-
-.mb-xs {
-  margin-bottom: calc(1rem / 1.618);
+.mb-8 {
+  margin-bottom: 0.8rem;
 }
 
 /*--------------------------------------------------
@@ -182,62 +214,6 @@ PADDING
 
 .no-pr {
   padding-right: 0 !important;
-}
-
-.pt-xxl {
-  padding-top: calc(1rem  * 1.618 * 1.618 * 1.618 * 1.618 * 1.618);
-}
-
-.pb-xxl {
-  padding-bottom: calc(1rem  * 1.618 * 1.618 * 1.618 * 1.618 * 1.618);
-}
-
-.pt-xxl {
-  padding-top: calc(1rem  * 1.618 * 1.618 * 1.618 * 1.618);
-}
-
-.pb-xxl {
-  padding-bottom: calc(1rem  * 1.618 * 1.618 * 1.618 * 1.618);
-}
-
-.pt-xl {
-  padding-top: calc(1rem  * 1.618 * 1.618 * 1.618);
-}
-
-.pb-xl {
-  padding-bottom: calc(1rem  * 1.618 * 1.618 * 1.618);
-}
-
-.pt-l {
-  padding-top: calc(1rem  * 1.618 * 1.618);
-}
-
-.pb-l {
-  padding-bottom: calc(1rem  * 1.618 * 1.618);
-}
-
-.pt-m {
-  padding-top: calc(1rem * 1.618);
-}
-
-.pb-m {
-  padding-bottom: calc(1rem * 1.618);
-}
-
-.pt-s {
-  padding-top: 1rem;
-}
-
-.pb-s {
-  padding-bottom: 1rem;
-}
-
-.pt-xs {
-  padding-top: calc(1rem / 1.618);
-}
-
-.pb-xs {
-  padding-bottom: calc(1rem / 1.618);
 }
 
 /*--------------------------------------------------
@@ -274,8 +250,8 @@ BASE
 }
 
 html {
-  font-size: 16px;
-  /*= 1rem*/
+  font-size: 62.5%;
+  /*= 62,5% di 16px = 10px*/
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   /*Include padding and border in the element's total width and height*/
@@ -283,22 +259,23 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', Arial, sans-serif;
-  background: #FEFEFE;
+  font-size: 1.6rem;
+  /*= 10px * 1.6 = 16px*/
+  background: #FFFFFF;
 }
 
 ::-moz-selection {
   color: white;
-  background: black;
+  background: #002868;
 }
 
 ::selection {
   color: white;
-  background: black;
+  background: #002868;
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 /*--------------------------------------------------
@@ -321,7 +298,7 @@ nav {
   width: 100vw;
   height: 64px;
   max-height: 80px;
-  background-color: black;
+  background-color: #002868;
   padding: 0.5rem 2rem;
   position: fixed;
   top: 0;
@@ -333,7 +310,7 @@ nav a {
 }
 
 nav .logo {
-  color: #FEFEFE;
+  color: #FFFFFF;
   font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -377,7 +354,7 @@ nav .burger #burger-icon rect {
 
 nav .burger #burger-icon line {
   fill: none;
-  stroke: #FEFEFE;
+  stroke: #FFFFFF;
   stroke-linecap: round;
   stroke-miterlimit: 10;
   stroke-width: 4px;
@@ -452,7 +429,7 @@ nav .menu {
           transform: translateX(101vw);
   height: calc(100vh - 64px);
   width: 100vw;
-  background-color: black;
+  background-color: #002868;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -479,14 +456,14 @@ nav .menu li {
 }
 
 nav .menu li a {
-  color: #FEFEFE;
+  color: #FFFFFF;
   font-size: 1.5rem;
   -webkit-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
 }
 
 nav .menu li a:hover {
-  color: grey;
+  color: #DC0500;
 }
 
 nav .open {
@@ -543,7 +520,7 @@ nav .open li:nth-child(6) {
 }
 
 nav .current-menu-item a {
-  color: grey !important;
+  color: #DC0500 !important;
 }
 
 .fix-fixed {
@@ -551,156 +528,156 @@ nav .current-menu-item a {
 }
 
 footer {
-  background-color: grey;
+  background-color: #DC0500;
 }
 
 footer .svg-social-icon-bg {
-  fill: black;
+  fill: #002868;
 }
 
 footer .svg-social-icon {
-  fill: #FEFEFE;
+  fill: #FFFFFF;
 }
 
 footer .widget_nav_menu .menu-item a {
-  color: black;
+  color: #262626;
   text-decoration: none;
   display: inline-block;
   text-transform: uppercase;
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid #002868;
   -webkit-transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 footer .widget_nav_menu .menu-item a:hover {
-  border-bottom-color: grey;
+  border-bottom-color: #DC0500;
   padding: 0 5px;
 }
 
 footer .widget_nav_menu .menu-item.current_page_item a {
-  color: red;
+  color: #DC0500;
   border-bottom: none;
 }
 
 /*----------------------------------------
     BUTTONS
 -----------------------------------------*/
-.btn {
+.button {
   display: inline-block;
-  color: #FEFEFE;
-  background: black;
-  font-size: 1rem;
+  color: #FFFFFF;
+  background: #DC0500;
+  font-size: 1.4rem;
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: 800;
-  letter-spacing: 1px;
-  border-radius: 100px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-radius: 100vw;
   padding: 16px 32px;
-  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.btn:hover {
+.button:hover {
   -webkit-box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
           box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
-  background-color: grey;
+  background-color: #002868;
 }
 
 /*----------------------------------------
     LINKS
 -----------------------------------------*/
 .link {
-  color: black;
+  color: #262626;
   text-decoration: none;
   display: inline-block;
   text-transform: uppercase;
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid #002868;
   -webkit-transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 .link:hover {
-  border-bottom-color: grey;
+  border-bottom-color: #DC0500;
   padding: 0 5px;
 }
 
 .link-ghost {
-  color: black;
+  color: #262626;
   -webkit-transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 .link-ghost:hover {
-  color: grey;
+  color: #58585b;
 }
 
 /*--------------------------------------------------
 RECCOMENDATIONS for target size by Apple
     DESKTOP and MOBILE minimun raget size = 44px X 44px 
 --------------------------------------------------*/
-/*Blocco ACF
-*Testo Immagine
------------------------------------------------*/
-.testo-immagine .row {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.testo-immagine h2 {
-  text-align: left;
-}
-
-.testo-immagine img {
-  width: 100%;
-}
-
-.destra .row {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
-@media (min-width: 768px) {
-  .destra .row .immagine {
-    padding: 0 0 0 30px;
-  }
-}
-
-@media (min-width: 768px) {
-  .sinistra .immagine {
-    padding: 0 30px 0 0;
-  }
-}
-
-.immagine-full-width .col-12 {
-  height: 75vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.citazione .row {
+.hero {
+  min-height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-.citazione svg {
-  max-height: 20vh;
+.hero .wysiwyg p {
+  margin-bottom: 1.6rem;
 }
 
-.citazione p {
-  font-size: 1.75rem;
-  font-weight: 700;
+.hero img {
+  border-radius: 1rem;
 }
-/*# sourceMappingURL=style.css.map */
+
+/*Blocco ACF
+*Testo Immagine
+-----------------------------------------------*/
+.txt-img .wysiwyg p {
+  margin-bottom: 1.6rem;
+}
+
+.txt-img .col-img {
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 992px) {
+  .txt-img .col-img {
+    margin-bottom: 0;
+  }
+}
+
+.txt-img img {
+  border-radius: 1rem;
+  max-height: 50vh;
+}
+
+@media (min-width: 992px) {
+  .txt-img img {
+    max-height: 80vh;
+  }
+}
+
+.right .row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+@media (min-width: 992px) {
+  .right .row .col-img {
+    padding-left: 4.8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .left .col-img {
+    padding-right: 4.8rem;
+  }
+}

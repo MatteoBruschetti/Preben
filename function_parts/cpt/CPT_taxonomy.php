@@ -5,7 +5,7 @@
 
     /*Replace = cpttaxonomy*/
 
-    function XY_custom_cpttaxonomy() {
+    function NC_custom_cpttaxonomy() {
         register_post_type( 'cpttaxonomy',
             array(
                 'labels'                =>          array(
@@ -45,10 +45,10 @@
     }
 
     // Inizializzazione della funzione
-    add_action( 'init', 'XY_custom_cpttaxonomy');
+    add_action( 'init', 'NC_custom_cpttaxonomy');
 
     //aggiunta categorie
-    function XY_cpttaxonomy_taxonomies() {
+    function NC_cpttaxonomy_taxonomies() {
         register_taxonomy(
             'categoria_tag',
             'cpttaxonomy',
@@ -68,14 +68,14 @@
 
     }
 
-    add_action( 'init', 'XY_cpttaxonomy_taxonomies', 0 );
+    add_action( 'init', 'NC_cpttaxonomy_taxonomies', 0 );
 
 
     /*SHORTCODE
     -----------------------------*/
-    add_shortcode( 'cpttaxonomy', 'XY_display_cpttaxonomy_custom_post_type' );
+    add_shortcode( 'cpttaxonomy', 'NC_display_cpttaxonomy_custom_post_type' );
 
-    function XY_display_cpttaxonomy_custom_post_type($atts){
+    function NC_display_cpttaxonomy_custom_post_type($atts){
         ob_start();
         extract( shortcode_atts( array (
             'limit' => -1,
@@ -104,14 +104,14 @@
         };
 
         // STAMPA
-        $XY_query = new WP_Query( $args );
-        if( $XY_query->have_posts() ){ ?>
+        $NC_query = new WP_Query( $args );
+        if( $NC_query->have_posts() ){ ?>
             <section id="cpttaxonomy" class="cpttaxonomy">
                 <div class="row">
                     <?php
                     // RICERCA POST NATIVI
-                    while( $XY_query->have_posts() ){
-                        $XY_query->the_post();
+                    while( $NC_query->have_posts() ){
+                        $NC_query->the_post();
                         global $post;
 
                         //get alt text of thumbnail

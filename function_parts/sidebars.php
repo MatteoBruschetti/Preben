@@ -3,12 +3,12 @@
     ADD SIDEBAR (che si popoplano di widget in Aspetto -> Widget)
 ----------------------------------------------------------------------------*/
 
-if(! function_exists('XY_sidebars')) {
+if(! function_exists('NC_sidebars')) {
 
 
     /*FOOTER sidebars
     ---------------------------------------------*/
-    function XY_sidebars() {
+    function NC_sidebars() {
         register_sidebar(array(
             'name' => esc_html__('Cerca', 'XY'),
             'id' => 'Cerca',
@@ -35,7 +35,7 @@ if(! function_exists('XY_sidebars')) {
 
     }
 }
-add_action('widgets_init', 'XY_sidebars');
+add_action('widgets_init', 'NC_sidebars');
 
 
 ?>

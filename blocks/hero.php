@@ -20,30 +20,31 @@ if( !empty($block['className']) ) {
 }
 
 // Load values and assign defaults.
-$titolo = get_field('titoloh1') ?: 'Titolo👈';
-$testo = get_field('testo') ?: 'Testo👈';
-$img = get_field('img');
-$btn = get_field('btn');
+$overtitle = get_field('overtitle') ?: 'Overtitle👈';
+$title = get_field('title') ?: 'Title👈';
+$text = get_field('text') ?: 'Text👈';
+$button = get_field('button');
+$media = get_field('media');
 
 ?>
 
-<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
-<div class="container-fluid pl-310"> 
-    <div class="row">
-        <div class="col-md-6 col-sm-12">
-            <div class="mr-120">
-            <h1><?php echo $titolo; ?></h1>
-            <p><?php echo $testo; ?></p>
-
-            <?php if( $btn ): 
-                $link_url = $btn['url'];
-                $link_title = $btn['title'];
-                ?>
-                    <a class="btn mt-80" href="<?php echo esc_url( $link_url ); ?>"><?php echo esc_html( $link_title ); ?></a>
-            <?php endif; ?>  
-            </div>      
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> mb-240">
+    <div class="container"> 
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-6">
+                <h1 class="overtitle mb-8"><?php echo $overtitle; ?></h1>
+                <p class="h1 mb-32"><?php echo $title; ?></p>
+                <div class="wysiwyg mb-32"><?php echo $text; ?></div>
+                <?php if( $button ): 
+                    $link_url = $button['url'];
+                    $link_title = $button['title'];
+                    ?>
+                    <a class="button" href="<?php echo esc_url( $link_url ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                <?php endif; ?>  
+            </div>
+            <div class="col-12 col-lg-5 offset-lg-1">
+                <img src="<?php echo esc_url($media['url']); ?>" alt="<?php echo esc_attr($media['alt']); ?>" />
+            </div>
         </div>
-        <div class="col-md-6 col-sm-12 hero-img" style="background-image:url(<?php echo $img; ?>);"></div>
     </div>
-</div>
-</div>
+</section>
