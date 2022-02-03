@@ -1,5 +1,22 @@
 <?php
 
+    /*ADD Option Page*/
+    if( function_exists('acf_add_options_page') ) {
+        acf_add_options_page(array(
+            'page_title' 	=> 'General Settings',
+            'menu_title'	=> 'General Settings',
+            'menu_slug' 	=> 'theme-general-settings',
+            'capability'	=> 'edit_posts',
+            'redirect'		=> false
+        ));
+        
+        acf_add_options_sub_page(array(
+            'page_title' 	=> 'Counters',
+            'menu_title'	=> 'Counters',
+            'parent_slug'	=> 'theme-general-settings',
+        ));      
+    }
+
     /*Registriamo una nuova categoria x i blocchi in Gutemberg
     --------------------------------------------------------------*/
     function NC_block_categories( $categories, $post ) {
@@ -8,15 +25,13 @@
             array(
                 array(
                     'slug' => 'norvegianBlocks',
-                    'title' => __( 'Blocchi personalizzati Norvegian Community', 'XY' ),
+                    'title' => __( 'Norvegian Community Blocks', 'NC' ),
                     'icon' => 'star-filled'
                 ),
             )
         );
     }
     add_filter( 'block_categories', 'NC_block_categories', 10, 2 );
-
-
 
 
     /*Registriamo blocchi ACF
@@ -63,7 +78,7 @@
                 'render_template'   => '/blocks/txt-img.php',
                 'category'          => 'norvegianBlocks',
                 'icon'              => 'align-pull-left',
-                'keywords'          => array( 'sezione', 'testo', 'immagine' ),
+                'keywords'          => array( 'section', 'text', 'image' ),
                 'mode'              => 'edit',
                 'align'             => 'wide',
                 'supports'          => array(
@@ -88,8 +103,120 @@
                     )
                 )
             ));
+            
+            /*COUNTERS
+            --------------------------------------------------------*/
+            acf_register_block_type(array(
+                'name'              => 'counters',
+                'title'             => __('Counters'),
+                'description'       => __('Section with course numbers'),
+                'render_template'   => '/blocks/counters.php',
+                'category'          => 'norvegianBlocks',
+                'icon'              => 'performance',
+                'keywords'          => array( 'section', 'numbers', 'counters' ),
+                'mode'              => 'edit',
+                'align'             => 'wide',
+                'supports'          => array(
+                    'align' => false,
+                    'jsx' => true,
+                ),
+                //preview in Gutemberg
+                'example'  => array(
+                    'attributes' => array(
+                        'mode' => 'preview',
+                        'data' => array(
+                            '_is_preview'   => 'true'
+                        )
+                    )
+                )
+            ));
 
-
+            /*KEYPOINTS
+            --------------------------------------------------------*/
+            acf_register_block_type(array(
+                'name'              => 'keypoints',
+                'title'             => __('Keypoints'),
+                'description'       => __('Section with icon keypoints'),
+                'render_template'   => '/blocks/keypoints.php',
+                'category'          => 'norvegianBlocks',
+                'icon'              => 'editor-ul',
+                'keywords'          => array( 'section', 'icon', 'keypoints' ),
+                'mode'              => 'edit',
+                'align'             => 'wide',
+                'supports'          => array(
+                    'align' => false,
+                    'jsx' => true,
+                ),
+                //preview in Gutemberg
+                'example'  => array(
+                    'attributes' => array(
+                        'mode' => 'preview',
+                        'data' => array(
+                            'overtitle'              =>          "Preview overtitle",
+                            'title'                  =>          "Preview title",
+                            'text'                   =>          "Preview text",
+                        )
+                    )
+                )
+            ));
+            
+            /*STEPS
+            --------------------------------------------------------*/
+            acf_register_block_type(array(
+                'name'              => 'steps',
+                'title'             => __('Steps'),
+                'description'       => __('Section with icon steps'),
+                'render_template'   => '/blocks/steps.php',
+                'category'          => 'norvegianBlocks',
+                'icon'              => 'ellipsis',
+                'keywords'          => array( 'section', 'icon', 'steps' ),
+                'mode'              => 'edit',
+                'align'             => 'wide',
+                'supports'          => array(
+                    'align' => false,
+                    'jsx' => true,
+                ),
+                //preview in Gutemberg
+                'example'  => array(
+                    'attributes' => array(
+                        'mode' => 'preview',
+                        'data' => array(
+                            'overtitle'              =>          "Preview overtitle",
+                            'title'                  =>          "Preview title",
+                            'text'                   =>          "Preview text",
+                        )
+                    )
+                )
+            ));
+            
+            /*TITLE
+            --------------------------------------------------------*/
+            acf_register_block_type(array(
+                'name'              => 'title_txt',
+                'title'             => __('Title and Text'),
+                'description'       => __('Section with title and text'),
+                'render_template'   => '/blocks/title_txt.php',
+                'category'          => 'norvegianBlocks',
+                'icon'              => 'editor-textcolor',
+                'keywords'          => array( 'section', 'title and text' ),
+                'mode'              => 'edit',
+                'align'             => 'wide',
+                'supports'          => array(
+                    'align' => false,
+                    'jsx' => true,
+                ),
+                //preview in Gutemberg
+                'example'  => array(
+                    'attributes' => array(
+                        'mode' => 'preview',
+                        'data' => array(
+                            'overtitle'              =>          "Preview overtitle",
+                            'title'                  =>          "Preview title",
+                            'text'                   =>          "Preview text",
+                        )
+                    )
+                )
+            ));
 
             /*CITAZIONE
             *Testo e svg decorativa

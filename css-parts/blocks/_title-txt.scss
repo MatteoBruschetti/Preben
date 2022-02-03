@@ -1,0 +1,7 @@
+.title_txt{
+    text-align: left;
+
+    @media #{$large}{
+        text-align: center;
+    }
+}

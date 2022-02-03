@@ -1,0 +1,23 @@
+.steps{
+    text-align: left;
+
+    @media #{$large}{
+        text-align: center;
+    }
+
+    .wysiwyg{
+        p{margin-bottom:1.6rem}
+    }
+
+    .step-icon{
+        margin-bottom: 1.6rem;
+        width: 4rem;
+
+        @media #{$large}{
+            width: 6.5rem;
+        }
+    }
+    .step-label{
+        text-align: left;
+    }
+}

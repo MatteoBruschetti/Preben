@@ -14,13 +14,13 @@
     
     //add CSS
     function NC_styles() {
-        wp_enqueue_style("XY-style", get_template_directory_uri().'/style.min.css');
-        wp_enqueue_style("XY-grid", get_template_directory_uri().'/css-parts/bootstrap-grid.min.css');
+        wp_enqueue_style("NC-style", get_template_directory_uri().'/style.min.css');
+        wp_enqueue_style("NC-grid", get_template_directory_uri().'/css-parts/bootstrap-grid.min.css');
     }
     add_action("wp_enqueue_scripts", "NC_styles");
     //add JS
     function NC_scripts() {
-        wp_enqueue_script("XY-scriptjs", get_template_directory_uri().'/js/script.js', array("jquery"), null, true);
+        wp_enqueue_script("NC-scriptjs", get_template_directory_uri().'/js/script.js', array("jquery"), null, true);
     }
     add_action("wp_enqueue_scripts", "NC_scripts");
 
@@ -120,7 +120,7 @@ require dirname(__FILE__).'/function_parts/sidebars.php';
 require dirname(__FILE__).'/function_parts/customize_backend.php';
 
 //CPT
-require dirname(__FILE__).'/function_parts/cpt/CPT.php';
+require dirname(__FILE__).'/function_parts/cpt/review.php';
 require dirname(__FILE__).'/function_parts/cpt/CPT_taxonomy.php';
 ?>
 

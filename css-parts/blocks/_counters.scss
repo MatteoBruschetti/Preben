@@ -1,0 +1,24 @@
+.counters{
+    background-color: $color-primary;
+
+    .row{
+        padding: 8rem 0;
+
+        p{
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .counter-number{
+            font-family: $font-family-secondary;
+            font-size: clamp(3rem, 4.5vw, 5.6rem);
+            line-height: 120%;
+            font-weight: 700;
+            color: $color-white;
+        }
+
+        .counter-text{
+            color: $color-low-white-on-blue;
+        }
+    }
+}

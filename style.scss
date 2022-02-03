@@ -36,9 +36,16 @@ Description:    - ACF invece di Gutemberg per permettere al cliente la gestione 
 @import "css-parts/components/footer";
 @import "css-parts/components/btn";
 
+//cpt
+@import "css-parts/cpt/review";
+
 //blocks
 @import "css-parts/blocks/hero";
 @import "css-parts/blocks/txt-img";
+@import "css-parts/blocks/counters";
+@import "css-parts/blocks/keypoints";
+@import "css-parts/blocks/steps";
+@import "css-parts/blocks/title-txt";
 // @import "css-parts/blocks/immagine-full-width";
 // @import "css-parts/blocks/cit";
   

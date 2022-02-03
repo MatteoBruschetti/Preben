@@ -1,0 +1,40 @@
+.keypoints{
+    background-color: $color-primary;
+    text-align: center;
+    padding: 8rem 0;
+
+    @media #{$large}{
+        padding: 12rem 0;
+    }
+
+    .wysiwyg{
+        p{margin-bottom:1.6rem}
+    }
+
+    h2{
+        color: $color-white;
+    }
+
+    p{
+        color: $color-low-white-on-blue;
+        strong{color: $color-low-white;}
+    }
+
+    .link{
+        color: $color-low-white-on-blue;
+        text-transform: uppercase;
+        transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+        &:hover{
+            color: $color-low-white;
+        }
+    }
+
+    .points-icon{
+        width: 6.5rem;
+
+        @media #{$large}{
+            width: 8rem;
+        }
+    }
+}

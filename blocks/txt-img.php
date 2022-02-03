@@ -21,9 +21,9 @@
 
     // Load values and assign defaults.
     $image = get_field('image');
-    $overtitle = get_field('overtitle') ?: 'Overtitle';
-    $title = get_field('title') ?: 'Title';
-    $text = get_field('text') ?: 'Text';
+    $overtitle = get_field('overtitle');
+    $title = get_field('title');
+    $text = get_field('text');
     $button = get_field('button');
     $position = get_field('position')
 ?>

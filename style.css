@@ -181,6 +181,14 @@ RECCOMENDATIONS for text font sizes
   margin-bottom: 24rem;
 }
 
+.mb-80 {
+  margin-bottom: 8rem;
+}
+
+.mb-64 {
+  margin-bottom: 6.4rem;
+}
+
 .mb-40 {
   margin-bottom: 4rem;
 }
@@ -585,38 +593,101 @@ footer .widget_nav_menu .menu-item.current_page_item a {
   background-color: #002868;
 }
 
-/*----------------------------------------
-    LINKS
------------------------------------------*/
+/*LINK
+------------------------------*/
 .link {
-  color: #262626;
-  text-decoration: none;
-  display: inline-block;
-  text-transform: uppercase;
-  border-bottom: 4px solid #002868;
-  -webkit-transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  color: #DC0500;
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .link:hover {
-  border-bottom-color: #DC0500;
-  padding: 0 5px;
-}
-
-.link-ghost {
-  color: #262626;
-  -webkit-transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-}
-
-.link-ghost:hover {
-  color: #58585b;
+  color: #002868;
 }
 
 /*--------------------------------------------------
 RECCOMENDATIONS for target size by Apple
     DESKTOP and MOBILE minimun raget size = 44px X 44px 
 --------------------------------------------------*/
+.review article {
+  position: relative;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #FBFBFD;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.012), 0px 0px 3.5px rgba(0, 0, 0, 0.018), 0px 0px 7.1px rgba(0, 0, 0, 0.022), 0px 0px 14.6px rgba(0, 0, 0, 0.028), 0px 0px 40px rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.012), 0px 0px 3.5px rgba(0, 0, 0, 0.018), 0px 0px 7.1px rgba(0, 0, 0, 0.022), 0px 0px 14.6px rgba(0, 0, 0, 0.028), 0px 0px 40px rgba(0, 0, 0, 0.04);
+  padding: 2.4rem 2.4rem 2rem;
+}
+
+@media (min-width: 992px) {
+  .review article {
+    padding: 4.8rem 4.8rem 4rem;
+  }
+}
+
+.review article .quote {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-20%, -38%);
+          transform: translate(-20%, -38%);
+}
+
+.review article .quote svg {
+  max-width: 3.2rem;
+}
+
+@media (min-width: 992px) {
+  .review article .quote svg {
+    max-width: 5.4rem;
+  }
+}
+
+.review article .review-text {
+  color: #58585b;
+}
+
+.review article .review-name {
+  font-size: 1.8rem;
+  color: #262626;
+  line-height: 125%;
+}
+
+.review article .review-course p {
+  font-size: 1.4rem;
+}
+
+.review .review-cta-col {
+  min-height: 100%;
+}
+
+.review .review-cta {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .hero {
   min-height: 90vh;
   display: -webkit-box;
@@ -679,5 +750,118 @@ RECCOMENDATIONS for target size by Apple
 @media (min-width: 992px) {
   .left .col-img {
     padding-right: 4.8rem;
+  }
+}
+
+.counters {
+  background-color: #002868;
+}
+
+.counters .row {
+  padding: 8rem 0;
+}
+
+.counters .row p {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.counters .row .counter-number {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(3rem, 4.5vw, 5.6rem);
+  line-height: 120%;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.counters .row .counter-text {
+  color: rgba(251, 251, 253, 0.72);
+}
+
+.keypoints {
+  background-color: #002868;
+  text-align: center;
+  padding: 8rem 0;
+}
+
+@media (min-width: 992px) {
+  .keypoints {
+    padding: 12rem 0;
+  }
+}
+
+.keypoints .wysiwyg p {
+  margin-bottom: 1.6rem;
+}
+
+.keypoints h2 {
+  color: #FFFFFF;
+}
+
+.keypoints p {
+  color: rgba(251, 251, 253, 0.72);
+}
+
+.keypoints p strong {
+  color: #FBFBFD;
+}
+
+.keypoints .link {
+  color: rgba(251, 251, 253, 0.72);
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.keypoints .link:hover {
+  color: #FBFBFD;
+}
+
+.keypoints .points-icon {
+  width: 6.5rem;
+}
+
+@media (min-width: 992px) {
+  .keypoints .points-icon {
+    width: 8rem;
+  }
+}
+
+.steps {
+  text-align: left;
+}
+
+@media (min-width: 992px) {
+  .steps {
+    text-align: center;
+  }
+}
+
+.steps .wysiwyg p {
+  margin-bottom: 1.6rem;
+}
+
+.steps .step-icon {
+  margin-bottom: 1.6rem;
+  width: 4rem;
+}
+
+@media (min-width: 992px) {
+  .steps .step-icon {
+    width: 6.5rem;
+  }
+}
+
+.steps .step-label {
+  text-align: left;
+}
+
+.title_txt {
+  text-align: left;
+}
+
+@media (min-width: 992px) {
+  .title_txt {
+    text-align: center;
   }
 }
