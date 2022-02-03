@@ -123,4 +123,3 @@ require dirname(__FILE__).'/function_parts/customize_backend.php';
 require dirname(__FILE__).'/function_parts/cpt/review.php';
 require dirname(__FILE__).'/function_parts/cpt/CPT_taxonomy.php';
 ?>
-
