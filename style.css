@@ -168,6 +168,10 @@ RECCOMENDATIONS for text font sizes
   margin-bottom: 24rem;
 }
 
+.mb-180 {
+  margin-bottom: 18rem;
+}
+
 .mb-80 {
   margin-bottom: 8rem;
 }
@@ -775,6 +779,10 @@ RECCOMENDATIONS for target size by Apple
 
 .hero img {
   border-radius: 1rem;
+}
+
+.secondary-hero .wysiwyg p {
+  margin-bottom: 1.6rem;
 }
 
 /*Blocco ACF

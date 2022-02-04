@@ -31,7 +31,7 @@ if( !empty( $block['data']['_is_preview'] ) ) { ?>
 } else {
     ?>
 
-    <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> mb-240">
+    <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> mb-180">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -75,7 +75,7 @@ if( !empty( $block['data']['_is_preview'] ) ) { ?>
                 </div>
                 <!--Email-->
                 <div class="col-3 col-social">
-                    <a href="mailto:<?php echo get_theme_mod("NC_social_email"); ?>" class="contacts-icon-link" target="_blank">
+                    <a href="mailto:<?php echo get_theme_mod("NC_contatti_email"); ?>" class="contacts-icon-link" target="_blank">
                         <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="40" cy="40" r="32.5" fill="#002868"/>
                             <path d="M25 28.75H55V50C55 50.3315 54.8683 50.6495 54.6339 50.8839C54.3995 51.1183 54.0815 51.25 53.75 51.25H26.25C25.9185 51.25 25.6005 51.1183 25.3661 50.8839C25.1317 50.6495 25 50.3315 25 50V28.75Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
