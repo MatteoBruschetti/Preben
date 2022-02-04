@@ -3,8 +3,8 @@
     /*ADD Option Page*/
     if( function_exists('acf_add_options_page') ) {
         acf_add_options_page(array(
-            'page_title' 	=> 'General Settings',
-            'menu_title'	=> 'General Settings',
+            'page_title' 	=> 'CustomSettings',
+            'menu_title'	=> 'Custom Settings',
             'menu_slug' 	=> 'theme-general-settings',
             'capability'	=> 'edit_posts',
             'redirect'		=> false
@@ -15,6 +15,7 @@
             'menu_title'	=> 'Counters',
             'parent_slug'	=> 'theme-general-settings',
         ));      
+   
     }
 
     /*Registriamo una nuova categoria x i blocchi in Gutemberg
@@ -217,6 +218,92 @@
                     )
                 )
             ));
+            
+            /*CTA
+            --------------------------------------------------------*/
+            acf_register_block_type(array(
+                'name'              => 'cta',
+                'title'             => __('Call to action'),
+                'description'       => __('Section with main Call To Action'),
+                'render_template'   => '/blocks/cta.php',
+                'category'          => 'norvegianBlocks',
+                'icon'              => 'button',
+                'keywords'          => array( 'section', 'call to action' ),
+                'mode'              => 'edit',
+                'align'             => 'wide',
+                'supports'          => array(
+                    'align' => false,
+                    'jsx' => true,
+                ),
+                //preview in Gutemberg
+                'example'  => array(
+                    'attributes' => array(
+                        'mode' => 'preview',
+                        'data' => array(
+                            'overtitle'              =>          "Preview overtitle",
+                            'title'                  =>          "Preview title",
+                            'text'                   =>          "Preview text",
+                        )
+                    )
+                )
+            ));
+
+            /*SECONDARY HERO block
+            ------------------------------------------------------------*/
+            acf_register_block_type(array(
+                'name'              => 'secondary-hero',
+                'title'             => __('Secondary Hero section'),
+                'description'       => __("Secondary Hero"),
+                'render_template'   => '/blocks/secondary-hero.php',
+                'category'          => 'norvegianBlocks',
+                'icon'              => 'superhero-alt',
+                'keywords'          => array( 'secondary-hero' ),
+                //preview del blocco
+                'example'  => array(
+                    'attributes' => array(
+                        'mode' => 'preview',
+                        'data' => array(
+                            'overtitle'              =>          "Preview overtitle",
+                            'title'                  =>          "Preview title",
+                            'text'                   =>          "Preview text",
+                            'media'                  =>          "https://source.unsplash.com/random",
+                            'button'                 =>          array(
+                                    'url'               =>          "#",
+                                    'title'             =>          "Button preview"
+                            )
+                        )
+                    )
+                )
+            ));
+
+            /*CONTACTS
+            --------------------------------------------------------*/
+            acf_register_block_type(array(
+                'name'              => 'contacts',
+                'title'             => __('Contacts'),
+                'description'       => __('Section with main contact and social link'),
+                'render_template'   => '/blocks/contacts.php',
+                'category'          => 'norvegianBlocks',
+                'icon'              => 'email',
+                'keywords'          => array( 'section', 'social', 'contacts' ),
+                'mode'              => 'edit',
+                'align'             => 'wide',
+                'supports'          => array(
+                    'align' => false,
+                    'jsx' => true,
+                ),
+                //preview in Gutemberg
+                'example'  => array(
+                    'attributes' => array(
+                        'mode' => 'preview',
+                        'data' => array(
+                            '_is_preview'   => 'true'
+                        )
+                    )
+                )
+            ));
+
+
 
             /*CITAZIONE
             *Testo e svg decorativa

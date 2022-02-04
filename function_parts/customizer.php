@@ -22,19 +22,11 @@
             )
           )
         );
-        // Logo alt text
-        $wp_customize->add_setting('NC_logo_alt_text', array('default' => 'Logo of the site'));
-        $wp_customize->add_control('NC_logo_alt_text', array(
-            'section' => 'NC_logo',
-            'label'   => __('Alt text del logo ', 'nx'),
-            'type'    => 'text'
-          )
-        );
         // Logo for footer
         $wp_customize->add_setting('NC_logo_footer', array('default' => ''));
         $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'NC_logo_footer', array(
               'section' => 'NC_logo',
-              'label'   => __('Logo monocromatico per il footer', 'nx'),
+              'label'   => __('Monocromatic Logo for footer', 'nx'),
               'setting'    => 'NC_logo_footer'
             )
           )
@@ -45,8 +37,8 @@
         /*per stampare poi i valori basta usare <?php echo get_theme_mod("NC_contatti_telefono"); ?>
         ----------------------------------------------------------*/
         $wp_customize -> add_section("NC_contatti", array(
-            "title"                 =>                  "Contatti",
-            "description"           =>                  "Inserisci i contatti dell'azienda",
+            "title"                 =>                  "Contacts",
+            "description"           =>                  "Insert your business info",
             "priority"              =>                  20
         ));
             /*FIELD Telefono*/
@@ -54,7 +46,7 @@
                 "default"           =>                  "Inserisci il tuo numero di telefono"
             ));
                 $wp_customize -> add_control("NC_contatti_telefono", array(
-                    "section"       =>                 "NC_contatti", /*INSERT THIS FIELD IN SECTION Contatti*/         
+                    "section"       =>                 "NC_contatti",       
                     "label"         =>                 "Telefono",
                     "type"          =>                 "text"
                 ));
@@ -110,8 +102,29 @@
                     "type"          =>                  "url"
 
                 ));
+                
+            /*FIELD whatsapp*/
+            $wp_customize -> add_setting("NC_social_whatsapp", array(
+                "default"           =>                  "Inserisci url della pagina whatsapp"
+            ));
+                $wp_customize -> add_control("NC_social_whatsapp", array(
+                    "section"       =>                  "NC_contatti",
+                    "label"         =>                  "Whatsapp",
+                    "type"          =>                  "url"
 
-            
+                ));
+                
+            /*FIELD youtube*/
+            $wp_customize -> add_setting("NC_social_youtube", array(
+                "default"           =>                  "Inserisci url della pagina youtube"
+            ));
+                $wp_customize -> add_control("NC_social_youtube", array(
+                    "section"       =>                  "NC_contatti",
+                    "label"         =>                  "Youtube",
+                    "type"          =>                  "url"
+
+                ));
+                
     }      
     add_action("customize_register", "NC_customize_register");
 

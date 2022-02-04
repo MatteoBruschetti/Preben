@@ -14,8 +14,8 @@
     
     //add CSS
     function NC_styles() {
-        wp_enqueue_style("NC-style", get_template_directory_uri().'/style.min.css');
         wp_enqueue_style("NC-grid", get_template_directory_uri().'/css-parts/bootstrap-grid.min.css');
+        wp_enqueue_style("NC-style", get_template_directory_uri().'/style.min.css');
     }
     add_action("wp_enqueue_scripts", "NC_styles");
     //add JS
@@ -138,8 +138,7 @@
 -------------------------------------------------*/
 require dirname(__FILE__).'/function_parts/acf_blocks.php';
 require dirname(__FILE__).'/function_parts/customizer.php';
-require dirname(__FILE__).'/function_parts/sidebars.php';
-require dirname(__FILE__).'/function_parts/customize_backend.php';
+require dirname(__FILE__).'/function_parts/customize-backend.php';
 
 //CPT
 require dirname(__FILE__).'/function_parts/cpt/review.php';

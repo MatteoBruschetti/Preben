@@ -4,4 +4,11 @@
     @media #{$large}{
         text-align: center;
     }
+
+    .wysiwyg{
+        p{
+            margin:0 auto 1.6rem;
+            max-width: 90ch;
+        }
+    }
 }

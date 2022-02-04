@@ -1,0 +1,38 @@
+.contacts{
+    text-align: left;
+
+    @media #{$large}{
+        text-align: center;
+    }
+
+    .col-social{
+        text-align: center;
+    }
+ 
+    .contacts-icon-link{
+        display: inline-block;
+        text-decoration: none;
+        color: $color-txt-secondary;
+
+        svg{
+            max-width: 5rem;
+            max-height: 5rem;
+
+            @media #{$large}{
+                max-width: 8rem;
+                max-height: 8rem;
+            }
+        }
+
+        &:hover{
+            svg{
+                circle{fill: $color-secondary;}
+            }
+        }
+
+        .contacts-icon-label{
+            margin-top: 0.8rem;
+        }
+    }
+    
+}

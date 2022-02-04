@@ -1,22 +1,9 @@
 /*
-Theme Name: 
-Theme URI: http://matteobruschetti.altervista.org
-Author: Matteo Bruschetti
-Author URI: http://matteobruschetti.altervista.org
-Description:    - ACF invece di Gutemberg per permettere al cliente la gestione totale dei contenuti ma non dello stile
-                - bootstrap grid 
-                - homepage displays a static page
-                - blog page for display articles
-                - dinamic navbar with custom menu
-                - custom post type
-                - contact mod in customize
-
-                TO ADD:
-                - responsive images
-                - dinamic footer with socail icon
-                - standard cookies e privacy policies
-                - dinamic logo in navbar
-                - navbar versione desktop senza hamburger 
+Theme Name: Norwegian Community
+Theme URI: https://matteobruschetti.it
+Author: Matteo Bruschetti, Federico Toldo
+Author URI: https://matteobruschetti.it
+Description: Norwegian Community Official WP Theme
 */
 
 //variables
@@ -46,6 +33,9 @@ Description:    - ACF invece di Gutemberg per permettere al cliente la gestione 
 @import "css-parts/blocks/keypoints";
 @import "css-parts/blocks/steps";
 @import "css-parts/blocks/title-txt";
+@import "css-parts/blocks/cta";
+@import "css-parts/blocks/contacts";
 // @import "css-parts/blocks/immagine-full-width";
 // @import "css-parts/blocks/cit";
+
   

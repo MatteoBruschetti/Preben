@@ -27,7 +27,7 @@ if( !empty( $block['data']['_is_preview'] ) ) { ?>
 } else {
     ?>
 
-    <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> mb-240">
+    <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> mb-240">
         <div class="container">
             <div class="row">
                 <?php
@@ -48,7 +48,7 @@ if( !empty( $block['data']['_is_preview'] ) ) { ?>
                 ?>
             </div>
         </div>
-    </div>
+    </section>
 
 <?php
 }

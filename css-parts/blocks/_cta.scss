@@ -1,4 +1,4 @@
-.keypoints{
+.cta{
     background-color: $color-primary;
     text-align: center;
     padding: 8rem 0;
@@ -23,6 +23,11 @@
         strong{color: $color-low-white;}
     }
 
+    .button:hover{
+        background-color: $color-white;
+        color: $color-primary;
+    }
+
     .link{
         color: $color-low-white-on-blue;
         text-transform: uppercase;
@@ -33,11 +38,4 @@
         }
     }
 
-    .points-icon{
-        width: 6.5rem;
-
-        @media #{$large}{
-            width: 8rem;
-        }
-    }
 }

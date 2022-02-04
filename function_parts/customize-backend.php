@@ -37,4 +37,16 @@
         </style>';
     }
     add_action('login_enqueue_scripts', 'NC_custom_login_logo');
+
+
+    //custom color scheme
+    function norvegiancommunity_admin_color_scheme() {
+        $theme_dir = get_stylesheet_directory_uri();
+        wp_admin_css_color( 'norvegiancommunity', __( 'Norvegian Community' ),
+          $theme_dir . '/css-parts/norvegian-community.css',
+          array( '#002868', '#fff', '#dc0500' , '#dc0500')
+        );
+      }
+      add_action('admin_init', 'norvegiancommunity_admin_color_scheme');
+      
 ?>
