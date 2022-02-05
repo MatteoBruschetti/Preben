@@ -27,13 +27,18 @@ $image = get_field('image');
 
 ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> mb-240">
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> mb-180-r">
     <div class="container"> 
-        <div class="row align-items-center">
+        <div class="row">
             <div class="col-12 col-lg-7">
-                <h1 class="overtitle mb-8"><?php echo $overtitle; ?></h1>
-                <p class="h1 mb-32"><?php echo $title; ?></p>
-                <div class="wysiwyg mb-32"><?php echo $text; ?></div>
+                <p class="overtitle mb-8-r"><?php echo $overtitle; ?></p>
+                <h1 class="subhero-h1"><?php echo $title; ?></h1>
+            </div>
+            <div class="col-12 col-lg-4 offset-lg-1 order-lg-3 subhero-img-col">
+                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+            </div>
+            <div class="col-12 col-lg-7">
+                <div class="wysiwyg mb-32-r"><?php echo $text; ?></div>
                 <?php if( $button ): 
                     $link_url = $button['url'];
                     $link_title = $button['title'];
@@ -41,9 +46,7 @@ $image = get_field('image');
                     <a class="button" href="<?php echo esc_url( $link_url ); ?>"><?php echo esc_html( $link_title ); ?></a>
                 <?php endif; ?>  
             </div>
-            <div class="col-12 col-lg-4 offset-lg-1">
-                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-            </div>
+            
         </div>
     </div>
 </section>

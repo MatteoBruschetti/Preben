@@ -3,8 +3,8 @@
     /*ADD Option Page*/
     if( function_exists('acf_add_options_page') ) {
         acf_add_options_page(array(
-            'page_title' 	=> 'CustomSettings',
-            'menu_title'	=> 'Custom Settings',
+            'page_title' 	=> 'Norwegian Settings',
+            'menu_title'	=> 'Norwegian Settings',
             'menu_slug' 	=> 'theme-general-settings',
             'capability'	=> 'edit_posts',
             'redirect'		=> false
@@ -26,7 +26,7 @@
             array(
                 array(
                     'slug' => 'norvegianBlocks',
-                    'title' => __( 'Norvegian Community Blocks', 'NC' ),
+                    'title' => __( 'Norwegian Community Blocks', 'NC' ),
                     'icon' => 'star-filled'
                 ),
             )
@@ -298,6 +298,33 @@
                         'mode' => 'preview',
                         'data' => array(
                             '_is_preview'   => 'true'
+                        )
+                    )
+                )
+            ));
+
+            /*CONTACT FORM [/shortcode]
+            --------------------------------------------------------*/
+            acf_register_block_type(array(
+                'name'              => 'contact-form',
+                'title'             => __('Contact Form'),
+                'description'       => __('Insert here the Contact Form 7 shortcode'),
+                'render_template'   => '/blocks/contact-form.php',
+                'category'          => 'norvegianBlocks',
+                'icon'              => 'testimonial',
+                'keywords'          => array( 'section', 'contact form' ),
+                'mode'              => 'edit',
+                'align'             => 'wide',
+                'supports'          => array(
+                    'align' => false,
+                    'jsx' => true,
+                ),
+                //preview in Gutemberg
+                'example'  => array(
+                    'attributes' => array(
+                        'mode' => 'preview',
+                        'data' => array(
+                            'shortcode'              =>          "[/contact-form-7 shortcode='here']",
                         )
                     )
                 )

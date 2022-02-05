@@ -1,0 +1,78 @@
+.course{
+
+    .wysiwyg{
+        p{
+            max-width: 90ch;
+            margin-bottom: 0.8rem;
+            @media #{$large}{
+                margin-bottom: 1.6rem;
+            }
+        }
+    }
+
+    .course-card{
+        background-color: $color-low-white;
+        border-radius: 1.2rem;
+        box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.012),
+                    0px 0px 3.5px rgba(0, 0, 0, 0.018),
+                    0px 0px 7.1px rgba(0, 0, 0, 0.022),
+                    0px 0px 14.6px rgba(0, 0, 0, 0.028),
+                    0px 0px 40px rgba(0, 0, 0, 0.04);
+        transition: all 0.4s ease-in-out;
+
+        @media #{$large}{
+            border-radius: 2.4rem;
+        }
+        
+                    
+        a{
+            text-decoration: none;
+            display: inline-block;
+            padding: 4rem 3.2rem;
+
+            @media #{$large}{
+                padding: 6.4rem;
+            }
+
+        }
+        &:hover{
+            transform: scale(1.001);
+            box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.024),
+                        0px 0px 3.5px rgba(0, 0, 0, 0.036),
+                        0px 0px 7.1px rgba(0, 0, 0, 0.044),
+                        0px 0px 14.6px rgba(0, 0, 0, 0.056),
+                        0px 0px 40px rgba(0, 0, 0, 0.08);
+        }
+    }
+
+    
+    .course-title{
+        font-size: 2.8rem;
+        
+        @media #{$large}{
+            font-size: 3.8rem;
+        }
+    }
+
+
+    .points-col{
+        display: flex;
+        align-items: start;
+    }
+
+    .points-icon{
+        margin-right: .6rem;
+        max-width: 1.8rem;
+        min-width: 1.8rem;
+
+        @media #{$large}{
+            margin-right: 1rem;
+            max-width: 2.4rem;
+            min-width: 2.4rem;
+        }
+    }
+
+    .points-label{
+        line-height: 140%;
+    }
+}

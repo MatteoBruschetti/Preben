@@ -9,8 +9,11 @@
 
     .wysiwyg{
         p{
-            margin:0 auto 1.6rem;
+            margin:0 auto 0.8rem;
             max-width: 90ch;
+            @media #{$large}{
+                margin:0 auto 1.6rem;
+            }
         }
     }
 

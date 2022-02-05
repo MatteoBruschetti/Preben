@@ -31,7 +31,7 @@
                     </div>
                 </div>
 
-                <div class="col-9 offset-md-3 col-lg-3 offset-lg-0 col-social-privacy">
+                <div class="col-9 offset-sm-3 col-lg-3 offset-lg-0 col-social-privacy">
                     <div class="row">
                         <div class="col-4">
                             <!--Facebook-->

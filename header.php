@@ -12,9 +12,9 @@
 
 <body <?php body_class(); ?>>
 
-    <a class="skip-link cta" href="#site-content"><?php echo __('Skip to content', 'nc') ?></a>
+    <a class="skip-link" href="#site-content"><?php echo __('Skip to content', 'nc') ?></a>
     
-    <header>
+    <header id="navigation">
         <nav>
             <div class="container">
                 <div class="row align-items-center">
@@ -30,10 +30,10 @@
                     </div>   
                     <!--icona hamburger-->
                     <div class="col-4 header__hamburger">
-                        <button class="nav-hamburger">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                        <button class="hamburger hamburger--spin" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
                         </button>
                     </div>        
                     <!--pannello menu widget-->

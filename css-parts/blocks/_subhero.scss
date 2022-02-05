@@ -1,8 +1,38 @@
 .secondary-hero{
+    padding-top: 2.4rem;
+    @media #{$large}{
+        padding-top: 4.8rem;
+    }
 
+    .subhero-h1{
+        margin-bottom: 0;
+        @media #{$large}{
+            margin-bottom: 3.2rem;
+        }
+    }
 
     .wysiwyg{
-        p{margin-bottom:1.6rem}
+        p{
+            margin-bottom:.8rem;
+            @media #{$large}{
+                margin-bottom:1.6rem;
+            }
+        }
+    }
+
+    .subhero-img-col{
+        img{
+            max-width: 21rem;
+        }
+        @media #{$large}{
+            position: relative;
+            img{
+                max-width: 100%;
+                position: absolute;
+                top: 0; left: 0;
+                transform: translateY(-40%);
+            }
+        }
     }
 
 }

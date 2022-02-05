@@ -27,13 +27,13 @@ $link = get_field('link');
 
 ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> mb-240">
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> mb-240-r">
     <div class="container"> 
         <div class="row">
             <div class="col-12">
-            <p class="overtitle mb-8"><?php echo $overtitle; ?></p>
-                <h2 class="mb-32"><?php echo $title; ?></h2>
-                <div class="wysiwyg mb-80"><?php echo $text; ?></div> 
+            <p class="overtitle mb-8-r"><?php echo $overtitle; ?></p>
+                <h2 class="mb-32-r"><?php echo $title; ?></h2>
+                <div class="wysiwyg mb-80-r"><?php echo $text; ?></div> 
 
                 <div class="row">
                     <?php
@@ -43,7 +43,7 @@ $link = get_field('link');
                                 $icon = get_sub_field('icon');
                                 $label = get_sub_field('label');
                                 ?>
-                                    <div class="col-12 col-lg-6 mb-64">
+                                    <div class="col-12 col-lg-6 mb-64-r-max">
                                         <div class="row">
                                             <div class="col-12 col-lg-2 t-left">
                                                 <img class="step-icon" src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt']); ?>" />

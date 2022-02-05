@@ -28,7 +28,7 @@ $link = get_field('link');
 
 ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> mb-240">
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> mb-240-r">
     <div class="container"> 
         <div class="row">
             <div class="col-12">

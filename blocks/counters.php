@@ -27,7 +27,7 @@ if( !empty( $block['data']['_is_preview'] ) ) { ?>
 } else {
     ?>
 
-    <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> mb-240">
+    <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> mb-240-r">
         <div class="container">
             <div class="row">
                 <?php
@@ -37,7 +37,7 @@ if( !empty( $block['data']['_is_preview'] ) ) { ?>
                             $number = get_sub_field('number');
                             $text = get_sub_field('text');
                             ?>
-                                <div class="col-4">
+                                <div class="col-12 col-md-4">
                                     <p class="counter-number"><?php echo $number ?></p>
                                     <p class="counter-text"><?php echo $text ?></p>
                                 </div>

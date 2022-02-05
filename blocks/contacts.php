@@ -31,12 +31,12 @@ if( !empty( $block['data']['_is_preview'] ) ) { ?>
 } else {
     ?>
 
-    <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> mb-180">
+    <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> mb-180-r">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <p class="overtitle"><?php echo $overtitle;?></p>
-                    <h2 class="mb-64"><?php echo $title;?></p>
+                    <p class="overtitle mb-8-r"><?php echo $overtitle;?></p>
+                    <h2 class="mb-64-r"><?php echo $title;?></p>
                 </div>
             </div>
             <div class="row">

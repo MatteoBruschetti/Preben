@@ -4,7 +4,12 @@
 .txt-img {
 
     .wysiwyg{
-        p{margin-bottom:1.6rem}
+        p{
+            margin-bottom:.8rem;
+            @media #{$large}{
+                margin-bottom:1.6rem;
+            }
+        }
     }
 
     .col-img{

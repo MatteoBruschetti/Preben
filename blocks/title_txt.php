@@ -30,8 +30,8 @@ $text = get_field('text');
     <div class="container"> 
         <div class="row">
             <div class="col-12">
-                <p class="overtitle mb-8"><?php echo $overtitle; ?></p>
-                <h2 class="mb-32"><?php echo $title; ?></h2>
+                <p class="overtitle mb-8-r"><?php echo $overtitle; ?></p>
+                <h2 class="mb-32-r"><?php echo $title; ?></h2>
                 <div class="wysiwyg"><?php echo $text; ?></div> 
             </div>
         </div>

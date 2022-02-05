@@ -1,13 +1,45 @@
 .hero{
-    min-height: 90vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
+    
+    @media #{$large}{
+        max-height: calc(100vh - 96px);    
+    }
+
+    .col-txt{
+        padding-top: 6.4rem;
+        padding-bottom: 8.8rem;
+
+        @media #{$large}{
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .h1-hero{
+            @media #{$large}{
+                font-size: clamp(3.6rem, 6.4vh, 5.6rem);
+            }
+        }
+        
+    }
+
 
     .wysiwyg{
-        p{margin-bottom:1.6rem}
+        p{
+            margin-bottom:.8rem;
+            @media #{$large}{
+                margin-bottom:1.6rem;
+            }
+        }
     }
 
     img{
         border-radius: 1rem;
+        max-height: 64vh;
+
+        @media #{$large}{
+            max-height: 78vh;
+        }
     }
 }

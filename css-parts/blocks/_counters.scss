@@ -19,6 +19,17 @@
 
         .counter-text{
             color: $color-low-white-on-blue;
+            margin-bottom: 4rem;
+
+            @media #{$medium}{
+                margin-bottom: 0;   
+            }
+        }
+
+        .col-12:last-of-type{
+            .counter-text{
+                margin-bottom: 0;
+            }
         }
     }
 }
