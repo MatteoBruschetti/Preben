@@ -74,7 +74,7 @@ h1, h2 {
 h3 {
   font-size: 3rem;
   font-weight: 600;
-  line-height: 110%;
+  line-height: 120%;
   text-align: left;
   color: #002868;
 }
@@ -874,6 +874,213 @@ footer .w-100 {
 RECCOMENDATIONS for target size by Apple
     DESKTOP and MOBILE minimun raget size = 44px X 44px 
 --------------------------------------------------*/
+.NorwegianQuizz-container {
+  margin-bottom: 9rem;
+}
+
+@media (min-width: 992px) {
+  .NorwegianQuizz-container {
+    margin-bottom: 18rem;
+  }
+}
+
+.NorwegianQuizz-container .wp-block-group__inner-container {
+  width: 100%;
+}
+
+.ays-quiz-container.NorwegianQuizz {
+  margin: 0 !important;
+  background-color: #FBFBFD !important;
+  border-radius: 1rem !important;
+  -webkit-box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.012), 0px 0px 3.5px rgba(0, 0, 0, 0.018), 0px 0px 7.1px rgba(0, 0, 0, 0.022), 0px 0px 14.6px rgba(0, 0, 0, 0.028), 0px 0px 40px rgba(0, 0, 0, 0.04) !important;
+          box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.012), 0px 0px 3.5px rgba(0, 0, 0, 0.018), 0px 0px 7.1px rgba(0, 0, 0, 0.022), 0px 0px 14.6px rgba(0, 0, 0, 0.028), 0px 0px 40px rgba(0, 0, 0, 0.04) !important;
+  -webkit-transition: all 0.4s ease-in-out !important;
+  transition: all 0.4s ease-in-out !important;
+  /*Next btn*/
+  /*Prev btn*/
+  /*Answers rows*/
+  /*Results page*/
+}
+
+.ays-quiz-container.NorwegianQuizz:hover {
+  -webkit-box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.024), 0px 0px 3.5px rgba(0, 0, 0, 0.036), 0px 0px 7.1px rgba(0, 0, 0, 0.044), 0px 0px 14.6px rgba(0, 0, 0, 0.056), 0px 0px 40px rgba(0, 0, 0, 0.08) !important;
+          box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.024), 0px 0px 3.5px rgba(0, 0, 0, 0.036), 0px 0px 7.1px rgba(0, 0, 0, 0.044), 0px 0px 14.6px rgba(0, 0, 0, 0.056), 0px 0px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+.ays-quiz-container.NorwegianQuizz .ays_next {
+  margin-top: 1.6rem !important;
+  color: #FFFFFF !important;
+  background: #DC0500 !important;
+  font-family: "Lato", sans-serif !important;
+  font-size: 1.4rem !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px !important;
+  border: none !important;
+  border-radius: 100vw !important;
+  padding: 16px 32px !important;
+  -webkit-box-shadow: 0 !important;
+          box-shadow: 0 !important;
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+.ays-quiz-container.NorwegianQuizz .ays_next:hover {
+  -webkit-box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15) !important;
+          box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15) !important;
+  background-color: #002868 !important;
+}
+
+.ays-quiz-container.NorwegianQuizz .ays_previous {
+  text-decoration: underline !important;
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+.ays-quiz-container.NorwegianQuizz .ays-field.ays_list_view_item {
+  opacity: 1 !important;
+  border-radius: 0.8rem !important;
+}
+
+.ays-quiz-container.NorwegianQuizz .ays-field.ays_list_view_item:hover {
+  border-color: #002868 !important;
+}
+
+.ays-quiz-container.NorwegianQuizz .ays-progress.first {
+  background-color: #002868 !important;
+  border-color: #002868 !important;
+}
+
+/*force Prev btn*/
+#ays-quiz-container-1 #ays_finish_quiz_1 .ays_previous {
+  color: #002868 !important;
+  border: none !important;
+}
+
+#ays-quiz-container-1 #ays_finish_quiz_1 .ays_previous:hover {
+  color: #DC0500 !important;
+}
+
+.blog-post .post-card {
+  min-width: 100%;
+  min-height: 100%;
+  background-color: #FBFBFD;
+  border-radius: 1.2rem;
+  -webkit-box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.012), 0px 0px 3.5px rgba(0, 0, 0, 0.018), 0px 0px 7.1px rgba(0, 0, 0, 0.022), 0px 0px 14.6px rgba(0, 0, 0, 0.028), 0px 0px 40px rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.012), 0px 0px 3.5px rgba(0, 0, 0, 0.018), 0px 0px 7.1px rgba(0, 0, 0, 0.022), 0px 0px 14.6px rgba(0, 0, 0, 0.028), 0px 0px 40px rgba(0, 0, 0, 0.04);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  text-decoration: none;
+  display: inline-block;
+}
+
+@media (min-width: 992px) {
+  .blog-post .post-card {
+    border-radius: 2.4rem;
+  }
+}
+
+.blog-post .post-card:hover {
+  -webkit-box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.024), 0px 0px 3.5px rgba(0, 0, 0, 0.036), 0px 0px 7.1px rgba(0, 0, 0, 0.044), 0px 0px 14.6px rgba(0, 0, 0, 0.056), 0px 0px 40px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.024), 0px 0px 3.5px rgba(0, 0, 0, 0.036), 0px 0px 7.1px rgba(0, 0, 0, 0.044), 0px 0px 14.6px rgba(0, 0, 0, 0.056), 0px 0px 40px rgba(0, 0, 0, 0.08);
+}
+
+.blog-post .post-card a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.blog-post .post-card .post-img {
+  border-radius: 1.2rem 1.2rem 0 0;
+  min-width: 100%;
+  height: 320px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+@media (min-width: 992px) {
+  .blog-post .post-card .post-img {
+    border-radius: 2.4rem 2.4rem 0 0;
+    height: 400px;
+  }
+}
+
+.blog-post .post-card .post-text {
+  padding: 3.2rem 3.2rem 2.4rem;
+}
+
+@media (min-width: 992px) {
+  .blog-post .post-card .post-text {
+    padding: 4.8rem 4.8rem 3.2rem;
+  }
+}
+
+.blog-post .post-card .post-text .post-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.blog-post .post-card .post-text .post-excerpt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.blog-post .post-card .post-text .link {
+  text-transform: uppercase;
+}
+
+.pagination .t-right {
+  padding-right: 1rem;
+}
+
+@media (min-width: 992px) {
+  .pagination .t-right {
+    padding-right: 3.2rem;
+  }
+}
+
+.pagination .t-left {
+  padding-left: 1rem;
+}
+
+@media (min-width: 992px) {
+  .pagination .t-left {
+    padding-left: 3.2rem;
+  }
+}
+
+.pagination .pagination-link {
+  font-size: 1.4rem;
+}
+
+@media (min-width: 992px) {
+  .pagination .pagination-link {
+    font-size: 1.6rem;
+  }
+}
+
+.pagination .pagination-link a {
+  text-transform: uppercase;
+  color: #002868;
+  text-decoration: none;
+  letter-spacing: 2px;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.pagination .pagination-link a:hover {
+  color: #DC0500;
+}
+
 .review article {
   position: relative;
   height: 100%;
@@ -992,8 +1199,6 @@ RECCOMENDATIONS for target size by Apple
 }
 
 .course .course-card:hover {
-  -webkit-transform: scale(1.001);
-          transform: scale(1.001);
   -webkit-box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.024), 0px 0px 3.5px rgba(0, 0, 0, 0.036), 0px 0px 7.1px rgba(0, 0, 0, 0.044), 0px 0px 14.6px rgba(0, 0, 0, 0.056), 0px 0px 40px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.024), 0px 0px 3.5px rgba(0, 0, 0, 0.036), 0px 0px 7.1px rgba(0, 0, 0, 0.044), 0px 0px 14.6px rgba(0, 0, 0, 0.056), 0px 0px 40px rgba(0, 0, 0, 0.08);
 }

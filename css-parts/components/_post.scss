@@ -1,0 +1,105 @@
+.blog-post{
+    .post-card{
+        min-width: 100%;
+        min-height: 100%;
+        background-color: $color-low-white;
+        border-radius: 1.2rem;
+        box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.012),
+                    0px 0px 3.5px rgba(0, 0, 0, 0.018),
+                    0px 0px 7.1px rgba(0, 0, 0, 0.022),
+                    0px 0px 14.6px rgba(0, 0, 0, 0.028),
+                    0px 0px 40px rgba(0, 0, 0, 0.04);
+        transition: all 0.4s ease-in-out;
+        text-decoration: none;
+        display: inline-block;
+
+        @media #{$large}{
+            border-radius: 2.4rem;
+        }
+
+        &:hover{ 
+            box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.024),
+                        0px 0px 3.5px rgba(0, 0, 0, 0.036),
+                        0px 0px 7.1px rgba(0, 0, 0, 0.044),
+                        0px 0px 14.6px rgba(0, 0, 0, 0.056),
+                        0px 0px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        a{
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .post-img{
+            border-radius: 1.2rem 1.2rem 0 0;
+            min-width: 100%;
+            height: 320px;
+            object-fit: cover;
+            object-position: center;
+
+            @media #{$large}{
+                border-radius: 2.4rem 2.4rem 0 0;
+                height: 400px;
+            }
+        }
+
+        .post-text{
+            padding: 3.2rem 3.2rem 2.4rem;
+
+            @media #{$large}{
+                padding: 4.8rem 4.8rem 3.2rem;
+            }
+
+            .post-title{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                            -webkit-line-clamp: 3;
+                            -webkit-box-orient: vertical;
+            }
+            .post-excerpt{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                            -webkit-line-clamp: 4;
+                            -webkit-box-orient: vertical;
+            }
+
+            .link{text-transform: uppercase;}
+        }
+    }
+}
+
+.pagination{
+    .t-right{
+        padding-right: 1rem;
+        @media #{$large}{
+            padding-right: 3.2rem;
+        }
+    }
+    .t-left{
+        padding-left: 1rem;
+        @media #{$large}{
+            padding-left: 3.2rem;
+        }
+    }
+
+    .pagination-link{
+        font-size: 1.4rem;
+        @media #{$large}{
+            font-size: 1.6rem;
+        }
+
+        a{
+            text-transform: uppercase;
+            color: $color-primary;
+            text-decoration: none;
+            letter-spacing: 2px;
+            transition: color 0.3s ease-in-out;
+    
+            &:hover{
+                color: $color-secondary;
+            }
+        }
+    }
+}

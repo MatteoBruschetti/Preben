@@ -1,0 +1,85 @@
+.NorwegianQuizz-container{
+    margin-bottom: 9rem;
+    @media #{$large}{
+        margin-bottom: 18rem;
+    }
+    
+    .wp-block-group__inner-container{
+        width: 100%;
+    }
+}
+.ays-quiz-container.NorwegianQuizz{
+    margin: 0 !important;
+    background-color: $color-low-white !important;
+    border-radius: 1rem !important;
+    box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.012),
+                    0px 0px 3.5px rgba(0, 0, 0, 0.018),
+                    0px 0px 7.1px rgba(0, 0, 0, 0.022),
+                    0px 0px 14.6px rgba(0, 0, 0, 0.028),
+                    0px 0px 40px rgba(0, 0, 0, 0.04) !important;
+    transition: all 0.4s ease-in-out !important;
+
+    &:hover{
+        box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.024),
+                    0px 0px 3.5px rgba(0, 0, 0, 0.036),
+                    0px 0px 7.1px rgba(0, 0, 0, 0.044),
+                    0px 0px 14.6px rgba(0, 0, 0, 0.056),
+                    0px 0px 40px rgba(0, 0, 0, 0.08) !important;
+    }
+
+
+    /*Next btn*/
+    .ays_next{
+        margin-top: 1.6rem !important;
+        color: $color-white !important;
+        background: $color-secondary !important;
+        font-family: $font-family-primary !important;
+        font-size: 1.4rem !important;
+        text-transform: uppercase !important; text-decoration: none !important;
+        font-weight: 700 !important; letter-spacing: 2px !important;
+        border: none !important;
+        border-radius: 100vw !important;
+        padding: 16px 32px !important;
+        box-shadow: 0 !important;
+        transition: all 0.4s cubic-bezier(.25,.8,.25,1) !important;
+
+        &:hover {
+            box-shadow: 0 1px 3px 0 rgba(60,64,67,0.30), 0 4px 8px 3px rgba(60,64,67,0.15) !important;
+            background-color: $color-primary !important;
+        }
+    }
+
+    /*Prev btn*/
+    .ays_previous{
+        text-decoration: underline !important;
+        transition: all 0.4s cubic-bezier(.25,.8,.25,1) !important;
+    }
+
+
+    /*Answers rows*/
+    .ays-field.ays_list_view_item{
+        opacity: 1 !important;
+        border-radius: 0.8rem !important;
+
+        &:hover{
+            border-color: $color-primary !important;
+        }
+    }
+
+
+    /*Results page*/
+    .ays-progress.first{
+        background-color: $color-primary !important;
+        border-color: $color-primary !important;
+    }
+
+}
+
+/*force Prev btn*/
+#ays-quiz-container-1 #ays_finish_quiz_1 .ays_previous{
+    color: $color-primary !important;
+    border: none !important;
+    &:hover{
+        color: $color-secondary !important;
+    }
+}

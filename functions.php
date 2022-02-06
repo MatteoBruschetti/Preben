@@ -9,6 +9,8 @@
         add_theme_support("post-thumbnails");
         //aggiunta di una posizione del menu
         register_nav_menu("header", "Navbar Header");
+        //remove core patterns
+        remove_theme_support("core-block-patterns");
     }
     add_action("after_setup_theme", "NC_setup_theme");
     
@@ -105,32 +107,107 @@
 
     // Allow SVG
     add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
-
         global $wp_version;
         if ( $wp_version !== '4.7.1' ) {
            return $data;
         }
-      
         $filetype = wp_check_filetype( $filename, $mimes );
-      
         return [
             'ext'             => $filetype['ext'],
             'type'            => $filetype['type'],
             'proper_filename' => $data['proper_filename']
         ];
-      
-      }, 10, 4 );
-      
-      function cc_mime_types( $mimes ){
-        $mimes['svg'] = 'image/svg+xml';
-        return $mimes;
-      }
-      add_filter( 'upload_mimes', 'cc_mime_types' );
-      
-      function fix_svg() {
-        echo '';
-      }
-      add_action( 'admin_head', 'fix_svg' );
+    }, 10, 4 );
+    function cc_mime_types( $mimes ){
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+    }
+    add_filter( 'upload_mimes', 'cc_mime_types' );
+    function fix_svg() {
+    echo '';
+    }
+    add_action( 'admin_head', 'fix_svg' );
+
+
+    //Add Blog Posts Shortcode with Pagination
+    function post_pagination_shortcode($atts){
+
+        extract( shortcode_atts( array(
+            'expand' => '',
+        ), $atts) );
+        
+        global $paged;
+        $posts_per_page = 6;
+        $settings = array(
+            'showposts'         => $posts_per_page, 
+            'post_type'         => 'post', 
+            'post_status'       => 'publish',
+            'orderby'           => 'count', 
+            'order'             => 'DESC', 
+            'paged'             => $paged
+        );
+        
+        $NC_query = new WP_Query( $settings );	
+        
+        $total_found_posts = $NC_query->found_posts;
+        $total_page = ceil($total_found_posts / $posts_per_page);
+            
+        $list = '
+            <section class="blog-post mb-16-r">
+                <div class="container">
+                    <div class="row">
+                        ';
+                        while($NC_query->have_posts()) : $NC_query->the_post();
+                            $thumbnail_id  = get_post_thumbnail_id( $post->ID ); $thumbnail_alt = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true );
+                            $list.= '
+                                <div class="col-12 col-lg-6 mb-64-r-max">
+                                    <article class="post-card">
+                                        <a href="'. get_the_permalink() .'">
+                                            <img class="post-img" src="'. get_the_post_thumbnail_url() .'" alt="Norwegian Blog">
+                                            <div class="post-text">
+                                                <h3 class="post-title mb-24-r">'. get_the_title() .'</h3>
+                                                <p class="post-excerpt mb-24-r">'. get_the_excerpt() .'</p>
+                                                <div class="link mb-40-r">Read more</div>
+                                            </div>
+                                        </a>
+                                    </article>
+                                </div>
+                            ';        
+                        endwhile;
+                        $list.= '
+                    </div> 
+                </div>
+            </section>
+        ';
+        
+        if(function_exists('wp_pagenavi')) {
+            $list .='
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-navigation">'.wp_pagenavi(array('query' => $NC_query, 'echo' => false)).'</div>
+                        </div>
+                    </div>
+                </div>
+            ';
+        } else {
+            $list.='
+                <div class="container mb-240-r pagination">
+                    <div class="row">
+                        <div class="col-6 t-right">
+                            <span class="pagination-link prev-posts-links">'.get_previous_posts_link('&#9668; Previous').'</span>
+                        </div>
+                        <div class="col-6 t-left">
+                            <span class="pagination-link next-posts-links">'.get_next_posts_link('Next &#9654;', $total_page).'</span>
+                        </div>
+                    </div>
+                </div>
+            ';
+        }
+        return $list;
+    }
+    add_shortcode('blog', 'post_pagination_shortcode');
+
 
 
 

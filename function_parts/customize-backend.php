@@ -14,6 +14,7 @@
              #wpadminbar #wp-admin-bar-wp-logo.hover > .ab-item .ab-icon {
                 background-position: 0 0;
             }
+            .wp-admin div#ays-quiz-winter-dicount-main div#ays-quiz-dicount-month-main.ays_quiz_dicount_info{display:none}
         </style>';
     }
     add_action('wp_before_admin_bar_render', 'NC_custom_logo');
