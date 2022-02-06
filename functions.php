@@ -220,4 +220,5 @@ require dirname(__FILE__).'/function_parts/customize-backend.php';
 //CPT
 require dirname(__FILE__).'/function_parts/cpt/review.php';
 require dirname(__FILE__).'/function_parts/cpt/courses.php';
+require dirname(__FILE__).'/function_parts/cpt/teachers.php';
 ?>

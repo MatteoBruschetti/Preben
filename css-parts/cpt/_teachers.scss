@@ -1,0 +1,59 @@
+.teacher{
+    .teacher-card{
+        min-height: 100%;
+        background-color: $color-low-white;
+        border-radius: 1rem;
+        box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.012),
+                    0px 0px 3.5px rgba(0, 0, 0, 0.018),
+                    0px 0px 7.1px rgba(0, 0, 0, 0.022),
+                    0px 0px 14.6px rgba(0, 0, 0, 0.028),
+                    0px 0px 40px rgba(0, 0, 0, 0.04);
+        transition: all 0.4s ease-in-out;
+
+
+        &:hover{ 
+            box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.024),
+                        0px 0px 3.5px rgba(0, 0, 0, 0.036),
+                        0px 0px 7.1px rgba(0, 0, 0, 0.044),
+                        0px 0px 14.6px rgba(0, 0, 0, 0.056),
+                        0px 0px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        a{
+            max-width: 100%;
+            text-decoration: none;
+            display: inline-block;
+            padding: 3.2rem;
+
+            @media #{$large}{
+                padding: 4.8rem;
+            }
+
+        }
+
+        .teacher-avatar{
+            max-width: 9rem;
+            max-height: 9rem;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+
+            @media #{$large}{
+                max-width: 18rem;
+                max-height: 18rem;
+            }
+        }
+
+        .teacher-excerpt{
+            p{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                            -webkit-line-clamp: 4;
+                            -webkit-box-orient: vertical;
+            }
+        }
+
+        .link{text-transform: uppercase;}
+    }
+}

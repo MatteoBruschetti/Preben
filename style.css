@@ -1240,6 +1240,63 @@ RECCOMENDATIONS for target size by Apple
   line-height: 140%;
 }
 
+.teacher .teacher-card {
+  min-height: 100%;
+  background-color: #FBFBFD;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.012), 0px 0px 3.5px rgba(0, 0, 0, 0.018), 0px 0px 7.1px rgba(0, 0, 0, 0.022), 0px 0px 14.6px rgba(0, 0, 0, 0.028), 0px 0px 40px rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.012), 0px 0px 3.5px rgba(0, 0, 0, 0.018), 0px 0px 7.1px rgba(0, 0, 0, 0.022), 0px 0px 14.6px rgba(0, 0, 0, 0.028), 0px 0px 40px rgba(0, 0, 0, 0.04);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.teacher .teacher-card:hover {
+  -webkit-box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.024), 0px 0px 3.5px rgba(0, 0, 0, 0.036), 0px 0px 7.1px rgba(0, 0, 0, 0.044), 0px 0px 14.6px rgba(0, 0, 0, 0.056), 0px 0px 40px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.024), 0px 0px 3.5px rgba(0, 0, 0, 0.036), 0px 0px 7.1px rgba(0, 0, 0, 0.044), 0px 0px 14.6px rgba(0, 0, 0, 0.056), 0px 0px 40px rgba(0, 0, 0, 0.08);
+}
+
+.teacher .teacher-card a {
+  max-width: 100%;
+  text-decoration: none;
+  display: inline-block;
+  padding: 3.2rem;
+}
+
+@media (min-width: 992px) {
+  .teacher .teacher-card a {
+    padding: 4.8rem;
+  }
+}
+
+.teacher .teacher-card .teacher-avatar {
+  max-width: 9rem;
+  max-height: 9rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+@media (min-width: 992px) {
+  .teacher .teacher-card .teacher-avatar {
+    max-width: 18rem;
+    max-height: 18rem;
+  }
+}
+
+.teacher .teacher-card .teacher-excerpt p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.teacher .teacher-card .link {
+  text-transform: uppercase;
+}
+
 .hero {
   min-height: 85vh;
   display: -webkit-box;
