@@ -94,7 +94,7 @@
         // STAMPA categoria ENTRY
         $NC_query = new WP_Query( $args );
         if( $NC_query->have_posts() ){ ?>
-            <section id="course" class="course mb-240-r">
+            <section id="course" class="course mb-180-r-max">
                 <div class="container">
                     <div class="row">
                         <?php
