@@ -190,7 +190,7 @@
                 )
             ));
             
-            /*TITLE
+            /*TITLE and TEXT
             --------------------------------------------------------*/
             acf_register_block_type(array(
                 'name'              => 'title_txt',
@@ -219,6 +219,34 @@
                 )
             ));
             
+            /*Heading H2
+            --------------------------------------------------------*/
+            acf_register_block_type(array(
+                'name'              => 'heading',
+                'title'             => __('Heading H2'),
+                'description'       => __('Section with heading'),
+                'render_template'   => '/blocks/heading.php',
+                'category'          => 'norvegianBlocks',
+                'icon'              => 'heading',
+                'keywords'          => array( 'section', 'heading H2' ),
+                'mode'              => 'edit',
+                'align'             => 'wide',
+                'supports'          => array(
+                    'align' => false,
+                    'jsx' => true,
+                ),
+                //preview in Gutemberg
+                'example'  => array(
+                    'attributes' => array(
+                        'mode' => 'preview',
+                        'data' => array(
+                            'overtitle'              =>          "Preview overtitle",
+                            'title'                  =>          "Preview title",
+                        )
+                    )
+                )
+            ));
+
             /*CTA
             --------------------------------------------------------*/
             acf_register_block_type(array(
@@ -331,41 +359,6 @@
             ));
 
 
-
-            /*CITAZIONE
-            *Testo e svg decorativa
-            ------------------------------------------------------------*/
-            // acf_register_block_type(array(
-            //     'name'              => 'citazione',
-            //     'title'             => __('Citazione'),
-            //     'description'       => __("Testo e decorazione"),
-            //     'render_template'   => '/blocks/cit.php',
-            //     'category'          => 'norvegianBlocks',
-            //     'icon'              => 'editor-quote',
-            //     'keywords'          => array( 'quote', 'cit', 'citazione', 'testo', 'testo in evidenza' ),
-            //     'mode'              => 'edit',
-            //     'align'             => 'wide',
-            //     'supports'          => array(
-            //         'align' => false,
-            //         'jsx' => true,
-            //     ),
-            //     //preview in Gutemberg
-            //     'example'  => array(
-            //         'attributes' => array(
-            //             'mode' => 'preview',
-            //             'data' => array(
-            //                 'grafica'          =>          "“",
-            //                 'testo'             =>          "Testo",
-            //             )
-            //         )
-            //     )
-            // ));
-
-
-
-            
-
-
             // /*IMMAGINE A TUTTO SCHERMO
             // *Immagine full width
             // --------------------------------------------------------*/
@@ -385,6 +378,33 @@
             //     )
             // ));
 
+
+            /*Bootstrap Container
+            --------------------------------------------------------*/
+            acf_register_block_type(array(
+                'name'              => 'bootstrap-container',
+                'title'             => __('Bootstrap Container'),
+                'description'       => __('Wrap blocks inside this container to keep it align within the website grid'),
+                'render_template'   => '/blocks/bootstrap-container.php',
+                'category'          => 'norvegianBlocks',
+                'icon'              => 'align-center',
+                'keywords'          => array( 'section', 'bootstrap-container' ),
+                'mode'              => 'edit',
+                'align'             => 'wide',
+                'supports'          => array(
+                    'align' => false,
+                    'jsx' => true,
+                ),
+                //preview in Gutemberg
+                'example'  => array(
+                    'attributes' => array(
+                        'mode' => 'preview',
+                        'data' => array(
+                            '_is_preview'   => 'true'
+                        )
+                    )
+                )
+            ));
 
         }
     }

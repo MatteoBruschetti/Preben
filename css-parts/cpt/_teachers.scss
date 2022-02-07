@@ -35,7 +35,7 @@
             max-width: 9rem;
             max-height: 9rem;
             border-radius: 50%;
-            object-fit: cover;
+            object-fit: contain;
             object-position: center;
 
             @media #{$large}{

@@ -38,7 +38,7 @@
         </style>';
     }
     add_action('login_enqueue_scripts', 'NC_custom_login_logo');
-
+    
 
     //custom color scheme
     function norvegiancommunity_admin_color_scheme() {

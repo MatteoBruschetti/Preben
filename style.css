@@ -326,6 +326,16 @@ PADDING
   padding-right: 0 !important;
 }
 
+.pt-24-r {
+  padding-top: 2.4rem;
+}
+
+@media (min-width: 992px) {
+  .pt-24-r {
+    padding-top: 4.8rem;
+  }
+}
+
 /*--------------------------------------------------
 RESET CSS
 --------------------------------------------------*/
@@ -391,6 +401,14 @@ img {
 /*--------------------------------------------------
 BOOTSTRAP MEDIA-QUERIES 2021
 ----------------------------------------------------*/
+.the-only-one-container .container {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
+  margin-left: 0;
+  background-color: lightgoldenrodyellow;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -1272,8 +1290,8 @@ RECCOMENDATIONS for target size by Apple
   max-width: 9rem;
   max-height: 9rem;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   -o-object-position: center;
      object-position: center;
 }
@@ -1349,6 +1367,16 @@ RECCOMENDATIONS for target size by Apple
 @media (min-width: 992px) {
   .hero img {
     max-height: 78vh;
+  }
+}
+
+.hero .col-img {
+  margin-bottom: -3.2rem;
+}
+
+@media (min-width: 992px) {
+  .hero .col-img {
+    margin-bottom: 0;
   }
 }
 
@@ -1837,7 +1865,7 @@ RECCOMENDATIONS for target size by Apple
 
 .contact-form .wpcf7 label.label-name .wpcf7-form-control-wrap .wpcf7-form-control {
   min-width: auto;
-  max-width: calc(100% - 1.2rem);
+  max-width: calc(100% - 0.8rem);
 }
 
 .contact-form .wpcf7 label.label-surname {
@@ -1853,8 +1881,8 @@ RECCOMENDATIONS for target size by Apple
 
 .contact-form .wpcf7 label.label-surname .wpcf7-form-control-wrap .wpcf7-form-control {
   min-width: auto;
-  max-width: calc(100% - 1.2rem);
-  margin-left: 1.2rem;
+  max-width: calc(100% - 0.8rem);
+  margin-left: 0.8rem;
 }
 
 .contact-form .wpcf7 .label-text {
@@ -1898,4 +1926,53 @@ RECCOMENDATIONS for target size by Apple
   border-color: #FFFFFF;
   margin: .8rem 0 4rem;
   color: #58585b;
+}
+
+.acf-bootstrap-container .container {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
+  margin-left: 0;
+  background-color: lightgoldenrodyellow;
+}
+
+.acf-bootstrap-container h1 {
+  margin-bottom: 3.2rem;
+}
+
+@media (min-width: 992px) {
+  .acf-bootstrap-container h1 {
+    margin-bottom: 4rem;
+  }
+}
+
+.acf-bootstrap-container h2 {
+  margin-bottom: 2.4rem;
+}
+
+@media (min-width: 992px) {
+  .acf-bootstrap-container h2 {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.acf-bootstrap-container h3 {
+  margin-bottom: 1.6rem;
+}
+
+@media (min-width: 992px) {
+  .acf-bootstrap-container h3 {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.acf-bootstrap-container p {
+  max-width: 90ch;
+  margin-bottom: 0.8rem;
+}
+
+@media (min-width: 992px) {
+  .acf-bootstrap-container p {
+    margin-bottom: 1.6rem;
+  }
 }

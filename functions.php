@@ -9,8 +9,7 @@
         add_theme_support("post-thumbnails");
         //aggiunta di una posizione del menu
         register_nav_menu("header", "Navbar Header");
-        //remove core patterns
-        remove_theme_support("core-block-patterns");
+        
     }
     add_action("after_setup_theme", "NC_setup_theme");
     
@@ -87,12 +86,6 @@
             }
             return $urls;
         }
-    
-    //Remove embeded
-    function NC_disable_embed(){
-        wp_dequeue_script( 'wp-embed' );
-    }
-    add_action( 'wp_footer', 'NC_disable_embed' );
 
 
 
@@ -195,10 +188,10 @@
                 <div class="container mb-240-r pagination">
                     <div class="row">
                         <div class="col-6 t-right">
-                            <span class="pagination-link prev-posts-links">'.get_previous_posts_link('&#9668; Previous').'</span>
+                            <span class="pagination-link prev-posts-links">'.get_previous_posts_link('&#x25C0;&#xFE0E; Previous').'</span>
                         </div>
                         <div class="col-6 t-left">
-                            <span class="pagination-link next-posts-links">'.get_next_posts_link('Next &#9654;', $total_page).'</span>
+                            <span class="pagination-link next-posts-links">'.get_next_posts_link('Next &#x25B6;&#xFE0E;', $total_page).'</span>
                         </div>
                     </div>
                 </div>
@@ -216,6 +209,7 @@
 require dirname(__FILE__).'/function_parts/acf_blocks.php';
 require dirname(__FILE__).'/function_parts/customizer.php';
 require dirname(__FILE__).'/function_parts/customize-backend.php';
+require dirname(__FILE__).'/function_parts/customize-gb.php';
 
 //CPT
 require dirname(__FILE__).'/function_parts/cpt/review.php';

@@ -1,7 +1,7 @@
 jQuery(document).ready(function () {
 
     jQuery(window).on("scroll", function() {
-        if(jQuery(this).scrollTop() > 80) {
+        if(jQuery(this).scrollTop() > 50) {
             jQuery("#navigation").addClass("scrolled");
         } else {
            jQuery("#navigation").removeClass("scrolled");

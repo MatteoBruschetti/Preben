@@ -105,4 +105,9 @@ PADDING
 .no-pr{padding-right: 0 !important;}
 
 
-
+.pt-24-r{ //before hero
+    padding-top: 2.4rem;
+    @media #{$large}{
+        padding-top: 4.8rem;
+    }
+}

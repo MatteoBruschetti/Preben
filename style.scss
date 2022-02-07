@@ -17,6 +17,7 @@ Description: Norwegian Community Official WP Theme
 //base
 @import "css-parts/base";
 @import 'css-parts/media-query';
+@import 'css-parts/single';
 
 //components
 @import "css-parts/components/nav";
@@ -41,6 +42,7 @@ Description: Norwegian Community Official WP Theme
 @import "css-parts/blocks/cta";
 @import "css-parts/blocks/contacts";
 @import "css-parts/blocks/contact-form";
+@import "css-parts/blocks/bootstrap-container";
 // @import "css-parts/blocks/immagine-full-width";
 // @import "css-parts/blocks/cit";
 

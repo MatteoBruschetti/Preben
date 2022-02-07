@@ -42,4 +42,12 @@
             max-height: 78vh;
         }
     }
+
+    .col-img{
+        margin-bottom: -3.2rem;
+
+        @media #{$large}{
+            margin-bottom: 0;
+        }
+    }
 }

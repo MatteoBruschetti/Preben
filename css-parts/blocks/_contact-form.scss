@@ -129,7 +129,7 @@
                     max-width: 100%;
                     .wpcf7-form-control{
                         min-width: auto;
-                        max-width: calc(100% - 1.2rem);
+                        max-width: calc(100% - 0.8rem);
                     }
                 }
             }
@@ -143,8 +143,8 @@
                     bottom: 0;
                     .wpcf7-form-control{
                         min-width: auto;
-                        max-width: calc(100% - 1.2rem);
-                        margin-left: 1.2rem;
+                        max-width: calc(100% - 0.8rem);
+                        margin-left: 0.8rem;
                     }
                 }
             }
