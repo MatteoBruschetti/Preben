@@ -23,27 +23,41 @@ function NC_custom_fullscreeneditor_logo(){
         }     
     </style>';
 
+    //add border to gb blocks
+    echo '<style>
+        .wp-block .wp-block:not([data-type="generateblocks/grid"]):not(.block-list-appender):not(.block-editor-default-block-appender):not(.editor-post-title){
+            border: 1px solid #00000024;
+        }
+        .wp-block .wp-block:not([data-type="generateblocks/grid"]):not(.block-list-appender):not(.block-editor-default-block-appender):not(.editor-post-title):hover{
+            border: 1px solid #00000088;
+        }
+    </style>';
 
-    //highlights blocks inside gb editor and block reusable editing
+    //highlights blocks inside gb editor
     echo '<style>
         
-        .wp-block.wp-block-acf-bootstrap-container{
-            border: 2px dashed #00800063;
+        .acf-block-component{
+            border: 2px dashed #00800063 !important;
         }
-
+        .acf-block-component .acf-block-component{
+            border: 2px dashed red !important;
+        }
+        .acf-block-component .acf-block-component:before{
+            content:"This block should not be here. Move it outside of the green dashed lines." !important;
+            background: lightpink;
+        }
         .wp-block.is-reusable {
-            border: 2px dashed red;
+            border: 2px dashed orange !important;
             cursor: not-allowed;
         }
         .wp-block.is-reusable .wp-block:not(.is-reusable) {
             cursor: not-allowed;
         }       
         .is-reusable::before {
-            content:"This is a reusable block. Convert it to a regular one by clicking on the pink icon." !important;
-            background: pink;
+            content:"This is a reusable block. Convert it to a regular one by clicking on the orange icon." !important;
+            background: lightgoldenrodyellow;
         }
-        button[aria-label="Convert to regular blocks"]{background: pink;}
-        
+        button[aria-label="Convert to regular blocks"]{background: orange;}    
     </style>';
 }
 add_action( 'admin_head', 'NC_custom_fullscreeneditor_logo' );

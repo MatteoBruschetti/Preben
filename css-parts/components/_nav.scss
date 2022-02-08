@@ -1,4 +1,22 @@
-body{overflow-x: hidden;}
+body{
+    overflow-x: hidden;
+
+    &.single-course{
+        #menu-item-353 { //local=menu-item-160 //sergio=menu-item-353
+            a{color: $color-secondary;}
+        }
+    }
+    &.single-post{
+        #menu-item-350 { //local=menu-item-157 //sergio=menu-item-350
+            a{color: $color-secondary;}
+        }
+    }
+    &.single-teacher{
+        #menu-item-349 { //local=menu-item-156 //sergio=menu-item-349
+            a{color: $color-secondary;}
+        }
+    }
+}
 
 .skip-link {
     position: absolute;
@@ -36,66 +54,6 @@ header {
             align-items: center;
             justify-content: flex-end;
         }
-
-        // .nav-hamburger {
-        //     height: 2.2rem;
-        //     width: 3.2rem;
-        //     position: relative;
-        //     cursor: pointer;
-        //     padding: 0;
-        //     background: transparent;
-        //     border: 0;
-
-        //     span {
-        //         display: block;
-        //         height: 2px;
-        //         width: 100%;
-        //         background-color: $color-secondary;
-        //         position: absolute;
-        //         transition: 0.3s all cubic-bezier(0.4, 0.0, 0.2, 1);
-
-        //         &:first-child {
-        //             top: 0;
-        //         }
-
-        //         &:nth-child(2) {
-        //             top: 50%;
-        //             transform: translateY(-50%);
-        //         }
-
-        //         &:last-child {
-        //             bottom: 0;
-        //         }
-        //     }
-
-        //     &:hover {
-        //         span {
-        //             background-color: $color-secondary;
-        //         }
-        //     }
-
-        //     &.open {
-        //         span {
-        //             &:first-child {
-        //                 transform: rotate(45deg);
-        //                 top: 45%;
-
-        //                 @media #{large} {
-        //                     top: 38%;
-        //                 }
-        //             }
-
-        //             &:nth-child(2) {
-        //                 opacity: 0;
-        //             }
-
-        //             &:last-child {
-        //                 transform: rotate(-45deg);
-        //                 bottom: 45%;
-        //             }
-        //         }
-        //     }
-        // }
     }
     /*!
         * Hamburgers

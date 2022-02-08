@@ -423,6 +423,18 @@ body {
   overflow-x: hidden;
 }
 
+body.single-course #menu-item-353 a {
+  color: #DC0500;
+}
+
+body.single-post #menu-item-350 a {
+  color: #DC0500;
+}
+
+body.single-teacher #menu-item-349 a {
+  color: #DC0500;
+}
+
 .skip-link {
   position: absolute;
   top: -9999px;
@@ -1017,6 +1029,7 @@ RECCOMENDATIONS for target size by Apple
 .blog-post .post-card a {
   text-decoration: none;
   display: inline-block;
+  min-width: 100%;
 }
 
 .blog-post .post-card .post-img {
@@ -1284,7 +1297,7 @@ RECCOMENDATIONS for target size by Apple
 }
 
 .teacher .teacher-card a {
-  max-width: 100%;
+  width: 100%;
   text-decoration: none;
   display: inline-block;
   padding: 3.2rem;
@@ -1293,23 +1306,6 @@ RECCOMENDATIONS for target size by Apple
 @media (min-width: 992px) {
   .teacher .teacher-card a {
     padding: 4.8rem;
-  }
-}
-
-.teacher .teacher-card .teacher-avatar {
-  max-width: 9rem;
-  max-height: 9rem;
-  border-radius: 50%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: center;
-     object-position: center;
-}
-
-@media (min-width: 992px) {
-  .teacher .teacher-card .teacher-avatar {
-    max-width: 18rem;
-    max-height: 18rem;
   }
 }
 
@@ -1323,6 +1319,23 @@ RECCOMENDATIONS for target size by Apple
 
 .teacher .teacher-card .link {
   text-transform: uppercase;
+}
+
+.teacher-avatar {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+@media (min-width: 992px) {
+  .teacher-avatar {
+    width: 18rem;
+    height: 18rem;
+  }
 }
 
 .hero {
@@ -1943,7 +1956,6 @@ RECCOMENDATIONS for target size by Apple
   padding-left: 0;
   margin-right: 0;
   margin-left: 0;
-  background-color: red;
 }
 
 .acf-bootstrap-container h1 {
@@ -2147,6 +2159,7 @@ RECCOMENDATIONS for target size by Apple
 }
 
 .acf-bootstrap-container .wp-block-embed.is-type-video.is-provider-youtube .wp-block-embed__wrapper iframe {
+  border-radius: 1.2rem;
   position: absolute;
   top: 0;
   left: 0;
