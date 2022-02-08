@@ -79,6 +79,24 @@ h3 {
   color: #002868;
 }
 
+h4 {
+  font-size: 2.8rem;
+  line-height: 120%;
+  color: #002868;
+}
+
+h5 {
+  font-size: 2.2rem;
+  line-height: 120%;
+  color: #002868;
+}
+
+h6 {
+  font-size: 1.8rem;
+  line-height: 120%;
+  color: #002868;
+}
+
 .overtitle {
   color: #DC0500;
   font-family: "Lato", sans-serif;
@@ -109,6 +127,10 @@ p.h1 {
   letter-spacing: -1.5px;
   line-height: 130%;
   color: #002868;
+}
+
+ol li, ul li {
+  color: #58585b;
 }
 
 /*--------------------------------------------------
@@ -358,10 +380,6 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-ol, ul {
-  list-style: none;
-}
-
 /*--------------------------------------------------
 BASE
 --------------------------------------------------*/
@@ -401,14 +419,6 @@ img {
 /*--------------------------------------------------
 BOOTSTRAP MEDIA-QUERIES 2021
 ----------------------------------------------------*/
-.the-only-one-container .container {
-  padding-right: 0;
-  padding-left: 0;
-  margin-right: 0;
-  margin-left: 0;
-  background-color: lightgoldenrodyellow;
-}
-
 body {
   overflow-x: hidden;
 }
@@ -1933,7 +1943,7 @@ RECCOMENDATIONS for target size by Apple
   padding-left: 0;
   margin-right: 0;
   margin-left: 0;
-  background-color: lightgoldenrodyellow;
+  background-color: red;
 }
 
 .acf-bootstrap-container h1 {
@@ -1966,6 +1976,16 @@ RECCOMENDATIONS for target size by Apple
   }
 }
 
+.acf-bootstrap-container h4, .acf-bootstrap-container h5, .acf-bootstrap-container h6 {
+  margin-bottom: .8rem;
+}
+
+@media (min-width: 992px) {
+  .acf-bootstrap-container h4, .acf-bootstrap-container h5, .acf-bootstrap-container h6 {
+    margin-bottom: 1.6rem;
+  }
+}
+
 .acf-bootstrap-container p {
   max-width: 90ch;
   margin-bottom: 0.8rem;
@@ -1975,4 +1995,168 @@ RECCOMENDATIONS for target size by Apple
   .acf-bootstrap-container p {
     margin-bottom: 1.6rem;
   }
+}
+
+.acf-bootstrap-container p a {
+  color: #DC0500;
+  text-decoration: underline;
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.acf-bootstrap-container p a:hover {
+  color: #002868;
+}
+
+.acf-bootstrap-container .wp-block-button a {
+  display: inline-block;
+  color: #FFFFFF;
+  background: #DC0500;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-radius: 100vw;
+  padding: 16px 32px;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin-bottom: 1.6rem;
+}
+
+@media (min-width: 992px) {
+  .acf-bootstrap-container .wp-block-button a {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.acf-bootstrap-container .wp-block-button a:hover {
+  -webkit-box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
+  background-color: #002868;
+}
+
+.acf-bootstrap-container ol, .acf-bootstrap-container ul {
+  list-style-position: inside;
+  margin-bottom: 0.8rem;
+}
+
+@media (min-width: 992px) {
+  .acf-bootstrap-container ol, .acf-bootstrap-container ul {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.acf-bootstrap-container ol li, .acf-bootstrap-container ul li {
+  margin-bottom: 0.6rem;
+}
+
+@media (min-width: 992px) {
+  .acf-bootstrap-container ol li, .acf-bootstrap-container ul li {
+    margin-bottom: 1.2rem;
+  }
+}
+
+.acf-bootstrap-container .wp-block-quote {
+  margin-bottom: 0.8rem;
+}
+
+@media (min-width: 992px) {
+  .acf-bootstrap-container .wp-block-quote {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.acf-bootstrap-container .wp-block-quote p {
+  color: #002868;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 140%;
+  margin-bottom: .4;
+  font-size: 2.4rem;
+}
+
+@media (min-width: 992px) {
+  .acf-bootstrap-container .wp-block-quote p {
+    font-size: 3.2rem;
+  }
+}
+
+.acf-bootstrap-container .wp-block-quote cite {
+  color: #58585b;
+}
+
+.acf-bootstrap-container .wp-block-table, .acf-bootstrap-container figcaption {
+  color: #58585b;
+}
+
+.acf-bootstrap-container .wp-block-image:not(.is-style-rounded) img {
+  border-radius: 1rem;
+}
+
+.acf-bootstrap-container .wp-block-file a:first-of-type {
+  display: inline-block;
+  color: #FFFFFF;
+  background: #DC0500;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-radius: 100vw;
+  padding: 16px 32px;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.acf-bootstrap-container .wp-block-file a:first-of-type:hover {
+  -webkit-box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
+  background-color: #002868;
+}
+
+.acf-bootstrap-container .wp-block-file a.wp-block-file__button {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #002868;
+  font-size: 1.4rem;
+  background: none;
+  border-radius: 0;
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.acf-bootstrap-container .wp-block-file a.wp-block-file__button:hover {
+  color: #DC0500;
+  text-decoration: underline;
+}
+
+.acf-bootstrap-container .wp-block-embed.is-type-video.is-provider-youtube .wp-block-embed__wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.acf-bootstrap-container .wp-block-embed.is-type-video.is-provider-youtube .wp-block-embed__wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.immagine-full-width .col-12 {
+  height: 75vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }

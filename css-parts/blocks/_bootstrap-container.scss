@@ -4,7 +4,7 @@
         padding-left: 0;
         margin-right: 0;
         margin-left: 0;
-        background-color: lightgoldenrodyellow;
+        background-color: red;
     }
 
     h1{
@@ -27,12 +27,156 @@
             margin-bottom: 2.4rem;
         }
     }
+    
+    h4, h5, h6{
+        margin-bottom: .8rem;
+        @media #{$large}{
+            margin-bottom: 1.6rem;
+        }
+    }
 
     p{
         max-width: 90ch;
         margin-bottom: 0.8rem;
         @media #{$large}{
             margin-bottom: 1.6rem;
+        }
+
+        a{
+            color: $color-secondary;
+            text-decoration: underline;
+            transition: all 0.4s cubic-bezier(.25,.8,.25,1);
+
+            &:hover{
+                color: $color-primary;
+            }
+        }
+    }
+
+    .wp-block-button{
+        a{
+            display: inline-block;
+            color: $color-white;
+            background: $color-secondary;
+            font-size: 1.4rem;
+            text-transform: uppercase; text-decoration: none; text-align: center;
+            font-weight: 700; letter-spacing: 2px;
+            border-radius: 100vw;
+            padding: 16px 32px;
+            box-shadow: 0;
+            transition: all 0.4s cubic-bezier(.25,.8,.25,1);
+            margin-bottom: 1.6rem;
+            @media #{$large}{
+                margin-bottom: 2.4rem;
+            }
+
+            &:hover {
+                box-shadow: 0 1px 3px 0 rgba(60,64,67,0.30), 0 4px 8px 3px rgba(60,64,67,0.15);
+                background-color: $color-primary;
+            }
+        }
+    }
+
+    ol, ul{
+        list-style-position: inside;
+        margin-bottom: 0.8rem;
+        @media #{$large}{
+            margin-bottom: 1.6rem;
+        }
+
+        li{
+            margin-bottom: 0.6rem;
+            @media #{$large}{
+                margin-bottom: 1.2rem;
+            }
+        }
+    }
+
+    .wp-block-quote{
+        margin-bottom: 0.8rem;
+        @media #{$large}{
+            margin-bottom: 1.6rem;
+        }
+
+        p{
+            color: $color-primary;
+            font-family: $font-family-secondary;
+            font-style: italic;
+            font-weight: 700;
+            line-height: 140%;
+            margin-bottom: .4;
+            font-size: 2.4rem;
+            
+            @media #{$large}{
+                font-size: 3.2rem;            
+            }
+        }
+
+        cite{
+            color: $color-txt-secondary;
+        }
+    }
+
+    .wp-block-table, figcaption{
+        color: $color-txt-secondary;
+    }
+
+    .wp-block-image:not(.is-style-rounded){
+        img{border-radius: 1rem;}
+    }
+
+    .wp-block-file{
+        a{
+            &:first-of-type{
+                display: inline-block;
+                color: $color-white;
+                background: $color-secondary;
+                font-size: 1.4rem;
+                text-transform: uppercase; text-decoration: none; text-align: center;
+                font-weight: 700; letter-spacing: 2px;
+                border-radius: 100vw;
+                padding: 16px 32px;
+                box-shadow: 0;
+                transition: all 0.4s cubic-bezier(.25,.8,.25,1);
+
+                &:hover {
+                    box-shadow: 0 1px 3px 0 rgba(60,64,67,0.30), 0 4px 8px 3px rgba(60,64,67,0.15);
+                    background-color: $color-primary;
+                }
+            }
+
+            &.wp-block-file__button{
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: $color-primary;
+                font-size: 1.4rem;
+                background: none;
+                border-radius: 0;
+                transition: all 0.4s cubic-bezier(.25,.8,.25,1);
+    
+                &:hover{
+                    color: $color-secondary;
+                    text-decoration: underline;
+                }
+            }
+            
+        }
+    }
+
+    .wp-block-embed.is-type-video.is-provider-youtube{
+        .wp-block-embed__wrapper{
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              }
         }
     }
 }

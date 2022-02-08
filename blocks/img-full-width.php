@@ -9,12 +9,12 @@
  * @param   (int|string) $post_id The post ID this block is saved to.
  */
 
-$id = 'immagine-full-width-' . $block['id'];
+$id = 'img-full-width-' . $block['id'];
 if( !empty($block['anchor']) ) {
     $id = $block['anchor'];
 }
 
-$className = 'immagine-full-width';
+$className = 'img-full-width';
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
 }

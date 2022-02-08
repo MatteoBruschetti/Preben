@@ -359,24 +359,24 @@
             ));
 
 
-            // /*IMMAGINE A TUTTO SCHERMO
-            // *Immagine full width
-            // --------------------------------------------------------*/
-            // acf_register_block_type(array(
-            //     'name'              => 'immagine_full_width',
-            //     'title'             => __('Immagine a tutto schermo'),
-            //     'description'       => __('Sezione con immagine a tutto schermo'),
-            //     'render_template'   => '/blocks/immagine-full-width.php',
-            //     'category'          => 'norvegianBlocks',
-            //     'icon'              => 'format-image',
-            //     'keywords'          => array( 'sezione', 'tutto schermo', 'immagine' ),
-            //     'mode'              => 'edit',
-            //     'align'             => 'wide',
-            //     'supports'          => array(
-            //         'align' => false,
-            //         'jsx' => true,
-            //     )
-            // ));
+            /*IMMAGINE A TUTTO SCHERMO
+            *Immagine full width
+            --------------------------------------------------------*/
+            acf_register_block_type(array(
+                'name'              => 'img_full_width',
+                'title'             => __('Full screen Image'),
+                'description'       => __('Sezione con img a tutto schermo'),
+                'render_template'   => '/blocks/img-full-width.php',
+                'category'          => 'norvegianBlocks',
+                'icon'              => 'format-image',
+                'keywords'          => array( 'sezione', 'tutto schermo', 'immagine' ),
+                'mode'              => 'edit',
+                'align'             => 'wide',
+                'supports'          => array(
+                    'align' => false,
+                    'jsx' => true,
+                )
+            ));
 
 
             /*Bootstrap Container

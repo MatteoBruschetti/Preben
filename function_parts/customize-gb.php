@@ -20,7 +20,30 @@ function NC_custom_fullscreeneditor_logo(){
             right: 10px;
             bottom: 10px;
             left: 10px;
-        }    
+        }     
+    </style>';
+
+
+    //highlights blocks inside gb editor and block reusable editing
+    echo '<style>
+        
+        .wp-block.wp-block-acf-bootstrap-container{
+            border: 2px dashed #00800063;
+        }
+
+        .wp-block.is-reusable {
+            border: 2px dashed red;
+            cursor: not-allowed;
+        }
+        .wp-block.is-reusable .wp-block:not(.is-reusable) {
+            cursor: not-allowed;
+        }       
+        .is-reusable::before {
+            content:"This is a reusable block. Convert it to a regular one by clicking on the pink icon." !important;
+            background: pink;
+        }
+        button[aria-label="Convert to regular blocks"]{background: pink;}
+        
     </style>';
 }
 add_action( 'admin_head', 'NC_custom_fullscreeneditor_logo' );
