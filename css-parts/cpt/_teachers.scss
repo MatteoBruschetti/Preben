@@ -1,6 +1,6 @@
 .teacher{
     .teacher-card{
-        min-height: 100%;
+        height: 100%;
         background-color: $color-low-white;
         border-radius: 1rem;
         box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.012),
@@ -21,6 +21,7 @@
 
         a{
             width: 100%;
+            min-height: 100%;           
             text-decoration: none;
             display: inline-block;
             padding: 3.2rem;

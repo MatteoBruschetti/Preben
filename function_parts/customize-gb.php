@@ -50,6 +50,17 @@ function NC_custom_fullscreeneditor_logo(){
             border: 2px dashed orange !important;
             cursor: not-allowed;
         }
+        .wp-block.is-reusable .wp-block.is-reusable{
+            border: 0px !important;
+            cursor: not-allowed;
+        }
+        .wp-block.is-reusable .wp-block.is-reusable::before {
+            content:"" !important;
+            background: transparent;
+        }
+        .wp-block.is-reusable .acf-block-component{
+            border: 0px !important;
+        }
         .wp-block.is-reusable .wp-block:not(.is-reusable) {
             cursor: not-allowed;
         }       

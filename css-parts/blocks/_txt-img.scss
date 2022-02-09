@@ -37,6 +37,7 @@
     .col-img{
         @media #{$large}{
             padding-left: 4.8rem;
+            display: flex; justify-content: center; 
         }
     }
    
@@ -46,6 +47,7 @@
     .col-img{
         @media #{$large}{
             padding-right: 4.8rem;
+            display: flex; justify-content: center; 
         }
     }
 

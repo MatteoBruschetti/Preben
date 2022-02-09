@@ -41,6 +41,7 @@ $link = get_field('link');
                         if( have_rows('step') ):
                             while( have_rows('step') ) : the_row();
                                 $icon = get_sub_field('icon');
+                                $subtitle = get_sub_field('subtitle');
                                 $label = get_sub_field('label');
                                 ?>
                                     <div class="col-12 col-lg-6 mb-64-r-max">
@@ -49,6 +50,7 @@ $link = get_field('link');
                                                 <img class="step-icon" src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt']); ?>" />
                                             </div>
                                             <div class="col-lg-10">
+                                                <p class="step-subtitle"><?php echo $subtitle ?></p>
                                                 <p class="step-label"><?php echo $label ?></p>
                                             </div>
                                         </div>

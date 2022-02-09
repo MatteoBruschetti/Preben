@@ -10,8 +10,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <img class="teacher-avatar mb-24-r" src="<?php echo get_the_post_thumbnail_url();?>" alt="<?php echo $thumbnail_alt ?>">
-                        <h1 class="mb-64-r"><?php the_title(); ?></h1>
+                        <img class="teacher-avatar mb-24-r mt-24-r" src="<?php echo get_the_post_thumbnail_url();?>" alt="<?php echo $thumbnail_alt ?>">
+                        <h1 class="mb-40-r"><?php the_title(); ?></h1>
                     </div>
                 </div>
             </div>
@@ -21,7 +21,7 @@
 
 
             <br>
-            <p>single.php here</p>
+            <p>single-teacher.php here</p>
             <br>
 
         <?php

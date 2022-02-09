@@ -53,6 +53,16 @@
         }
     }
 
+    .course-excerpt{
+        p{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+        }
+    }
+
 
     .points-col{
         display: flex;
@@ -73,5 +83,112 @@
 
     .points-label{
         line-height: 140%;
+    }
+}
+
+
+.single-course{
+    .wysiwyg{
+        p{
+            max-width: 90ch;
+            margin-bottom: 0.8rem;
+            @media #{$large}{
+                margin-bottom: 1.6rem;
+            }
+        }
+    }
+
+    .review-cta-col{
+        display: none;
+    }
+
+    .fixed-bar{
+        min-width: 100%;
+        position: fixed; 
+        z-index: 998;
+        bottom: 0;
+        top: auto;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease-in-out;
+
+        @media #{$large}{
+            bottom: auto;
+            top: 96px;
+        }
+        
+        a{
+            background-color: $color-secondary;
+            padding: 1.6rem 0;
+            text-decoration: none;
+            display: block;
+            box-shadow: 0px -4px 32px -10px rgba(0, 0, 0, 0.24);
+            transition: all 0.3s ease-in-out;
+
+            @media #{$large}{
+                background-color: $color-primary;
+                box-shadow: 0px 4px 32px -10px rgba(0, 0, 0, 0.24);
+            }
+
+            .fixed-bar-container{
+                display: flex;
+                justify-content: space-between;
+    
+                .mobile-only{
+                    width: 100%;
+                    color: $color-white;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    text-align: center;
+
+                    @media #{$large}{
+                        display: none;
+                    }
+                }
+
+                .desktop-only{
+                    display: none;
+
+                    @media #{$large}{
+                        display: inline-block;
+                        color: $color-white;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        margin: auto 0;
+                    }
+                }
+            }
+
+            &:hover{
+                background-color: $color-primary;
+                @media #{$large}{
+                    background-color: $color-secondary;
+                }
+            }
+        }
+
+        &.scrolled{
+            opacity: 1;
+            pointer-events: fill;
+        }
+    }
+
+    footer{
+        padding-bottom: calc(4.8rem + 6.4rem);        
+        @media #{$large}{
+            padding-bottom: 4.8rem;
+        }
+    }
+
+    header .header__menu .main-menu li:last-child a{
+        @media #{$large}{
+            color: $color-primary;
+            background-color: transparent;
+            padding: 1.4rem 0;
+
+            &:hover{
+                color: $color-secondary;
+            }
+        }
     }
 }

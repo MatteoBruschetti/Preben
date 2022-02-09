@@ -13,9 +13,9 @@ HOSTING LOCAL FONTS with https://google-webfonts-helper.herokuapp.com/fonts/
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
-  src: url("../../../fonts/lato-v22-latin-regular.eot");
+  src: url("fonts/lato-v22-latin-regular.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("../../../fonts/lato-v22-latin-regular.eot?#iefix") format("embedded-opentype"), url("../../../fonts/lato-v22-latin-regular.woff2") format("woff2"), url("../../../fonts/lato-v22-latin-regular.woff") format("woff"), url("../../../fonts/lato-v22-latin-regular.ttf") format("truetype"), url("../../../fonts/lato-v22-latin-regular.svg#Lato") format("svg");
+  src: local(""), url("fonts/lato-v22-latin-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lato-v22-latin-regular.woff2") format("woff2"), url("fonts/lato-v22-latin-regular.woff") format("woff"), url("fonts/lato-v22-latin-regular.ttf") format("truetype"), url("fonts/lato-v22-latin-regular.svg#Lato") format("svg");
   /* Legacy iOS */
 }
 
@@ -24,9 +24,9 @@ HOSTING LOCAL FONTS with https://google-webfonts-helper.herokuapp.com/fonts/
   font-family: 'Lato';
   font-style: italic;
   font-weight: 400;
-  src: url("../../../fonts/lato-v22-latin-italic.eot");
+  src: url("fonts/lato-v22-latin-italic.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("../../../fonts/lato-v22-latin-italic.eot?#iefix") format("embedded-opentype"), url("../../../fonts/lato-v22-latin-italic.woff2") format("woff2"), url("../../../fonts/lato-v22-latin-italic.woff") format("woff"), url("../../../fonts/lato-v22-latin-italic.ttf") format("truetype"), url("../../../fonts/lato-v22-latin-italic.svg#Lato") format("svg");
+  src: local(""), url("fonts/lato-v22-latin-italic.eot?#iefix") format("embedded-opentype"), url("fonts/lato-v22-latin-italic.woff2") format("woff2"), url("fonts/lato-v22-latin-italic.woff") format("woff"), url("fonts/lato-v22-latin-italic.ttf") format("truetype"), url("fonts/lato-v22-latin-italic.svg#Lato") format("svg");
   /* Legacy iOS */
 }
 
@@ -35,9 +35,9 @@ HOSTING LOCAL FONTS with https://google-webfonts-helper.herokuapp.com/fonts/
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
-  src: url("../../../fonts/lato-v22-latin-700.eot");
+  src: url("fonts/lato-v22-latin-700.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("../../../fonts/lato-v22-latin-700.eot?#iefix") format("embedded-opentype"), url("../../../fonts/lato-v22-latin-700.woff2") format("woff2"), url("../../../fonts/lato-v22-latin-700.woff") format("woff"), url("../../../fonts/lato-v22-latin-700.ttf") format("truetype"), url("../../../fonts/lato-v22-latin-700.svg#Lato") format("svg");
+  src: local(""), url("fonts/lato-v22-latin-700.eot?#iefix") format("embedded-opentype"), url("fonts/lato-v22-latin-700.woff2") format("woff2"), url("fonts/lato-v22-latin-700.woff") format("woff"), url("fonts/lato-v22-latin-700.ttf") format("truetype"), url("fonts/lato-v22-latin-700.svg#Lato") format("svg");
   /* Legacy iOS */
 }
 
@@ -46,9 +46,9 @@ HOSTING LOCAL FONTS with https://google-webfonts-helper.herokuapp.com/fonts/
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
-  src: url("../../../fonts/poppins-v19-latin-700.eot");
+  src: url("fonts/poppins-v19-latin-700.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("../../../fonts/poppins-v19-latin-700.eot?#iefix") format("embedded-opentype"), url("../../../fonts/poppins-v19-latin-700.woff2") format("woff2"), url("../../../fonts/poppins-v19-latin-700.woff") format("woff"), url("../../../fonts/poppins-v19-latin-700.ttf") format("truetype"), url("../../../fonts/poppins-v19-latin-700.svg#Poppins") format("svg");
+  src: local(""), url("fonts/poppins-v19-latin-700.eot?#iefix") format("embedded-opentype"), url("fonts/poppins-v19-latin-700.woff2") format("woff2"), url("fonts/poppins-v19-latin-700.woff") format("woff"), url("fonts/poppins-v19-latin-700.ttf") format("truetype"), url("fonts/poppins-v19-latin-700.svg#Poppins") format("svg");
   /* Legacy iOS */
 }
 
@@ -302,6 +302,16 @@ RECCOMENDATIONS for text font sizes
 @media (min-width: 992px) {
   .mb-24-r {
     margin-bottom: 2.4rem;
+  }
+}
+
+.mt-24-r {
+  margin-top: 1.6rem;
+}
+
+@media (min-width: 992px) {
+  .mt-24-r {
+    margin-top: 2.4rem;
   }
 }
 
@@ -1004,7 +1014,7 @@ RECCOMENDATIONS for target size by Apple
 
 .blog-post .post-card {
   min-width: 100%;
-  min-height: 100%;
+  height: 100%;
   background-color: #FBFBFD;
   border-radius: 1.2rem;
   -webkit-box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.012), 0px 0px 3.5px rgba(0, 0, 0, 0.018), 0px 0px 7.1px rgba(0, 0, 0, 0.022), 0px 0px 14.6px rgba(0, 0, 0, 0.028), 0px 0px 40px rgba(0, 0, 0, 0.04);
@@ -1030,6 +1040,7 @@ RECCOMENDATIONS for target size by Apple
   text-decoration: none;
   display: inline-block;
   min-width: 100%;
+  min-height: 100%;
 }
 
 .blog-post .post-card .post-img {
@@ -1120,6 +1131,11 @@ RECCOMENDATIONS for target size by Apple
 
 .pagination .pagination-link a:hover {
   color: #DC0500;
+}
+
+.single-post-thumbnail {
+  border-radius: 1rem;
+  max-height: 56vh;
 }
 
 .review article {
@@ -1254,6 +1270,14 @@ RECCOMENDATIONS for target size by Apple
   }
 }
 
+.course .course-excerpt p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
 .course .points-col {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1281,8 +1305,134 @@ RECCOMENDATIONS for target size by Apple
   line-height: 140%;
 }
 
+.single-course .wysiwyg p {
+  max-width: 90ch;
+  margin-bottom: 0.8rem;
+}
+
+@media (min-width: 992px) {
+  .single-course .wysiwyg p {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.single-course .review-cta-col {
+  display: none;
+}
+
+.single-course .fixed-bar {
+  min-width: 100%;
+  position: fixed;
+  z-index: 998;
+  bottom: 0;
+  top: auto;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+@media (min-width: 992px) {
+  .single-course .fixed-bar {
+    bottom: auto;
+    top: 96px;
+  }
+}
+
+.single-course .fixed-bar a {
+  background-color: #DC0500;
+  padding: 1.6rem 0;
+  text-decoration: none;
+  display: block;
+  -webkit-box-shadow: 0px -4px 32px -10px rgba(0, 0, 0, 0.24);
+          box-shadow: 0px -4px 32px -10px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 992px) {
+  .single-course .fixed-bar a {
+    background-color: #002868;
+    -webkit-box-shadow: 0px 4px 32px -10px rgba(0, 0, 0, 0.24);
+            box-shadow: 0px 4px 32px -10px rgba(0, 0, 0, 0.24);
+  }
+}
+
+.single-course .fixed-bar a .fixed-bar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.single-course .fixed-bar a .fixed-bar-container .mobile-only {
+  width: 100%;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .single-course .fixed-bar a .fixed-bar-container .mobile-only {
+    display: none;
+  }
+}
+
+.single-course .fixed-bar a .fixed-bar-container .desktop-only {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .single-course .fixed-bar a .fixed-bar-container .desktop-only {
+    display: inline-block;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: auto 0;
+  }
+}
+
+.single-course .fixed-bar a:hover {
+  background-color: #002868;
+}
+
+@media (min-width: 992px) {
+  .single-course .fixed-bar a:hover {
+    background-color: #DC0500;
+  }
+}
+
+.single-course .fixed-bar.scrolled {
+  opacity: 1;
+  pointer-events: fill;
+}
+
+.single-course footer {
+  padding-bottom: calc(4.8rem + 6.4rem);
+}
+
+@media (min-width: 992px) {
+  .single-course footer {
+    padding-bottom: 4.8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .single-course header .header__menu .main-menu li:last-child a {
+    color: #002868;
+    background-color: transparent;
+    padding: 1.4rem 0;
+  }
+  .single-course header .header__menu .main-menu li:last-child a:hover {
+    color: #DC0500;
+  }
+}
+
 .teacher .teacher-card {
-  min-height: 100%;
+  height: 100%;
   background-color: #FBFBFD;
   border-radius: 1rem;
   -webkit-box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.012), 0px 0px 3.5px rgba(0, 0, 0, 0.018), 0px 0px 7.1px rgba(0, 0, 0, 0.022), 0px 0px 14.6px rgba(0, 0, 0, 0.028), 0px 0px 40px rgba(0, 0, 0, 0.04);
@@ -1298,6 +1448,7 @@ RECCOMENDATIONS for target size by Apple
 
 .teacher .teacher-card a {
   width: 100%;
+  min-height: 100%;
   text-decoration: none;
   display: inline-block;
   padding: 3.2rem;
@@ -1495,12 +1646,24 @@ RECCOMENDATIONS for target size by Apple
 @media (min-width: 992px) {
   .right .row .col-img {
     padding-left: 4.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
 @media (min-width: 992px) {
   .left .col-img {
     padding-right: 4.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -1626,6 +1789,12 @@ RECCOMENDATIONS for target size by Apple
     width: 6.5rem;
     margin-bottom: 1.6rem;
   }
+}
+
+.steps .step-subtitle {
+  text-align: left;
+  font-weight: 700;
+  color: #262626;
 }
 
 .steps .step-label {
@@ -2018,6 +2187,35 @@ RECCOMENDATIONS for target size by Apple
 
 .acf-bootstrap-container p a:hover {
   color: #002868;
+}
+
+.acf-bootstrap-container .course-subscribe-btn-price {
+  white-space: nowrap;
+}
+
+.acf-bootstrap-container .course-subscribe-btn-price a {
+  display: inline-block;
+  color: #FFFFFF;
+  background: #DC0500;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-radius: 100vw;
+  padding: 16px 32px;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.acf-bootstrap-container .course-subscribe-btn-price a:hover {
+  color: #FFFFFF;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
+  background-color: #002868;
 }
 
 .acf-bootstrap-container .wp-block-button a {

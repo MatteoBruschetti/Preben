@@ -38,8 +38,8 @@
                 'capability_type'       =>          'post',
                 'hierarchycal'          =>          false,
                 'taxonomies'            =>          array(''),
-                'show_in_rest'          =>          false, //gutemberg disattivato
-                'supports'              =>          array('title') //campi supportati
+                'show_in_rest'          =>          true, //gutemberg disattivato
+                'supports'              =>          array('title', 'excerpt', 'editor') //campi supportati
             ), flush_rewrite_rules() /*fine delle opzioni*/
         );
     }
@@ -108,8 +108,8 @@
                                     <article class="course-card">
                                         <a href="<?php the_permalink(); ?>">
                                             <p class="overtitle mb-8-r"><?php echo get_field('level') ?>
-                                            <h3 class="course-title mb-32-r"><?php the_title(); ?></h3>
-                                            <div class="wysiwyg mb-32-r"><?php echo get_field('description'); ?></div>
+                                            <h3 class="course-title mb-24-r"><?php the_title(); ?></h3>
+                                            <div class="course-excerpt mb-24-r"><?php the_excerpt(); ?></div>
                                             <div class="button mb-40-r">More about this course</div>
                                             <div class="row">
                                                 <?php
