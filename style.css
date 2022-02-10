@@ -2116,6 +2116,7 @@ RECCOMENDATIONS for target size by Apple
   -webkit-box-sizing: border-box !important;
           box-sizing: border-box !important;
   height: 4.9rem !important;
+  border-radius: 2.5rem !important;
 }
 
 .contact-form .wpcf7 input[type='submit']:hover {
