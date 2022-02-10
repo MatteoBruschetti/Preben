@@ -958,9 +958,11 @@ RECCOMENDATIONS for target size by Apple
 }
 
 .ays-quiz-container.NorwegianQuizz input[type='button'] {
+  /*iOS input height fix*/
   -webkit-box-sizing: border-box !important;
           box-sizing: border-box !important;
   height: 4.6rem !important;
+  border-radius: 2.3rem !important;
 }
 
 .ays-quiz-container.NorwegianQuizz .ays_next {
@@ -2108,10 +2110,12 @@ RECCOMENDATIONS for target size by Apple
   padding: 16px 32px;
   -webkit-box-shadow: 0;
           box-shadow: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  /*iOS input height fix*/
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+  height: 4.9rem !important;
 }
 
 .contact-form .wpcf7 input[type='submit']:hover {

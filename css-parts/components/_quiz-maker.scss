@@ -27,9 +27,10 @@
                     0px 0px 40px rgba(0, 0, 0, 0.08) !important;
     }
 
-    input[type='button']{
+    input[type='button']{ /*iOS input height fix*/
         box-sizing: border-box !important;
         height: 4.6rem !important;
+        border-radius: 2.3rem !important;
     }
 
 
