@@ -27,6 +27,11 @@
                     0px 0px 40px rgba(0, 0, 0, 0.08) !important;
     }
 
+    input[type='button']{
+        box-sizing: border-box;
+        min-height: 4.6rem;
+    }
+
 
     /*Next btn*/
     .ays_next{
@@ -60,7 +65,6 @@
     .ays-field.ays_list_view_item{
         opacity: 1 !important;
         border-radius: 0.8rem !important;
-
         &:hover{
             border-color: $color-primary !important;
         }
