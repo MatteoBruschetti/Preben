@@ -958,9 +958,9 @@ RECCOMENDATIONS for target size by Apple
 }
 
 .ays-quiz-container.NorwegianQuizz input[type='button'] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  min-height: 4.6rem;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+  height: 4.6rem !important;
 }
 
 .ays-quiz-container.NorwegianQuizz .ays_next {
