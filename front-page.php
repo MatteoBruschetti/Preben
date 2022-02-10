@@ -12,8 +12,4 @@
             }
         }?>
 
-        <br>
-        <p>frontpage.php here</p>
-        <br>
-
 <?php get_footer(); ?>

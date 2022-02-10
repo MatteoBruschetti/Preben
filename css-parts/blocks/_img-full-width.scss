@@ -1,8 +1,8 @@
-.immagine-full-width{
-    .col-12{
-        height:75vh;
-        background-repeat:no-repeat;
-        background-size:cover;
-        background-position: center;
+.img-full-width{
+    img{
+        max-height: 64vh;
+        min-width: 100%; 
+        object-fit: cover;
+        object-position: center;
     }
 }

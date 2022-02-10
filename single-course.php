@@ -36,10 +36,6 @@
                 <?php the_content(); ?>
             </div>
 
-            <br>
-            <p>single-course.php here</p>
-            <br>
-
         <?php
         }
     } ?>

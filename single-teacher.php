@@ -19,11 +19,6 @@
                 <?php the_content(); ?>
             </div>
 
-
-            <br>
-            <p>single-teacher.php here</p>
-            <br>
-
         <?php
         }
     } ?>

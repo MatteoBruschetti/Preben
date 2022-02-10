@@ -70,6 +70,7 @@
                 )
             ));
 
+            
             /*TESTO IMMAGINE
             --------------------------------------------------------*/
             acf_register_block_type(array(
@@ -105,6 +106,7 @@
                 )
             ));
             
+
             /*COUNTERS
             --------------------------------------------------------*/
             acf_register_block_type(array(
@@ -131,6 +133,7 @@
                     )
                 )
             ));
+
 
             /*KEYPOINTS
             --------------------------------------------------------*/
@@ -161,6 +164,7 @@
                 )
             ));
             
+
             /*STEPS
             --------------------------------------------------------*/
             acf_register_block_type(array(
@@ -190,6 +194,7 @@
                 )
             ));
             
+
             /*TITLE and TEXT
             --------------------------------------------------------*/
             acf_register_block_type(array(
@@ -219,6 +224,7 @@
                 )
             ));
             
+
             /*Heading H2
             --------------------------------------------------------*/
             acf_register_block_type(array(
@@ -246,6 +252,7 @@
                     )
                 )
             ));
+
 
             /*CTA
             --------------------------------------------------------*/
@@ -276,6 +283,7 @@
                 )
             ));
 
+
             /*SECONDARY HERO block
             ------------------------------------------------------------*/
             acf_register_block_type(array(
@@ -304,6 +312,7 @@
                 )
             ));
 
+
             /*CONTACTS
             --------------------------------------------------------*/
             acf_register_block_type(array(
@@ -330,6 +339,7 @@
                     )
                 )
             ));
+
 
             /*CONTACT FORM [/shortcode]
             --------------------------------------------------------*/
@@ -370,6 +380,26 @@
                 'category'          => 'norvegianBlocks',
                 'icon'              => 'format-image',
                 'keywords'          => array( 'sezione', 'tutto schermo', 'immagine' ),
+                'mode'              => 'edit',
+                'align'             => 'wide',
+                'supports'          => array(
+                    'align' => false,
+                    'jsx' => true,
+                )
+            ));
+            
+
+            /*FAQ
+            *accordion section
+            --------------------------------------------------------*/
+            acf_register_block_type(array(
+                'name'              => 'faq',
+                'title'             => __('Faq'),
+                'description'       => __('Sezione con accordion apribili'),
+                'render_template'   => '/blocks/faq.php',
+                'category'          => 'norvegianBlocks',
+                'icon'              => 'sort',
+                'keywords'          => array( 'sezione', 'faq', 'accordion', 'dropdown' ),
                 'mode'              => 'edit',
                 'align'             => 'wide',
                 'supports'          => array(

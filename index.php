@@ -7,7 +7,6 @@ if ( have_posts() ) {
         the_post();
     ?>
 
-    <div>index here</div>
 
     <?php
     }

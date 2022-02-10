@@ -1138,6 +1138,11 @@ RECCOMENDATIONS for target size by Apple
   max-height: 56vh;
 }
 
+.quattrozeroquattro .quattrozeroquattro-img {
+  display: block;
+  max-height: 56vh;
+}
+
 .review article {
   position: relative;
   height: 100%;
@@ -2365,9 +2370,93 @@ RECCOMENDATIONS for target size by Apple
   height: 100%;
 }
 
-.immagine-full-width .col-12 {
-  height: 75vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.img-full-width img {
+  max-height: 64vh;
+  min-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.faq .faq-container .faq-question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.8rem 1.6rem;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .faq .faq-container .faq-question {
+    padding: 2.4rem 1.6rem;
+  }
+}
+
+.faq .faq-container .faq-question p {
+  color: #262626;
+  font-weight: 700;
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  max-width: 80%;
+}
+
+.faq .faq-container .faq-question svg {
+  margin: auto 0;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.faq .faq-container .faq-question:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.faq .faq-container .faq-question:hover p {
+  color: #002868;
+}
+
+.faq .faq-container .faq-answer {
+  border-bottom: 2px solid #E6E6E6;
+  height: 0;
+  overflow-y: hidden;
+}
+
+.faq .faq-container .faq-answer .wysiwyg {
+  opacity: 0;
+  padding: 0 1.6rem 1.6rem;
+  -webkit-transition: opacity 0.4s ease-out;
+  transition: opacity 0.4s ease-out;
+}
+
+.faq .faq-container .faq-answer .wysiwyg p {
+  max-width: 90ch;
+  margin-bottom: 0.8rem;
+}
+
+@media (min-width: 992px) {
+  .faq .faq-container .faq-answer .wysiwyg p {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.faq .faq-container.faq-active .faq-question p {
+  color: #002868;
+}
+
+.faq .faq-container.faq-active .faq-question svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.faq .faq-container.faq-active .faq-answer {
+  height: 100%;
+}
+
+.faq .faq-container.faq-active .faq-answer .wysiwyg {
+  opacity: 1;
 }

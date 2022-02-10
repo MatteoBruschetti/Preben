@@ -11,9 +11,4 @@
         }
     }?>
 
-
-    <br>
-    <div>page.php here</div>
-    <br>
-
 <?php get_footer(); ?>

@@ -20,12 +20,10 @@ if( !empty($block['className']) ) {
 }
 
 // Load values and assign defaults.
-$img = get_field('immagine');
+$image = get_field('image');
 ?>
 
 
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
-    <div class="row mb-xl">
-        <div class="col-12" style="background-image:url(<?php echo $img; ?>);"></div>
-    </div> 
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> <?php echo $position ?> mb-240-r-max">
+    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 </section>

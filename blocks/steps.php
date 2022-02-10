@@ -31,7 +31,7 @@ $link = get_field('link');
     <div class="container"> 
         <div class="row">
             <div class="col-12">
-            <p class="overtitle mb-8-r"><?php echo $overtitle; ?></p>
+                <p class="overtitle mb-8-r"><?php echo $overtitle; ?></p>
                 <h2 class="mb-32-r"><?php echo $title; ?></h2>
                 <div class="wysiwyg mb-80-r"><?php echo $text; ?></div> 
 

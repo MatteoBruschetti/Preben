@@ -22,10 +22,6 @@
             </div>
 
 
-            <br>
-            <p>single.php here</p>
-            <br>
-
         <?php
         }
     } ?>
