@@ -963,6 +963,7 @@ RECCOMENDATIONS for target size by Apple
           box-sizing: border-box !important;
   height: 4.6rem !important;
   border-radius: 2.3rem !important;
+  -webkit-appearance: none;
 }
 
 .ays-quiz-container.NorwegianQuizz .ays_next {
