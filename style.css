@@ -962,7 +962,8 @@ RECCOMENDATIONS for target size by Apple
   -webkit-box-sizing: border-box !important;
           box-sizing: border-box !important;
   height: 4.6rem !important;
-  -webkit-appearance: none;
+  border-radius: 2.3rem !important;
+  -webkit-appearance: none !important;
 }
 
 .ays-quiz-container.NorwegianQuizz .ays_next {
@@ -2116,7 +2117,8 @@ RECCOMENDATIONS for target size by Apple
   -webkit-box-sizing: border-box !important;
           box-sizing: border-box !important;
   height: 4.9rem !important;
-  -webkit-appearance: none;
+  border-radius: 2.5rem !important;
+  -webkit-appearance: none !important;
 }
 
 .contact-form .wpcf7 input[type='submit']:hover {
