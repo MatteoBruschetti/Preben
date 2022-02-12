@@ -33,7 +33,7 @@ $media = get_field('media');
         <div class="row align-items-center">
             <div class="col-12 col-lg-6 col-txt">
                 <h1 class="overtitle mb-8-r"><?php echo $overtitle; ?></h1>
-                <p class="h1 h1-hero mb-24"><?php echo $title; ?></p>
+                <p class="h1 h1-hero mb-24" role="heading"><?php echo $title; ?></p>
                 <div class="wysiwyg mb-32-r"><?php echo $text; ?></div>
                 <?php if( $button ): 
                     $link_url = $button['url'];

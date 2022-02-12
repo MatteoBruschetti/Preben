@@ -8,7 +8,7 @@
             the_post();
         ?>
             <div class="fixed-bar">
-                <a href="<?php echo get_field('link') ?>" target="_blank">
+                <a href="<?php echo get_field('link') ?>" target="_blank" aria-label="Link opens in a new tab">
                     <div class="container">
                         <div class="row">
                             <div class="col-12 fixed-bar-container">

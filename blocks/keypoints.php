@@ -44,7 +44,7 @@ $link = get_field('link');
                                 $label = get_sub_field('label');
                                 ?>
                                     <div class="col-12 col-sm-6 col-lg-3 mb-64">
-                                        <img class="points-icon" src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt']); ?>" />
+                                        <img class="points-icon" src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt']); ?>" role="presentation" />
                                         <p class="points-label"><?php echo $label ?></p>
                                     </div>
                                 <?php
