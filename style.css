@@ -1760,6 +1760,17 @@ RECCOMENDATIONS for target size by Apple
   line-height: 120%;
   font-weight: 700;
   color: #FFFFFF;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  opacity: 0;
+  -webkit-transition: all .4s ease-in-out .2s;
+  transition: all .4s ease-in-out .2s;
+}
+
+.counters .row .counter-number.in-viewport-once {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 .counters .row .counter-text {

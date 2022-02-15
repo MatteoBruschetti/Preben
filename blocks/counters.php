@@ -38,7 +38,7 @@ if( !empty( $block['data']['_is_preview'] ) ) { ?>
                             $text = get_sub_field('text');
                             ?>
                                 <div class="col-12 col-md-4">
-                                    <p class="counter-number"><?php echo $number ?></p>
+                                    <p class="counter-number i-v"><?php echo $number ?></p>
                                     <p class="counter-text"><?php echo $text ?></p>
                                 </div>
                             <?php
