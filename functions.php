@@ -21,6 +21,7 @@
     add_action("wp_enqueue_scripts", "NC_styles");
     //add JS
     function NC_scripts() {
+        wp_enqueue_script("NC-script-in-view", get_template_directory_uri().'/js/jquery.in-viewport-class.min.js', array("jquery"), null, true);
         wp_enqueue_script("NC-scriptjs", get_template_directory_uri().'/js/script.js', array("jquery"), null, true);
     }
     add_action("wp_enqueue_scripts", "NC_scripts");

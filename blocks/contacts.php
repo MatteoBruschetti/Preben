@@ -41,7 +41,7 @@ if( !empty( $block['data']['_is_preview'] ) ) { ?>
             </div>
             <div class="row">
                 <!--FB-->
-                <div class="col-3 col-social">
+                <div class="col-3 col-social i-v">
                     <a href="<?php echo get_theme_mod("NC_social_facebook"); ?>" class="contacts-icon-link" target="_blank" aria-label="Link opens in a new tab">
                         <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" role="presentation">
                             <circle cx="40" cy="40" r="32.5" fill="#002868"/>
@@ -51,7 +51,7 @@ if( !empty( $block['data']['_is_preview'] ) ) { ?>
                     </a>
                 </div>
                 <!--IG-->
-                <div class="col-3 col-social">
+                <div class="col-3 col-social i-v">
                     <a href="<?php echo get_theme_mod("NC_social_instagram"); ?>" class="contacts-icon-link" target="_blank" aria-label="Link opens in a new tab">
                         <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" role="presentation">
                             <circle cx="40" cy="40" r="32.5" fill="#002868"/>
@@ -63,7 +63,7 @@ if( !empty( $block['data']['_is_preview'] ) ) { ?>
                     </a>
                 </div>
                 <!--WhatsApp-->
-                <div class="col-3 col-social">
+                <div class="col-3 col-social i-v">
                     <a href="<?php echo get_theme_mod("NC_social_whatsapp"); ?>" class="contacts-icon-link" target="_blank" aria-label="Link opens in a new tab">
                         <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" role="presentation">
                             <circle cx="40" cy="40" r="32.5" fill="#002868"/>
@@ -74,7 +74,7 @@ if( !empty( $block['data']['_is_preview'] ) ) { ?>
                     </a>
                 </div>
                 <!--Email-->
-                <div class="col-3 col-social">
+                <div class="col-3 col-social i-v">
                     <a href="mailto:<?php echo get_theme_mod("NC_contatti_email"); ?>" class="contacts-icon-link" target="_blank" aria-label="Link opens in a new tab">
                         <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" role="presentation">
                             <circle cx="40" cy="40" r="32.5" fill="#002868"/>

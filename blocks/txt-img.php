@@ -33,7 +33,9 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-12 col-lg-6 col-img">
-                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                <figure class="img-wrapper i-v">
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                </figure>
             </div>
             <div class="col-12 col-lg-6">
                 <p class="overtitle mb-8-r"><?php echo $overtitle; ?></p>

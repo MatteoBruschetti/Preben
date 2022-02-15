@@ -28,6 +28,25 @@
             max-height: 80vh;
         }
     }
+
+
+    .img-wrapper{
+        border-radius: 1rem;
+        background-color: $color-primary;
+        display: inline-block;
+        clip-path: polygon(0 0,0 0,0 100%,0% 100%);
+        
+        img{
+            display: block;
+            clip-path: polygon(0 0,0 0,0 100%,0% 100%);
+            transition: .5s all cubic-bezier(.4,0,.2,1) .3s;
+        }
+
+        &.in-viewport-once{
+            animation: fix-render .6s cubic-bezier(.4,0,.2,1) forwards .2s;
+            img{clip-path: polygon(0 0,100% 0,100% 100%,0 100%);}
+        }
+    }
     
 }
 
@@ -52,3 +71,4 @@
     }
 
 }
+

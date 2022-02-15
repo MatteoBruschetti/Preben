@@ -368,6 +368,40 @@ PADDING
   }
 }
 
+@-webkit-keyframes fix-render {
+  0% {
+    -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+  90% {
+    background-color: #002868;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  100% {
+    background-color: transparent;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes fix-render {
+  0% {
+    -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+  90% {
+    background-color: #002868;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  100% {
+    background-color: transparent;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
 /*--------------------------------------------------
 RESET CSS
 --------------------------------------------------*/
@@ -1650,6 +1684,32 @@ RECCOMENDATIONS for target size by Apple
   }
 }
 
+.txt-img .img-wrapper {
+  border-radius: 1rem;
+  background-color: #002868;
+  display: inline-block;
+  -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+          clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.txt-img .img-wrapper img {
+  display: block;
+  -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+          clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  -webkit-transition: 0.5s all cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  transition: 0.5s all cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+
+.txt-img .img-wrapper.in-viewport-once {
+  -webkit-animation: fix-render 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.2s;
+          animation: fix-render 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.2s;
+}
+
+.txt-img .img-wrapper.in-viewport-once img {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
 .right .row {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
@@ -1796,6 +1856,11 @@ RECCOMENDATIONS for target size by Apple
 .steps .step-icon {
   margin-bottom: .8rem;
   width: 4rem;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  opacity: 0;
+  -webkit-transition: all .4s ease-in-out .2s;
+  transition: all .4s ease-in-out .2s;
 }
 
 @media (min-width: 992px) {
@@ -1803,6 +1868,12 @@ RECCOMENDATIONS for target size by Apple
     width: 6.5rem;
     margin-bottom: 1.6rem;
   }
+}
+
+.steps .step-icon.in-viewport-once {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 .steps .step-subtitle {
@@ -1899,6 +1970,40 @@ RECCOMENDATIONS for target size by Apple
 
 .contacts .col-social {
   text-align: center;
+}
+
+.contacts .col-social a {
+  -webkit-transform: translateY(40%);
+          transform: translateY(40%);
+  opacity: 0;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.contacts .col-social:nth-of-type(1) a {
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
+}
+
+.contacts .col-social:nth-of-type(2) a {
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+}
+
+.contacts .col-social:nth-of-type(3) a {
+  -webkit-transition-delay: .4s;
+          transition-delay: .4s;
+}
+
+.contacts .col-social:nth-of-type(4) a {
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s;
+}
+
+.contacts .col-social.in-viewport-once a {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 .contacts .contacts-icon-link {
