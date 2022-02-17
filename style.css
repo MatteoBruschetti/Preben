@@ -1075,6 +1075,8 @@ RECCOMENDATIONS for target size by Apple
 }
 
 .blog-post .post-card:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
   -webkit-box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.024), 0px 0px 3.5px rgba(0, 0, 0, 0.036), 0px 0px 7.1px rgba(0, 0, 0, 0.044), 0px 0px 14.6px rgba(0, 0, 0, 0.056), 0px 0px 40px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.024), 0px 0px 3.5px rgba(0, 0, 0, 0.036), 0px 0px 7.1px rgba(0, 0, 0, 0.044), 0px 0px 14.6px rgba(0, 0, 0, 0.056), 0px 0px 40px rgba(0, 0, 0, 0.08);
 }
@@ -1304,6 +1306,8 @@ RECCOMENDATIONS for target size by Apple
 }
 
 .course .course-card:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
   -webkit-box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.024), 0px 0px 3.5px rgba(0, 0, 0, 0.036), 0px 0px 7.1px rgba(0, 0, 0, 0.044), 0px 0px 14.6px rgba(0, 0, 0, 0.056), 0px 0px 40px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.024), 0px 0px 3.5px rgba(0, 0, 0, 0.036), 0px 0px 7.1px rgba(0, 0, 0, 0.044), 0px 0px 14.6px rgba(0, 0, 0, 0.056), 0px 0px 40px rgba(0, 0, 0, 0.08);
 }
@@ -1490,6 +1494,8 @@ RECCOMENDATIONS for target size by Apple
 }
 
 .teacher .teacher-card:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
   -webkit-box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.024), 0px 0px 3.5px rgba(0, 0, 0, 0.036), 0px 0px 7.1px rgba(0, 0, 0, 0.044), 0px 0px 14.6px rgba(0, 0, 0, 0.056), 0px 0px 40px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 0px 1.4px rgba(0, 0, 0, 0.024), 0px 0px 3.5px rgba(0, 0, 0, 0.036), 0px 0px 7.1px rgba(0, 0, 0, 0.044), 0px 0px 14.6px rgba(0, 0, 0, 0.056), 0px 0px 40px rgba(0, 0, 0, 0.08);
 }

@@ -23,6 +23,13 @@ function NC_custom_fullscreeneditor_logo(){
         }     
     </style>';
 
+    //add color to spacers
+    echo '<style>
+        .wp-block-spacer{
+            background: rgba(211, 211, 211, 0.3);
+        }
+    </style>';
+
     //add border to gb blocks
     echo '<style>
         .wp-block .wp-block:not([data-type="generateblocks/grid"]):not(.block-list-appender):not(.block-editor-default-block-appender):not(.editor-post-title){
