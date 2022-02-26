@@ -413,7 +413,7 @@
             --------------------------------------------------------*/
             acf_register_block_type(array(
                 'name'              => 'bootstrap-container',
-                'title'             => __('Bootstrap Container'),
+                'title'             => __('Container'),
                 'description'       => __('Wrap blocks inside this container to keep it align within the website grid'),
                 'render_template'   => '/blocks/bootstrap-container.php',
                 'category'          => 'norvegianBlocks',

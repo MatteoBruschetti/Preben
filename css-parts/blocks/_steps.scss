@@ -14,6 +14,17 @@
         }
     }
 
+    .step-container:nth-child(even){
+        @media #{$large}{
+            padding-left: 4rem;
+        }
+    }
+    .step-container:nth-child(odd){
+        @media #{$large}{
+            padding-right: 4rem;
+        }
+    }
+
     .step-icon{
         margin-bottom: .8rem;
         width: 4rem;

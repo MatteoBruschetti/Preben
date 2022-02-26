@@ -44,7 +44,7 @@ $link = get_field('link');
                                 $subtitle = get_sub_field('subtitle');
                                 $label = get_sub_field('label');
                                 ?>
-                                    <div class="col-12 col-lg-6 mb-64-r-max">
+                                    <div class="col-12 col-lg-6 step-container mb-64-r-max">
                                         <div class="row">
                                             <div class="col-12 col-lg-2 t-left">
                                                 <img class="step-icon i-v" src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt']); ?>" role="presentation"/>

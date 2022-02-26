@@ -12,7 +12,7 @@
     }
 
     .wysiwyg{
-        p{
+        p, li{
             margin-bottom:.8rem;
             @media #{$large}{
                 margin-bottom:1.6rem;
