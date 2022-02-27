@@ -35,7 +35,7 @@ $link = get_field('link');
                 <h2 class="mb-32"><?php echo $title; ?></h2>
                 <div class="wysiwyg mb-80"><?php echo $text; ?></div> 
 
-                <div class="row">
+                <div class="row justify-content-center">
                     <?php
                         // Check rows exists.
                         if( have_rows('points') ):

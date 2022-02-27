@@ -12,12 +12,12 @@
     }
 
     .wysiwyg{
-        p, li{
+        p{
             margin-bottom:.8rem;
             @media #{$large}{
                 margin-bottom:1.6rem;
             }
-        }
+        } 
     }
 
     .subhero-img-col{
