@@ -22,7 +22,7 @@ if( !empty($block['className']) ) {
 
 //Preview in Gutemberg image
 if( !empty( $block['data']['_is_preview'] ) ) { ?>
-    <h1>Counters</h1>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/acf-blocks-preview/preview-counter.png">
 <?php
 } else {
     ?>

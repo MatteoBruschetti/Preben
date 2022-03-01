@@ -7,6 +7,7 @@
             'menu_title'	=> 'Norwegian Settings',
             'menu_slug' 	=> 'theme-general-settings',
             'capability'	=> 'edit_posts',
+            'icon_url'      => 'dashicons-info',
             'redirect'		=> false
         ));
         
@@ -52,19 +53,18 @@
                 'category'          => 'norvegianBlocks',
                 'icon'              => 'superhero-alt',
                 'keywords'          => array( 'hero' ),
-                //preview del blocco
+                'mode'              => 'edit',
+                
+                //Custom preview in Gutemberg
+                'supports'          => array(
+                    'align' => false,
+                    'jsx' => true,
+                ),
                 'example'  => array(
                     'attributes' => array(
                         'mode' => 'preview',
                         'data' => array(
-                            'overtitle'              =>          "Preview overtitle",
-                            'title'                  =>          "Preview title",
-                            'text'                   =>          "Preview text",
-                            'media'                  =>          "https://source.unsplash.com/random",
-                            'button'                 =>          array(
-                                    'url'               =>          "#",
-                                    'title'             =>          "Button preview"
-                            )
+                            '_is_preview'   => 'true'
                         )
                     )
                 )
@@ -82,25 +82,17 @@
                 'icon'              => 'align-pull-left',
                 'keywords'          => array( 'section', 'text', 'image' ),
                 'mode'              => 'edit',
-                'align'             => 'wide',
+                
+                //Custom preview in Gutemberg
                 'supports'          => array(
                     'align' => false,
                     'jsx' => true,
                 ),
-                //preview in Gutemberg
                 'example'  => array(
                     'attributes' => array(
                         'mode' => 'preview',
                         'data' => array(
-                            'overtitle'              =>          "Preview overtitle",
-                            'title'                  =>          "Preview title",
-                            'text'                   =>          "Preview text",
-                            'image'                  =>          "https://source.unsplash.com/random",
-                            'button'                 =>          array(
-                                    'url'               =>          "#",
-                                    'title'             =>          "Button preview"
-                            ),
-                            'position'      => 'left'
+                            '_is_preview'   => 'true'
                         )
                     )
                 )
@@ -118,12 +110,12 @@
                 'icon'              => 'performance',
                 'keywords'          => array( 'section', 'numbers', 'counters' ),
                 'mode'              => 'edit',
-                'align'             => 'wide',
+                
+                //Custom preview in Gutemberg
                 'supports'          => array(
                     'align' => false,
                     'jsx' => true,
                 ),
-                //preview in Gutemberg
                 'example'  => array(
                     'attributes' => array(
                         'mode' => 'preview',
@@ -146,19 +138,17 @@
                 'icon'              => 'editor-ul',
                 'keywords'          => array( 'section', 'icon', 'keypoints' ),
                 'mode'              => 'edit',
-                'align'             => 'wide',
+                
+                //Custom preview in Gutemberg
                 'supports'          => array(
                     'align' => false,
                     'jsx' => true,
                 ),
-                //preview in Gutemberg
                 'example'  => array(
                     'attributes' => array(
                         'mode' => 'preview',
                         'data' => array(
-                            'overtitle'              =>          "Preview overtitle",
-                            'title'                  =>          "Preview title",
-                            'text'                   =>          "Preview text",
+                            '_is_preview'   => 'true'
                         )
                     )
                 )
@@ -176,19 +166,17 @@
                 'icon'              => 'ellipsis',
                 'keywords'          => array( 'section', 'icon', 'steps' ),
                 'mode'              => 'edit',
-                'align'             => 'wide',
+                
+                //Custom preview in Gutemberg
                 'supports'          => array(
                     'align' => false,
                     'jsx' => true,
                 ),
-                //preview in Gutemberg
                 'example'  => array(
                     'attributes' => array(
                         'mode' => 'preview',
                         'data' => array(
-                            'overtitle'              =>          "Preview overtitle",
-                            'title'                  =>          "Preview title",
-                            'text'                   =>          "Preview text",
+                            '_is_preview'   => 'true'
                         )
                     )
                 )
@@ -206,19 +194,17 @@
                 'icon'              => 'editor-textcolor',
                 'keywords'          => array( 'section', 'title and text' ),
                 'mode'              => 'edit',
-                'align'             => 'wide',
+                
+                //Custom preview in Gutemberg
                 'supports'          => array(
                     'align' => false,
                     'jsx' => true,
                 ),
-                //preview in Gutemberg
                 'example'  => array(
                     'attributes' => array(
                         'mode' => 'preview',
                         'data' => array(
-                            'overtitle'              =>          "Preview overtitle",
-                            'title'                  =>          "Preview title",
-                            'text'                   =>          "Preview text",
+                            '_is_preview'   => 'true'
                         )
                     )
                 )
@@ -236,18 +222,17 @@
                 'icon'              => 'heading',
                 'keywords'          => array( 'section', 'heading H2' ),
                 'mode'              => 'edit',
-                'align'             => 'wide',
+                
+                //Custom preview in Gutemberg
                 'supports'          => array(
                     'align' => false,
                     'jsx' => true,
                 ),
-                //preview in Gutemberg
                 'example'  => array(
                     'attributes' => array(
                         'mode' => 'preview',
                         'data' => array(
-                            'overtitle'              =>          "Preview overtitle",
-                            'title'                  =>          "Preview title",
+                            '_is_preview'   => 'true'
                         )
                     )
                 )
@@ -265,19 +250,17 @@
                 'icon'              => 'button',
                 'keywords'          => array( 'section', 'call to action' ),
                 'mode'              => 'edit',
-                'align'             => 'wide',
+                
+                //Custom preview in Gutemberg
                 'supports'          => array(
                     'align' => false,
                     'jsx' => true,
                 ),
-                //preview in Gutemberg
                 'example'  => array(
                     'attributes' => array(
                         'mode' => 'preview',
                         'data' => array(
-                            'overtitle'              =>          "Preview overtitle",
-                            'title'                  =>          "Preview title",
-                            'text'                   =>          "Preview text",
+                            '_is_preview'   => 'true'
                         )
                     )
                 )
@@ -294,19 +277,18 @@
                 'category'          => 'norvegianBlocks',
                 'icon'              => 'superhero-alt',
                 'keywords'          => array( 'secondary-hero' ),
-                //preview del blocco
+                'mode'              => 'edit',
+                
+                //Custom preview in Gutemberg
+                'supports'          => array(
+                    'align' => false,
+                    'jsx' => true,
+                ),
                 'example'  => array(
                     'attributes' => array(
                         'mode' => 'preview',
                         'data' => array(
-                            'overtitle'              =>          "Preview overtitle",
-                            'title'                  =>          "Preview title",
-                            'text'                   =>          "Preview text",
-                            'media'                  =>          "https://source.unsplash.com/random",
-                            'button'                 =>          array(
-                                    'url'               =>          "#",
-                                    'title'             =>          "Button preview"
-                            )
+                            '_is_preview'   => 'true'
                         )
                     )
                 )
@@ -324,12 +306,12 @@
                 'icon'              => 'email',
                 'keywords'          => array( 'section', 'social', 'contacts' ),
                 'mode'              => 'edit',
-                'align'             => 'wide',
+                
+                //Custom preview in Gutemberg
                 'supports'          => array(
                     'align' => false,
                     'jsx' => true,
                 ),
-                //preview in Gutemberg
                 'example'  => array(
                     'attributes' => array(
                         'mode' => 'preview',
@@ -352,17 +334,17 @@
                 'icon'              => 'testimonial',
                 'keywords'          => array( 'section', 'contact form' ),
                 'mode'              => 'edit',
-                'align'             => 'wide',
+                
+                //Custom preview in Gutemberg
                 'supports'          => array(
                     'align' => false,
                     'jsx' => true,
                 ),
-                //preview in Gutemberg
                 'example'  => array(
                     'attributes' => array(
                         'mode' => 'preview',
                         'data' => array(
-                            'shortcode'              =>          "[/contact-form-7 shortcode='here']",
+                            '_is_preview'   => 'true'
                         )
                     )
                 )
@@ -381,10 +363,19 @@
                 'icon'              => 'format-image',
                 'keywords'          => array( 'sezione', 'tutto schermo', 'immagine' ),
                 'mode'              => 'edit',
-                'align'             => 'wide',
+                
+                //Custom preview in Gutemberg
                 'supports'          => array(
                     'align' => false,
                     'jsx' => true,
+                ),
+                'example'  => array(
+                    'attributes' => array(
+                        'mode' => 'preview',
+                        'data' => array(
+                            '_is_preview'   => 'true'
+                        )
+                    )
                 )
             ));
             
@@ -401,13 +392,102 @@
                 'icon'              => 'sort',
                 'keywords'          => array( 'sezione', 'faq', 'accordion', 'dropdown' ),
                 'mode'              => 'edit',
-                'align'             => 'wide',
+                
+                //Custom preview in Gutemberg
                 'supports'          => array(
                     'align' => false,
                     'jsx' => true,
+                ),
+                'example'  => array(
+                    'attributes' => array(
+                        'mode' => 'preview',
+                        'data' => array(
+                            '_is_preview'   => 'true'
+                        )
+                    )
                 )
             ));
 
+            /*Cit
+            --------------------------------------------------------*/
+            acf_register_block_type(array(
+                'name'              => 'cit',
+                'title'             => __('Citazione'),
+                'description'       => __('Usa questo blocco per aggiungere una citazione'),
+                'render_template'   => '/blocks/cit.php',
+                'category'          => 'norvegianBlocks',
+                'icon'              => 'editor-quote',
+                'keywords'          => array( 'sezione', 'cit', 'citazione' ),
+                'mode'              => 'edit',
+                
+                //Custom preview in Gutemberg
+                'supports'          => array(
+                    'align' => false,
+                    'jsx' => true,
+                ),
+                'example'  => array(
+                    'attributes' => array(
+                        'mode' => 'preview',
+                        'data' => array(
+                            '_is_preview'   => 'true'
+                        )
+                    )
+                )
+            ));
+
+            /*CHECKS
+            --------------------------------------------------------*/
+            acf_register_block_type(array(
+                'name'              => 'checks',
+                'title'             => __('Checks'),
+                'description'       => __('Section with icon checks'),
+                'render_template'   => '/blocks/checks.php',
+                'category'          => 'norvegianBlocks',
+                'icon'              => 'saved',
+                'keywords'          => array( 'section', 'icon', 'checks' ),
+                'mode'              => 'edit',
+                
+                //Custom preview in Gutemberg
+                'supports'          => array(
+                    'align' => false,
+                    'jsx' => true,
+                ),
+                'example'  => array(
+                    'attributes' => array(
+                        'mode' => 'preview',
+                        'data' => array(
+                            '_is_preview'   => 'true'
+                        )
+                    )
+                )
+            ));
+
+            /*Photo Gallery
+            --------------------------------------------------------*/
+            acf_register_block_type(array(
+                'name'              => 'gallery',
+                'title'             => __('Photo Gallery'),
+                'description'       => __('Put your best photo in this gallery'),
+                'render_template'   => '/blocks/gallery.php',
+                'category'          => 'norvegianBlocks',
+                'icon'              => 'images-alt2',
+                'keywords'          => array( 'sezione', 'foto', 'galleria' ),
+                'mode'              => 'edit',
+                
+                //Custom preview in Gutemberg
+                'supports'          => array(
+                    'align' => false,
+                    'jsx' => true,
+                ),
+                'example'  => array(
+                    'attributes' => array(
+                        'mode' => 'preview',
+                        'data' => array(
+                            '_is_preview'   => 'true'
+                        )
+                    )
+                )
+            ));
 
             /*Bootstrap Container
             --------------------------------------------------------*/
@@ -420,12 +500,12 @@
                 'icon'              => 'align-center',
                 'keywords'          => array( 'section', 'bootstrap-container' ),
                 'mode'              => 'edit',
-                'align'             => 'wide',
+                
+                //Custom preview in Gutemberg
                 'supports'          => array(
                     'align' => false,
                     'jsx' => true,
                 ),
-                //preview in Gutemberg
                 'example'  => array(
                     'attributes' => array(
                         'mode' => 'preview',

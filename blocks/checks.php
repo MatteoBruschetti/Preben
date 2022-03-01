@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Steps Block Template.
+ * Checks Block Template.
  *
  * @param   array $block The block settings and attributes.
  * @param   string $content The block inner HTML (empty).
@@ -9,12 +9,12 @@
  * @param   (int|string) $post_id The post ID this block is saved to.
  */
 
-$id = 'steps-' . $block['id'];
+$id = 'checks-' . $block['id'];
 if( !empty($block['anchor']) ) {
     $id = $block['anchor'];
 }
 
-$className = 'steps';
+$className = 'checks';
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
 }
@@ -23,16 +23,16 @@ if( !empty($block['className']) ) {
 $overtitle = get_field('overtitle');
 $title = get_field('title');
 $text = get_field('text');
-$link = get_field('link');
+$bgcolor = get_field('bgcolor');
 
 //Preview in Gutemberg image
 if( !empty( $block['data']['_is_preview'] ) ) { ?>
-    <img src="<?php echo get_template_directory_uri(); ?>/img/acf-blocks-preview/preview-steps.png">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/acf-blocks-preview/preview-checks.png">
 <?php
 } else {
     ?>
 
-    <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> mb-240-r">
+    <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> <?php echo $bgcolor?> mb-240-r">
         <div class="container"> 
             <div class="row">
                 <div class="col-12">
@@ -43,20 +43,21 @@ if( !empty( $block['data']['_is_preview'] ) ) { ?>
                     <div class="row">
                         <?php
                             // Check rows exists.
-                            if( have_rows('step') ):
-                                while( have_rows('step') ) : the_row();
-                                    $icon = get_sub_field('icon');
+                            if( have_rows('check') ):
+                                while( have_rows('check') ) : the_row();
                                     $subtitle = get_sub_field('subtitle');
-                                    $label = get_sub_field('label');
+                                    $subtext = get_sub_field('subtext');
                                     ?>
-                                        <div class="col-12 col-lg-6 step-container mb-64-r-max">
+                                        <div class="col-12 col-lg-6 check-container mb-64-r-max">
                                             <div class="row">
-                                                <div class="col-12 col-lg-2 t-left">
-                                                    <img class="step-icon i-v" src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt']); ?>" role="presentation"/>
+                                                <div class="col-2 t-left">
+                                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="check-icon">
+                                                        <path d="M59.25 27.75L34.75 52.25L22.5 40" stroke-width="4.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
                                                 </div>
-                                                <div class="col-lg-10">
-                                                    <p class="step-subtitle"><?php echo $subtitle ?></p>
-                                                    <p class="step-label"><?php echo $label ?></p>
+                                                <div class="col-10 no-pl">
+                                                    <p class="check-subtitle"><?php echo $subtitle ?></p>
+                                                    <p class="check-label"><?php echo $subtext ?></p>
                                                 </div>
                                             </div>
                                         </div>

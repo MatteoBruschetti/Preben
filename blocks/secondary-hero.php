@@ -25,28 +25,37 @@ $title = get_field('title');
 $text = get_field('text');
 $image = get_field('image');
 
-?>
+//Preview in Gutemberg image
+if( !empty( $block['data']['_is_preview'] ) ) { ?>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/acf-blocks-preview/preview-subhero.png">
+<?php
+} else {
+    ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> mb-180-r">
-    <div class="container"> 
-        <div class="row">
-            <div class="col-12 col-lg-7">
-                <p class="overtitle mb-8-r"><?php echo $overtitle; ?></p>
-                <h1 class="subhero-h1"><?php echo $title; ?></h1>
+    <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> mb-180-r">
+        <div class="container"> 
+            <div class="row">
+                <div class="col-12 col-lg-7">
+                    <p class="overtitle mb-8-r"><?php echo $overtitle; ?></p>
+                    <h1 class="subhero-h1"><?php echo $title; ?></h1>
+                </div>
+                <div class="col-12 col-lg-4 offset-lg-1 order-lg-3 subhero-img-col">
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                </div>
+                <div class="col-12 col-lg-7">
+                    <div class="wysiwyg mb-32-r"><?php echo $text; ?></div>
+                    <?php if( $button ): 
+                        $link_url = $button['url'];
+                        $link_title = $button['title'];
+                        ?>
+                        <a class="button" href="<?php echo esc_url( $link_url ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                    <?php endif; ?>  
+                </div>
+                
             </div>
-            <div class="col-12 col-lg-4 offset-lg-1 order-lg-3 subhero-img-col">
-                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-            </div>
-            <div class="col-12 col-lg-7">
-                <div class="wysiwyg mb-32-r"><?php echo $text; ?></div>
-                <?php if( $button ): 
-                    $link_url = $button['url'];
-                    $link_title = $button['title'];
-                    ?>
-                    <a class="button" href="<?php echo esc_url( $link_url ); ?>"><?php echo esc_html( $link_title ); ?></a>
-                <?php endif; ?>  
-            </div>
-            
         </div>
-    </div>
-</section>
+    </section>
+
+    <?php
+}
+?>

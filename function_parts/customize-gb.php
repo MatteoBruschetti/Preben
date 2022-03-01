@@ -54,10 +54,10 @@ function NC_custom_fullscreeneditor_logo(){
     //helpers for a peaceful coexistence between CORE Gutemberg blocks and ACF blocks
     echo '<style>
         /* RED core blocks outside a bootstrap container */
-        .wp-block:not(.editor-post-title):not(.block-list-appender):not(.block-editor-default-block-appender):not([data-type="generateblocks/grid"]):not([aria-label="Empty block; start writing or type forward slash to choose a block"]):not([data-type^="acf/"]){
+        .wp-block:not(.editor-post-title):not(.block-list-appender):not(.block-editor-default-block-appender):not([data-type="generateblocks/grid"]):not([aria-label="Empty block; start writing or type forward slash to choose a block"]):not([data-type^="acf/"]):not(.wp-block-shortcode){
             border: 2px dashed red;
         }
-                .wp-block:not(.editor-post-title):not(.block-list-appender):not(.block-editor-default-block-appender):not([data-type="generateblocks/grid"]):not([aria-label="Empty block; start writing or type forward slash to choose a block"]):not([data-type^="acf/"]):before{
+                .wp-block:not(.editor-post-title):not(.block-list-appender):not(.block-editor-default-block-appender):not([data-type="generateblocks/grid"]):not([aria-label="Empty block; start writing or type forward slash to choose a block"]):not([data-type^="acf/"]):not(.wp-block-shortcode):before{
                     content:"This block is not placed in a Container. Create a Container and move the block inside the green dashed lines.";
                     background: lightpink; font-size: 14px; font-weight:400; display: block;
                 }

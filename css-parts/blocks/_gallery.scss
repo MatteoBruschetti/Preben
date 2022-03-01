@@ -1,0 +1,25 @@
+.photo-gallery{
+
+    /* The Masonry Container */
+    .masonry {
+        column-gap: 1.6rem;
+        column-count: 1;
+
+        @media #{$medium}{
+            column-count: 2;   
+        }
+        @media #{$large}{
+            column-count: 3;   
+        }
+    }
+    
+    /* The Masonry Brick */
+    .item {
+        display: block;
+        margin-bottom: 1.6rem;
+
+        img{
+            border-radius: .8rem;
+        }
+    }
+}

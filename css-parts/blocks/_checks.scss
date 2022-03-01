@@ -1,0 +1,49 @@
+.checks{
+
+    .check-container:nth-child(even){
+        @media #{$large}{
+            padding-left: 4rem;
+        }
+    }
+    .check-container:nth-child(odd){
+        @media #{$large}{
+            padding-right: 4rem;
+        }
+    }
+    
+
+    .check-icon{
+        path{stroke: $color-primary;}
+
+        max-width: 4rem;
+    }
+
+    .check-subtitle{
+        text-align: left;
+        font-weight: 700;
+        color: $color-txt-primary;
+    }
+    .check-subtext{
+        text-align: left;
+    }
+
+
+    &.bgprimary{
+        background-color: $color-primary;
+        padding: 8rem 0;
+
+        @media #{$large}{
+            padding: 12rem 0;
+        }
+
+        h2{
+            color: $color-white;
+        }
+
+        p{
+            color: $color-low-white-on-primary;
+            strong{color: $color-low-white;}
+            &.step-subtitle{color: $color-low-white;}
+        }
+    }
+}

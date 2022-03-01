@@ -23,7 +23,12 @@ $template = array(
 
   );
 
-?>
+//Preview in Gutemberg image
+if( !empty( $block['data']['_is_preview'] ) ) { ?>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/acf-blocks-preview/preview-container.png">
+<?php
+} else {
+    ?>
 
     <div class="container <?php echo esc_attr($className); ?>"> 
         <div class="row">
@@ -32,3 +37,7 @@ $template = array(
             </div>
         </div>
     </div>
+
+    <?php
+}
+?>

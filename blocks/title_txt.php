@@ -24,16 +24,25 @@ $overtitle = get_field('overtitle');
 $title = get_field('title');
 $text = get_field('text');
 
-?>
+//Preview in Gutemberg image
+if( !empty( $block['data']['_is_preview'] ) ) { ?>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/acf-blocks-preview/preview-titletxt.png">
+<?php
+} else {
+    ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> mb-80">
-    <div class="container"> 
-        <div class="row">
-            <div class="col-12">
-                <p class="overtitle mb-8-r"><?php echo $overtitle; ?></p>
-                <h2 class="mb-32-r"><?php echo $title; ?></h2>
-                <div class="wysiwyg"><?php echo $text; ?></div> 
+    <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> mb-80">
+        <div class="container"> 
+            <div class="row">
+                <div class="col-12">
+                    <p class="overtitle mb-8-r"><?php echo $overtitle; ?></p>
+                    <h2 class="mb-32-r"><?php echo $title; ?></h2>
+                    <div class="wysiwyg"><?php echo $text; ?></div> 
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <?php
+}
+?>

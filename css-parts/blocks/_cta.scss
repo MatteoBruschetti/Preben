@@ -22,7 +22,7 @@
     }
 
     p{
-        color: $color-low-white-on-blue;
+        color: $color-low-white-on-primary;
         strong{color: $color-low-white;}
     }
 
@@ -32,7 +32,7 @@
     }
 
     .link{
-        color: $color-low-white-on-blue;
+        color: $color-low-white-on-primary;
         text-transform: uppercase;
         transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 

@@ -23,7 +23,12 @@ if( !empty($block['className']) ) {
 $overtitle = get_field('overtitle');
 $title = get_field('title');
 
-?>
+//Preview in Gutemberg image
+if( !empty( $block['data']['_is_preview'] ) ) { ?>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/acf-blocks-preview/preview-h2.png">
+<?php
+} else {
+    ?>
 
     <div class="container <?php echo esc_attr($className); ?> mb-40-r"> 
         <div class="row">
@@ -33,3 +38,7 @@ $title = get_field('title');
             </div>
         </div>
     </div>
+
+    <?php
+}
+?>

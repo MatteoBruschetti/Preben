@@ -26,7 +26,7 @@ $title = get_field('contacts-title', 'option');
 
 //Preview in Gutemberg image
 if( !empty( $block['data']['_is_preview'] ) ) { ?>
-    <h1>Contacts and social links</h1>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/acf-blocks-preview/preview-contact.png">
 <?php
 } else {
     ?>
@@ -88,6 +88,6 @@ if( !empty( $block['data']['_is_preview'] ) ) { ?>
         </div>
     </section>
 
-<?php
+    <?php
 }
 ?>
