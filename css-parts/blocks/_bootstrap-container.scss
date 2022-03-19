@@ -166,7 +166,7 @@
     .wp-block-file{
         a{
             &:first-of-type{
-                display: inline-block;
+                display: inline-block; word-break: break-all;
                 color: $color-white;
                 background: $color-secondary;
                 font-size: 1.4rem;

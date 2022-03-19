@@ -34,14 +34,14 @@ function NC_custom_fullscreeneditor_logo(){
             padding: 8px;
         }
         /* add color to spacers */
-        .wp-block-spacer{
+        .wp-block-spacer, .wp-block-separator{
             background: rgba(211, 211, 211, 0.3);
         }
         /* GREY outline empty blocks */
-        .wp-block[aria-label="Blocco vuoto; inizia a scrivere o digita la barra in avanti per scegliere un blocco"], .wp-block[aria-label="Empty block; start writing or type forward slash to choose a block"]{
+        .wp-block[aria-label="Empty block; start writing or type forward slash to choose a block"]{
             border: 1px solid #00000024 !important;
         }
-            .wp-block[aria-label="Blocco vuoto; inizia a scrivere o digita la barra in avanti per scegliere un blocco"]:hover, .wp-block[aria-label="Empty block; start writing or type forward slash to choose a block"]:hover{
+            .wp-block[aria-label="Empty block; start writing or type forward slash to choose a block"]:hover{
                 border: 1px solid #00000088 !important;
             }
         /* Container label*/
@@ -75,13 +75,13 @@ function NC_custom_fullscreeneditor_logo(){
         }
         
         /* GREY outline for core blocks inside a bootstrap container */
-        .acf-block-component .wp-block:not(.editor-post-title):not(.block-list-appender):not(.block-editor-default-block-appender):not([data-type="generateblocks/grid"]):not([data-type^="acf/"]){
+        .acf-block-component .wp-block:not(.editor-post-title):not(.block-list-appender):not(.block-editor-default-block-appender):not([data-type="generateblocks/grid"]):not([aria-label="Empty block; start writing or type forward slash to choose a block"]):not([data-type^="acf/"]):not(.wp-block-shortcode){
             border: 1px solid #00000024;
         }
-            .acf-block-component .wp-block:not(.editor-post-title):not(.block-list-appender):not(.block-editor-default-block-appender):not([data-type="generateblocks/grid"]):not([data-type^="acf/"]):hover{
+            .acf-block-component .wp-block:not(.editor-post-title):not(.block-list-appender):not(.block-editor-default-block-appender):not([data-type="generateblocks/grid"]):not([aria-label="Empty block; start writing or type forward slash to choose a block"]):not([data-type^="acf/"]):not(.wp-block-shortcode):hover{
                 border: 1px solid #00000088;
             }
-            .acf-block-component .wp-block:not(.editor-post-title):not(.block-list-appender):not(.block-editor-default-block-appender):not([data-type="generateblocks/grid"]):not([data-type^="acf/"]):before{
+            .acf-block-component .wp-block:not(.editor-post-title):not(.block-list-appender):not(.block-editor-default-block-appender):not([data-type="generateblocks/grid"]):not([aria-label="Empty block; start writing or type forward slash to choose a block"]):not([data-type^="acf/"]):not(.wp-block-shortcode):before{
                 display:none;
             }
         /* GREY outline for core blocks inside a group core block */
@@ -90,8 +90,6 @@ function NC_custom_fullscreeneditor_logo(){
         .wp-block-group .wp-block:not([data-type="acf/bootstrap-container"]):before{display:none !important;}
         .wp-block-group .wp-block[data-type="acf/bootstrap-container"]:before{background: lightpink;}
         .wp-block-group .wp-block[data-type="acf/bootstrap-container"] .acf-block-component {border: 2px dashed red;}
-
-        
 
         /* RED acf blocks inside a bootstrap container */
         .acf-block-component .acf-block-component{
@@ -165,6 +163,13 @@ function NC_custom_fullscreeneditor_logo(){
             .components-panel .components-button-group[aria-label="Button width"]{
                 display:none;
             }
+    </style>';
+
+    //HIDE unwanted embed blocks
+    echo '<style>
+        .block-editor-block-types-list[aria-label="Embeds"] button:not(.editor-block-list-item-embed){
+            display:none; 
+        }
     </style>';
 }
 add_action( 'admin_head', 'NC_custom_fullscreeneditor_logo' );

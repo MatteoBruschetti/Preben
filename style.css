@@ -2489,6 +2489,7 @@ RECCOMENDATIONS for target size by Apple
 
 .acf-bootstrap-container .wp-block-file a:first-of-type {
   display: inline-block;
+  word-break: break-all;
   color: #FFFFFF;
   background: #DC0500;
   font-size: 1.4rem;

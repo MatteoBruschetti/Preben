@@ -27,10 +27,17 @@
             array(
                 array(
                     'slug' => 'norvegianBlocks',
-                    'title' => __( 'Norwegian Community Blocks', 'NC' ),
+                    'title' => __( 'Norwegian Blocks', 'NC' ),
                     'icon' => 'star-filled'
                 ),
-            )
+            ),
+            array(
+                array(
+                    'slug' => 'norvegianLayout',
+                    'title' => __( 'norvegian Layout', 'NC' ),
+                    'icon' => 'editor-contract'
+                ),
+            ), 
         );
     }
     add_filter( 'block_categories', 'NC_block_categories', 10, 2 );
@@ -412,8 +419,8 @@
             --------------------------------------------------------*/
             acf_register_block_type(array(
                 'name'              => 'cit',
-                'title'             => __('Citazione'),
-                'description'       => __('Usa questo blocco per aggiungere una citazione'),
+                'title'             => __('Quote'),
+                'description'       => __('Use this block for add a quote'),
                 'render_template'   => '/blocks/cit.php',
                 'category'          => 'norvegianBlocks',
                 'icon'              => 'editor-quote',
@@ -496,7 +503,7 @@
                 'title'             => __('Container'),
                 'description'       => __('Wrap blocks inside this container to keep it align within the website grid'),
                 'render_template'   => '/blocks/bootstrap-container.php',
-                'category'          => 'norvegianBlocks',
+                'category'          => 'norvegianLayout',
                 'icon'              => 'align-center',
                 'keywords'          => array( 'section', 'bootstrap-container' ),
                 'mode'              => 'edit',
@@ -513,6 +520,25 @@
                             '_is_preview'   => 'true'
                         )
                     )
+                )
+            ));
+
+
+            /*Spacers
+            --------------------------------------------------------*/
+            acf_register_block_type(array(
+                'name'              => 'spacer',
+                'title'             => __('Spacers'),
+                'description'       => __('Use this block to add white space to layout'),
+                'render_template'   => '/blocks/spacer.php',
+                'category'          => 'norvegianLayout',
+                'icon'              => 'fullscreen-alt',
+                'keywords'          => array( 'sezione', 'spazio', 'vuoto' ),
+                'mode'              => 'edit',
+                'align'             => 'wide',
+                'supports'          => array(
+                    'align' => false,
+                    'jsx' => true,
                 )
             ));
 
