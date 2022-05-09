@@ -25,7 +25,7 @@ $title = get_field('title');
 
 //Preview in Gutemberg image
 if( !empty( $block['data']['_is_preview'] ) ) { ?>
-    <img src="<?php echo get_template_directory_uri(); ?>/img/acf-blocks-preview/preview-h2.png">
+    <img style="max-width:100%;" src="<?php echo get_template_directory_uri(); ?>/img/acf-blocks-preview/preview-h2.png">
 <?php
 } else {
     ?>

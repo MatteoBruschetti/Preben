@@ -27,7 +27,7 @@ $link = get_field('link');
 
 //Preview in Gutemberg image
 if( !empty( $block['data']['_is_preview'] ) ) { ?>
-    <img src="<?php echo get_template_directory_uri(); ?>/img/acf-blocks-preview/preview-keypoints.png">
+    <img style="max-width:100%;" src="<?php echo get_template_directory_uri(); ?>/img/acf-blocks-preview/preview-keypoints.png">
 <?php
 } else {
     ?>
