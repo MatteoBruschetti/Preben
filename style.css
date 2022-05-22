@@ -1942,6 +1942,21 @@ RECCOMENDATIONS for target size by Apple
   text-align: left;
 }
 
+.steps .step-label strong {
+  color: #002868;
+}
+
+.steps .step-label a {
+  color: #DC0500;
+  text-decoration: underline;
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.steps .step-label a:hover {
+  color: #002868;
+}
+
 .title_txt {
   text-align: left;
 }

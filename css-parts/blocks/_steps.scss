@@ -50,5 +50,19 @@
     }
     .step-label{
         text-align: left;
+
+        strong{
+            color: $color-primary;
+        }
+    
+        a{
+            color: $color-secondary;
+            text-decoration: underline;
+            transition: all 0.4s cubic-bezier(.25,.8,.25,1);
+    
+            &:hover{
+                color: $color-primary;
+            }
+        }
     }
 }
