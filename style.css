@@ -368,6 +368,17 @@ PADDING
   }
 }
 
+.wysiwyg p a {
+  color: #DC0500;
+  text-decoration: underline;
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.wysiwyg p a:hover {
+  color: #002868;
+}
+
 @-webkit-keyframes fix-render {
   0% {
     -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
