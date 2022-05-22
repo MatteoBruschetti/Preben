@@ -1942,7 +1942,7 @@ RECCOMENDATIONS for target size by Apple
   text-align: left;
 }
 
-.steps .step-label strong {
+.steps .step-label strong, .steps .step-label b {
   color: #002868;
 }
 
