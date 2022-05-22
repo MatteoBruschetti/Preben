@@ -368,6 +368,10 @@ PADDING
   }
 }
 
+.wysiwyg p strong {
+  color: #002868;
+}
+
 .wysiwyg p a {
   color: #DC0500;
   text-decoration: underline;
@@ -1828,6 +1832,18 @@ RECCOMENDATIONS for target size by Apple
   }
 }
 
+.keypoints .wysiwyg p strong {
+  color: #FBFBFD;
+}
+
+.keypoints .wysiwyg p a {
+  color: rgba(251, 251, 253, 0.72);
+}
+
+.keypoints .wysiwyg p a:hover {
+  color: #FBFBFD;
+}
+
 .keypoints h2 {
   color: #FFFFFF;
 }
@@ -1945,6 +1961,18 @@ RECCOMENDATIONS for target size by Apple
   .title_txt .wysiwyg p {
     margin: 0 auto 1.6rem;
   }
+}
+
+.title_txt .wysiwyg p strong {
+  color: #FBFBFD;
+}
+
+.title_txt .wysiwyg p a {
+  color: rgba(251, 251, 253, 0.72);
+}
+
+.title_txt .wysiwyg p a:hover {
+  color: #FBFBFD;
 }
 
 .cta {

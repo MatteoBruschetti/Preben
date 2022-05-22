@@ -1,4 +1,9 @@
 .wysiwyg p{
+
+    strong{
+        color: $color-primary;
+    }
+
     a{
         color: $color-secondary;
         text-decoration: underline;

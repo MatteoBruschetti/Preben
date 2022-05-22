@@ -14,7 +14,17 @@
             @media #{$large}{
                 margin:0 auto 1.6rem;
             }
+
+            strong{color: $color-low-white;}
+
+            a{
+                color: $color-low-white-on-primary;
+                &:hover{
+                    color: $color-low-white;
+                }
+            }
         }
+
     }
 
     h2{
