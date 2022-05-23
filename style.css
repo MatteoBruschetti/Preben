@@ -69,6 +69,8 @@ h1, h2 {
   letter-spacing: -1.5px;
   line-height: 130%;
   color: #002868;
+  /*fix Safari clamp*/
+  min-height: 0vw;
 }
 
 h3 {
