@@ -1890,12 +1890,13 @@ RECCOMENDATIONS for target size by Apple
 }
 
 .steps .wysiwyg p {
-  margin-bottom: .8rem;
+  max-width: 90ch;
+  margin: 0 auto 0.8rem;
 }
 
 @media (min-width: 992px) {
   .steps .wysiwyg p {
-    margin-bottom: 1.6rem;
+    margin: 0 auto 1.6rem;
   }
 }
 
