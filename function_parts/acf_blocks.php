@@ -274,6 +274,34 @@
             ));
 
 
+            /*White CTA
+            --------------------------------------------------------*/
+            acf_register_block_type(array(
+                'name'              => 'white-cta',
+                'title'             => __('White Call to action'),
+                'description'       => __('Section with main Call To Action'),
+                'render_template'   => '/blocks/white-cta.php',
+                'category'          => 'norvegianBlocks',
+                'icon'              => 'button',
+                'keywords'          => array( 'section', 'call to action' ),
+                'mode'              => 'edit',
+                
+                //Custom preview in Gutemberg
+                'supports'          => array(
+                    'align' => false,
+                    'jsx' => true,
+                ),
+                'example'  => array(
+                    'attributes' => array(
+                        'mode' => 'preview',
+                        'data' => array(
+                            '_is_preview'   => 'true'
+                        )
+                    )
+                )
+            ));
+
+
             /*SECONDARY HERO block
             ------------------------------------------------------------*/
             acf_register_block_type(array(

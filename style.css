@@ -2044,6 +2044,51 @@ RECCOMENDATIONS for target size by Apple
   color: #FBFBFD;
 }
 
+.white-cta {
+  text-align: center;
+  padding: 8rem 0;
+}
+
+@media (min-width: 992px) {
+  .white-cta {
+    padding: 12rem 0;
+  }
+}
+
+.white-cta .wysiwyg p {
+  margin: 0 auto 0.8rem;
+  max-width: 90ch;
+}
+
+@media (min-width: 992px) {
+  .white-cta .wysiwyg p {
+    margin: 0 auto 1.6rem;
+  }
+}
+
+.white-cta h2 {
+  color: #002868;
+}
+
+.white-cta p {
+  color: #58585b;
+}
+
+.white-cta p strong {
+  color: #262626;
+}
+
+.white-cta .link {
+  color: #002868;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.white-cta .link:hover {
+  color: #58585b;
+}
+
 .contacts {
   text-align: left;
 }
