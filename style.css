@@ -386,6 +386,20 @@ PADDING
   color: #002868;
 }
 
+/*HARD FIXES
+-------------------------*/
+#cta-block_62bc54399f0e9.mb-240-r {
+  margin-bottom: 2.4rem;
+}
+
+.single-course.postid-867 .fixed-bar {
+  display: none;
+}
+
+.single-course.postid-867 .fixed-bar.scrolled {
+  display: none;
+}
+
 @-webkit-keyframes fix-render {
   0% {
     -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);

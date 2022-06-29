@@ -14,3 +14,19 @@
         }
     }
 }
+
+
+/*HARD FIXES
+-------------------------*/
+#cta-block_62bc54399f0e9.mb-240-r{
+    margin-bottom: 2.4rem;
+}
+
+.single-course.postid-867{
+    .fixed-bar{
+        display: none;
+        &.scrolled{
+            display: none;
+        }
+    }
+}
