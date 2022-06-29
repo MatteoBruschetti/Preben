@@ -120,6 +120,7 @@ p {
   font-size: 1.6rem;
   line-height: 180%;
   word-wrap: break-word;
+  font-weight: 400;
 }
 
 p.h1 {
@@ -1851,6 +1852,7 @@ RECCOMENDATIONS for target size by Apple
 }
 
 .keypoints p {
+  font-weight: 400;
   color: rgba(251, 251, 253, 0.72);
 }
 
